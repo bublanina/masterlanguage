@@ -1,0 +1,25 @@
+<h2>Priraď ďalší kurz k lektorovi <%= @user.fname+" "+@user.lname %></h2>
+<%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table><tr><td>
+    Vyber kurz:
+    </td><td> 
+    <%= collection_select(:user, :subject_ids, Subject.all, :id, :title) %>
+    </td></tr>
+    </table>
+	<p class="center">
+    <%= f.submit "Pridaj" %>
+    </p>
+<hr />
+<% end %>

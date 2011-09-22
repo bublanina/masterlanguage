@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sk" lang="sk">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <title>MasterLanguage</title>
+  <%= stylesheet_link_tag    "master_language" %>
+  <%= javascript_include_tag :all, "nested_form" %>
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="main">
+		
+		<div id="content">
+			<p>Dnes je <%= Date.today.strftime("%d.%m.%y")%></p>
+		          <p style="color: green"><%= flash[:notice] %></p>
+                  <p style="color: red"><%= flash[:alert] %></p>
+		
+
+			<%= yield %>
+		</div>
+		<div id="right_menu">
+		
+			<% if user_signed_in? %>
+
+    			Prihlásený: <%= current_user.email %>. Nie ste to vy?
+    			<%= link_to "Odhlásiť", destroy_user_session_path, :method=>:delete %><br/>
+    			<b>Toto uvidí lektor: </b><br/>
+  				<%= link_to "Linky lektorov", "#" %><br/>
+  				<%= link_to "Moje kurzy", :controller=>"users", :action=>"subjects", 
+  										:id=>current_user %><br/>
+			
+
+  			<% elsif admin_signed_in? %>
+
+    			<b> Ešte čosi pre admina: </b><br/>
+    			
+    			<%= link_to "Rozvrhy podľa lektorov", :controller=>"events", :action=>"podla_lektorov" %><br/>
+    			<%= link_to "Rozvrhy podľa miestností", :controller=>"events", :action=>"podla_miestnosti" %><br/>
+    			<%= link_to "Správa kurzov", subjects_path %><br/>
+    			<%= link_to "Pridaj termíny výučby", :controller=>"events", :action=>"before_new" %><br/>
+    			<%= link_to "Správa miestností", classrooms_path %><br/>
+    			<%= link_to "Správa zákazníkov", buyers_path %><br/>
+				<%= link_to "Správa lektorov", users_path %><br/>
+  			<%= link_to "Odhlásiť admina", destroy_admin_session_path, :confirm => "Naozaj sa chcete odhlásiť?",
+  					:method=>:delete %>
+
+			<% else %>
+    			<%= link_to "Prihlásiť ako Admin", new_admin_session_path %><br/>
+    			<%= link_to "Prihlásiť", new_user_session_path %>
+  			<% end %>
+  		
+		</div>
+		<div class="clr"></div>
+		<div id="footer">hlavička</div>
+	</div>
+</body>
+</html>

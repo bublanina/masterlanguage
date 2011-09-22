@@ -1,0 +1,76 @@
+
+
+<h2>Kurz: <%= @subject.title %></h2>
+<p>
+	<b>Lektori vyučujúci tento kurz:</b>
+	<% @subject.users.each do |user| %>
+		<%= user.fname.first+". "+user.lname%>
+		<% if !(user==@subject.users.last) %>
+			<% ", " %>
+		<% end %>
+	<% end %>
+</p>
+<p>
+  <b>Typ kurzu:</b>
+  <%= @subject.typ %>
+</p>
+<p>
+  <b>Kapacita kurzu:</b>
+  <%= @subject.capacity %>
+</p>
+<p>
+  <b>Dĺžka výučbovej hodiny(v minútach):</b>
+  <%= @subject.mins_per_hour %>
+</p>
+<p>
+  <b>Celkový počet výučbových hodín:</b>
+  <%= @subject.how_many_hours %>
+</p>
+
+<p>
+	<b>Zákazníci prihlásení do tohoto kurzu:</b>
+	<% if @subject.buyers.empty? %>
+		<span class="redspan">Kurz je momentálne prázdny.</span>
+	<% else %>
+		<table class="t">
+			<th>Meno</th>
+			<th>počet osôb</th>
+			<th></th>
+			<% @subject.jobs.each do |job|%>
+			<tr>
+				<td><%= link_to job.buyer.name, job.buyer %></td>
+				<td><%= job.persons %></td>
+				<td>
+					<%= link_to "Uprav objednávku", edit_job_path(job) %> ||
+					<%= link_to "Zmaž", job, confirm: 'Naozaj zmazať?', method: :delete%>
+				</td>
+			</tr>
+			<% end %>
+			<tr>
+				<td>Spolu osôb</td>
+				<td><%= Job.where(:subject_id=>@subject.id).sum("persons")%></td>
+			</tr>
+		</table>
+	<% end%>
+</p>
+	<p class="center">
+	<%= link_to "Pridaj účastníkov kurzu", :controller=>"jobs", :action=>"new_to_subject" , :id=>@subject %>
+	</p>
+
+
+<p>
+  <b>Popis kurzu:</b>
+  <%= @subject.info %>
+</p>
+
+<% if admin_signed_in? %>
+<p>
+  <b>Poznámka pre admina (vidí len admin):</b>
+  <%= @subject.admin_note %>
+</p>
+<% end %>
+
+<p class="center">
+<%= link_to 'Uprav predmet', edit_subject_path(@subject) %> |
+<%= link_to 'Späť na zoznam kurzov', subjects_path %>
+</p>

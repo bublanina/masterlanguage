@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  fname: MyString
+  lname: MyString
+  street: MyString
+  city: MyString
+  zip: 1
+  info: MyText
+
+two:
+  fname: MyString
+  lname: MyString
+  street: MyString
+  city: MyString
+  zip: 1
+  info: MyText

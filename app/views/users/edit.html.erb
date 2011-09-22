@@ -1,0 +1,50 @@
+<h2>Uprav lektora</h2>
+
+<%= form_for @user,  :html => { :method => :put } do |f| -%>
+  <%= f.error_messages(:header_message => "Lektor nemôže byť uložený v tomto formáte!",
+   :message => "Je potrebné upraviť tieto polia:",
+   :header_tag => :h4) %>
+   
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div>Nové heslo (nechaj prázdne ak je bez zmeny)<br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :kontrola_hesla %><br />
+  <%= f.password_field :password_confirmation %></div>
+  
+    <div><%= f.label :meno %><br />
+  <%= f.text_field :fname %></div>
+  
+    <div><%= f.label :priezvisko %><br />
+  <%= f.text_field :lname %></div>
+  
+      <div><%= f.label :telefón %><br />
+  <%= f.text_field :phone %></div>
+  Pracovný pomer: 
+   <%= f.radio_button :prac_pomer, "živnosť" %>živnosť
+   <%= f.radio_button :prac_pomer, "dohoda"%>dohoda
+ 
+  
+    <div><%= f.label :ulica %><br />
+  <%= f.text_field :street %></div>
+  
+    <div><%= f.label :mesto %><br />
+  <%= f.text_field :city %></div>
+  
+    <div><%= f.label :psc %><br />
+  <%= f.text_field :zip %></div>
+  
+    <div><%= f.label :poznámka %><br />
+  <%= f.text_area :info %></div>
+  
+    Priradené kurzy (odober alebo pridaj ak chceš zmeniť):<br/>
+  <% Subject.all.each do |subject| %>
+	<%= check_box_tag "user[subject_ids][]", subject.id, @user.subjects.include?(subject) %>
+  	<%= subject.title %>
+  
+	<% end%> 
+
+  <div><%= f.submit "Uprav profil lektora" %></div>
+<% end %>

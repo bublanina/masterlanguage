@@ -1,0 +1,52 @@
+
+<p>
+  <b>Názov firmy alebo meno osoby:</b>
+  <%= @buyer.name %>
+</p>
+<p>
+  <b>Mail:</b>
+  <%= @buyer.email %>
+</p>
+<p>
+  <b>Telefón:</b>
+  <%= @buyer.phone %>
+</p>
+
+<p>
+  <b>Ulica:</b>
+  <%= @buyer.street %>
+</p>
+
+<p>
+  <b>Mesto:</b>
+  <%= @buyer.city %>
+</p>
+
+<p>
+  <b>PSČ:</b>
+  <%= @buyer.zip %>
+</p>
+
+<p>
+  <b>IČO:</b>
+  <%= @buyer.ico %>
+</p>
+
+<p>
+  <b>DIČ:</b>
+  <%= @buyer.dic %>
+</p>
+
+<p>
+  <b>Poznámka:</b>
+  <%= @buyer.info %>
+</p>
+<% if admin_signed_in? %>
+<p>
+  <b>Poznámka pre admina:</b>
+  <%= @buyer.admin_note %>
+</p>
+<% end %>
+
+<%= link_to 'Uprav', edit_buyer_path(@buyer) %> |
+<%= link_to 'Späť na zoznam zákazníkov', buyers_path %>

@@ -1,0 +1,71 @@
+<h2>Rozvrhy zoradené podľa miestností
+	<span style="font-size: 10px;">
+		<%= link_to"Ukáž zoradenie podľa lektorov", :action=>"podla_lektorov", :start=>@start %>
+	</span>
+</h2>
+<% if @rozvrhy.empty? %>
+<span class="redspan">Na aktuálny týždeň sa v tvojich miestnostiach nekonajú žiadne kurzy.</span>
+<% end %>
+<%= form_tag :action=>"podla_miestnosti" do %>
+<p class="center">
+Vyber si týždeň pre zobrazenie:	<%= select_tag(:start, options_for_select(@starty, :selected=>@start)) %>
+
+
+<%= submit_tag "Vyber" %>
+</p>
+<% end%>
+<h2>
+Rozvrhy miestnosí pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.days).strftime("%d.%m.%y") %>
+</h2>
+<% @rozvrhy.each do |classroom, events| %>
+<table class="day_rozvrh">
+		<th style="width:70px; max-width:70px; min-width:70px; font-size:10px;">
+			<%= Classroom.find(classroom).name %></th>
+		<% 13.times do |c|%>
+			<th colspan="12" style="width:48px;"><%= c+7 %></th>
+		<% end%>
+		
+		<tr>
+			<td></td>
+			<% 156.times do %>
+				<td style="width: 2px; max-width: 2px; min-width: 1.5px;"></td>
+			<% end %>
+		</tr>
+		<% tyzden = ["PO","UT","ST","ŠT","PI","SO","NE"]%>
+		
+		<% 7.times do |i| %>
+		
+		<% events_den = events.find_all {|e| (@start+i.days) == e[:zaciatok].to_date } %>
+		<tr>
+		<td><%= tyzden[i]+" "+(@start+i.days).strftime("%d.%m") %></td>
+		<% if events_den.empty? %>
+			<td colspan="156"></td>
+		<% end %>
+				<% start=Time.parse("7:00") %>
+				<% events_den.each do |event| %>
+					
+					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
+					<td colspan="<%=n%>" ></td>
+					<% n2=event.subject.mins_per_hour/5 %>
+					<% trieda=event.status %>
+					<td class="<%=trieda%>" colspan="<%=n2%>" >
+						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.") %>
+					</td>
+
+					<% start=event.zaciatok+event.subject.mins_per_hour.minutes %>
+					<% if (156-(n+n2)==0) %><tr/><tr>
+					<% elsif (events_den.last == event) %>
+					<td colspan="<%= 156-(n+n2)%>">
+					</td>
+					<% elsif events_den[events_den.index(event) + 1].zaciatok.month != event.zaciatok.month %> 
+					<td colspan="<%= 156-(n+n2)%>">
+					</td></tr><tr>
+					<% end %>
+					
+					<% end %>
+
+
+				</tr>
+				<% end %>
+	</table><br/>
+<% end %>

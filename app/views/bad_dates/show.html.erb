@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fujdate:</b>
+  <%= @bad_date.fujdate %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @bad_date.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_bad_date_path(@bad_date) %> |
+<%= link_to 'Back', bad_dates_path %>

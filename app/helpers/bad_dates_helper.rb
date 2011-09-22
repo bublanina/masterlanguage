@@ -1,0 +1,2 @@
+module BadDatesHelper
+end

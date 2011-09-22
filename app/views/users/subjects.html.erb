@@ -1,0 +1,34 @@
+<h1>Kurzy lektora <%= @user.fname+" "+@user.lname%></h1>
+
+<table class="classic">
+  <tr>
+    <th>Názov</th>
+    <th>Začiatok / <br/>
+    koniec (predpokladaný)</th>
+    <th>Typ</th>
+    <th>Počet hodín</th>
+    <th></th>
+  </tr>
+<% @subjects.each do |subject| %>
+  <tr>
+    <td><%= link_to subject.title, subject %></td>
+
+    <td><%=  %></td>
+
+    <td><%= subject.type %></td>
+    <td><%= subject.how_many_hours %></td>
+    <td>
+    	<%= link_to 'Uprav', edit_subject_path(subject) %>||
+    	<%= link_to 'Zmaž', subject, confirm: 'Definitívne zmazať kurz?', method: :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<% if admin_signed_in? %>
+<p class="center">
+	<%= link_to "Uprav", edit_user_path(@user) %>||
+	<%= link_to "Zoznam všetkých lektorov", users_path %>||
+	<%= link_to "Zoznam všetkých kurzov", subjects_path %>
+</p>
+<% end %>

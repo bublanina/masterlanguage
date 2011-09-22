@@ -1,0 +1,99 @@
+<h1>Pridanie nových osôb do kurzu <%= @subject.title %></h1>
+
+
+<h2>Pridaj kurzistov:</h2>
+<hr/>
+<h4>Pridanie už uloženého zákazníka:</h4>
+<%= form_for @job do |f| %>
+
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table><tr><td>
+    Objednávateľ:
+    </td><td> 
+    <%= collection_select(:job, :buyer_id, Buyer.all, :id, :name) %>
+    </td><td> 
+    Kurz: </td><td> 
+    <%= collection_select(:job, :subject_id, Subject.all, :id, :title) %></td></tr>
+    <tr><td> 
+    Počet osôb: </td><td> 
+    <%= f.number_field :persons, :size=>5 %></td><td> </td><td> </td></tr>
+    </table>
+	<p class="center">
+    <%= f.submit "Pridaj" %>
+    </p>
+<hr />
+<% end %>
+
+
+
+<%= nested_form_for @job do |f1| %>
+<h4>Pridanie nového zákazníka</h4>
+<table>
+	<tr><td>
+    Počet osôb na toto meno:
+    </td><td colspan="3">
+    <%= f1.text_field :persons, :size=>5%>
+    </td><td></td><td></td></tr>
+   <%= f1.fields_for :buyer_attributes do |f| %>
+
+	<tr><td>
+    Meno:
+    </td><td>
+    <%= f.text_field :name, :size=>25 %>
+    </td><td>
+    Mail
+    </td><td>
+    <%= f.text_field :email, :size=>25 %>
+    </td></tr><tr><td>
+    Telefón
+    </td><td>
+    <%= f.text_field :phone, :size=>25 %>
+    </td><td>
+    Ulica
+    </td><td>
+    <%= f.text_field :street, :size=>25 %>
+    </td></tr><tr><td>
+    Mesto
+    </td><td>
+    <%= f.text_field :city, :size=>25 %>
+    </td><td>
+    PSČ
+    </td><td>
+    <%= f.number_field :zip, :size=>25 %>
+    </td></tr><tr><td>
+    IČO
+    </td><td>
+    <%= f.text_field :ico, :size=>25 %>
+    </td><td>
+    DIČ
+    </td><td>
+    <%= f.text_field :dic, :size=>25 %>
+    </td></tr><tr><td>
+    Info:
+    </td><td colspan="3">
+    <%= f.text_area :info, :cols => 50, :rows => 3 %>
+    </td><td></td><td></td></tr>
+
+  		<% if admin_signed_in? %>
+	<tr><td>
+    Poznámka (vidí len admin): </td><td colspan="3">
+    <%= f.text_area :admin_note, :cols => 50, :rows => 3 %>
+    </td><td></td><td></td></tr>
+
+  		<% end %>
+  	<%= f1.hidden_field :subject_id, :value=>@subject.id %>
+  </table>
+<% end %>
+
+<p class="center">  <%= f1.submit "Pridaj" %></p>
+<% end %>

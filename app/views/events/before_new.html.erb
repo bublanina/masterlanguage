@@ -1,0 +1,103 @@
+<h2>Vyber kurz ku ktorému chceš priradiť termíny:</h2>
+<%= form_tag :action=>"before_new" do %>
+<p class="center">
+    <%= collection_select(:event, :subject_id, 
+    @subjects, :id, :title) %>
+
+<%= submit_tag "Vyber" %>
+</p>
+<% end%>
+
+<% if @subject %>
+<%= form_for @event, :action=>"viac_datumov" do |f| %>
+
+Vyber dátumy k zvolenému kurzu <%= @subject.title %>
+<% 7.times do |i| %>
+<% @zac_mesiaca =  ((Date.today+i.months).beginning_of_month.wday == 0 ? 7 : (Date.today+i.months).beginning_of_month.wday) %>
+<% mesiac = (Date.today+i.months).month %>
+<% rok =  (Date.today+i.months).year %>
+<h2><%= mesiac(mesiac)+" "+rok.to_s %></h2>
+<table class="calendar">
+	<th>PO</th>
+	<th>UT</th>
+	<th>ST</th>
+	<th>ŠT</th>
+	<th>PI</th>
+	<th>SO</th>
+	<th>NE</th>
+<tr>
+	<% (@zac_mesiaca-1).times do %>
+		<td class="no"> 
+		</td>
+	<% end %>
+	<% datum = Date.today+i.months %>
+	<% days_in_month(datum.year, datum.month).times do |t| %>
+	<% aktualny = DateTime.new(datum.year,datum.month,t+1) %>
+	<% if [0,6].include?(Date.new(datum.year, datum.month, t+1).wday)%>
+	<td class = "weekend">
+		<% else%>
+		<td>
+	<% end %>
+		<%= check_box_tag(:event, :zaciatok) %>
+		
+		<%= link_to t+1, :action=>"before_new", :den=>aktualny, :subject_id=>@subject.id %><br/>
+		<span class="ispan">
+		<!--	<%= Event.where(:user_id=>@subject.users, :zaciatok=> aktualny..aktualny+1).count %> /
+			<%= Event.where(:zaciatok=> aktualny..aktualny+1).count %> -->
+		</span>
+	</td>
+		<% if (@zac_mesiaca+t)%7==0 %>
+			</tr><tr>
+		<% end %>
+	<% end %>
+		<% (7-((@zac_mesiaca-1+days_in_month(datum.year,datum.month))%7)).times do %>
+			<td class="no"></td>
+		<% end%>
+		</tr>
+</table><br/>
+
+<% if @detail && @detail.month==mesiac %>
+	<table class="day_rozvrh">
+		<th style="width:70px;"></th>
+		<% 13.times do |c|%>
+			<th colspan="12" style="width:48px;"><%= c+7 %></th>
+		<% end%>
+		<tr>
+			<td></td>
+			<% 156.times do %>
+				<td style="width: 2px; max-width: 2px; min-width: 2px;"></td>
+			<% end %>
+		</tr>
+		<% @udalosti.each do |user, events| %>
+		<tr>
+		<td><%= User.find(user).lname %></td>
+				<% start=Time.parse("7:00") %>
+				<% events.each do |event| %>
+					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
+					<td colspan="<%=n%>" ></td>
+					<% n2=event.subject.mins_per_hour/5 %>
+					<% trieda=event.status %>
+					<td class="<%=trieda%>" colspan="<%=n2%>" >
+						<%= event.subject.title+" "+event.zaciatok.strftime("%H:%M.") %>
+					</td>
+
+					<% start=event.zaciatok+event.subject.mins_per_hour.minutes %>
+					<% if 156-(n+n2)!=0 && events.last==event %>
+					<td colspan="<%= 156-(n+n2)%>">
+					</td>
+					<% end %>
+				<% end %>
+
+				</tr>
+			<% end %>	
+		
+	</table>
+<% end %>
+
+<% end %>
+<p class="center">
+	<%= f.submit "Ďalej" %>
+</p>
+<% end %>
+
+<% end%>

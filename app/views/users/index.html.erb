@@ -1,0 +1,27 @@
+<h2>Správa lektorov</h2>
+
+<table class="classic">
+  <th>Meno</th>
+  <th>Email</th>
+  <th>Učí kurzy</th>
+  <th></th>
+  <% @users.each do |user| %>
+  <tr>
+  <% user.fname ? name=user.fname+" " : name="" %>
+  <% user.lname ? name<<user.lname : name<<"" %>
+    <td><%=  link_to name, user_path(user).to_s %></td>
+    <td><%=  user.email %></td>
+	<td><% user.subjects.each do  |subject| %>
+		<%= subject.title %>,
+		<% end%>
+		
+	</td>
+    <td><%= link_to "Kurzy lektora", :controller=>"users", :action=>"subjects", :id=>user %> ||
+    	<%= link_to 'Uprav', edit_user_path(user) %> ||
+    	<%= link_to 'Zmaž', user, :confirm => 'Zmazať?', :method => :delete %></td>
+  </tr>
+  <% end %>
+</table>
+<p class="center">
+<%= link_to "Zaregistruj nového lektora", new_user_path %>
+</p>

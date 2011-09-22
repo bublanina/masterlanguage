@@ -1,0 +1,59 @@
+<%= form_for(@buyer) do |f| %>
+  <% if @buyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@buyer.errors.count, "error") %> prohibited this buyer from being saved:</h2>
+
+      <ul>
+      <% @buyer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    Meno<br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    Mail<br />
+    <%= f.text_field :email %>
+  </div>
+    <div class="field">
+    Telefón<br />
+    <%= f.text_field :phone %>
+  </div> 
+  <div class="field">
+    Ulica<br />
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    Mesto<br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    PSČ<br />
+    <%= f.number_field :zip %>
+  </div>
+  <div class="field">
+    IČO<br />
+    <%= f.text_field :ico %>
+  </div>
+  <div class="field">
+    DIČ<br />
+    <%= f.text_field :dic %>
+  </div>
+  <div class="field">
+    Info<br />
+    <%= f.text_area :info, :cols => 50, :rows => 5 %>
+  </div>
+  <% if admin_signed_in? %>
+  <div class="field">
+    Poznámka (vidí len admin):<br />
+    <%= f.text_area :admin_note, :cols => 50, :rows => 5 %>
+  </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit "Odoslať" %>
+  </div>
+<% end %>
+

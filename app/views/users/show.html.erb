@@ -1,0 +1,21 @@
+<h2>Lektor   <%= @user.fname+" "+@user.lname %></h2>
+
+<p>
+Mail:  <%= @user.email %><br/>  
+  Ulica: <%= @user.street %><br />
+  Mesto: <%= @user.city %><br />
+  PSČ: <%= @user.zip %><br />
+  poznámka: <%= @user.info %><br />
+
+Počet prihlásení:  <%= @user.sign_in_count %><br/>
+Posledné prihlásenie:  <%= @user.last_sign_in_at%><br/>
+Posledná IP prihlásenia:  <%= @user.last_sign_in_ip %><br/>
+Vytvorený:  <%= @user.created_at %><br/>
+</p>
+<p class="center">
+	<%= link_to "Priraď lektorovi nový kurz", :action=>"add_subject", :id=>@user %>
+</p>
+<p class="center">
+<%= link_to "Uprav lektora", edit_user_path(@user) %> ||
+<%= link_to "Ukáž všetkých lektorov", users_path %>
+</p>

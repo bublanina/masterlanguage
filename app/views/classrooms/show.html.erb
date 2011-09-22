@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Názov miestnosti:</b>
+  <%= @classroom.name %>
+</p>
+
+<p>
+  <b>Kapacita:</b>
+  <%= @classroom.capacity %>
+</p>
+
+<p>
+  <b>Poznámka:</b>
+  <%= @classroom.note %>
+</p>
+<p><b>Miestnosť je viditeľná pre lektorov: </b>
+	<% if @classroom.users %>
+    	<% @classroom.users.each do |i| %>
+    	<%= i.fname.first+". "+i.lname+", "%>
+    	<% end %>
+    	<% else %>žiadni lektori
+    	<%end%></p>
+
+
+<%= link_to 'Uprav', edit_classroom_path(@classroom) %> |
+<%= link_to 'Späť na zoznam miestností', classrooms_path %>

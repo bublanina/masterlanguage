@@ -1,0 +1,24 @@
+<h1>Zoznam zákazníkov</h1>
+
+<table class="classic">
+  <tr>
+    <th>Názov (meno)</th>
+    <th>Mesto</th>
+    <th></th>
+  </tr>
+
+<% @buyers.each do |buyer| %>
+  <tr>
+    <td><%= buyer.name %></td>
+    <td><%= buyer.city %></td>
+    <td><%= link_to 'Ukáž', buyer %>
+    <%= link_to 'Uprav', edit_buyer_path(buyer) %>
+    <%= link_to 'Zmaž', buyer, confirm: 'Definitívne zmazať zákazníka?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<p class="center">
+<%= link_to 'Pridaj nového zákazníka', new_buyer_path %>
+</p>

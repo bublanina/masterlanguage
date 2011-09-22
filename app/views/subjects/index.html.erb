@@ -1,0 +1,38 @@
+<h1>Zoznam kurzov</h1>
+
+<table class="classic">
+  <tr>
+    <th>Názov</th>
+    <th>Lektori</th>
+    <th>Začiatok / <br/>
+    koniec (predpokladaný)</th>
+    <th>Typ</th>
+    <th>Počet hodín</th>
+    <th></th>
+  </tr>
+
+<% @subjects.each do |subject| %>
+  <tr>
+    <td><%= link_to subject.title, subject %></td>
+    <td><% subject.users.each do |user| %>
+    	<%= user.fname.first+". "+user.lname%>
+    	<% if !(subject.users.last==user) %>
+    	<%= ", "%>
+    	<% end %>
+    	<% end %>
+    </td>
+    <td><%=  %></td>
+
+    <td><%= subject.typ %></td>
+    <td><%= subject.how_many_hours %></td>
+    <td>
+    	<%= link_to "Pridaj účastníkov", :controller=>"jobs", :action=>"new_to_subject" , :id=>subject %>
+    	<%= link_to 'Uprav', edit_subject_path(subject) %>||
+    	<%= link_to 'Zmaž', subject, confirm: 'Definitívne zmazať kurz?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>
+<%= link_to 'Pridaj nový kurz', new_subject_path %>
+</p>

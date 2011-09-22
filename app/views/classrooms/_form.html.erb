@@ -1,0 +1,35 @@
+<%= form_for(@classroom) do |f| %>
+  <% if @classroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classroom.errors.count, "error") %> prohibited this classroom from being saved:</h2>
+
+      <ul>
+      <% @classroom.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :názov_miestnosti %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :kapacita %><br />
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :poznámka %><br />
+    <%= f.text_area :note %>
+  </div>
+  Viditeľnosť miestnosti (označ lektorov, ktorí majú k miestnosti prístup):<br/>
+  <% User.all.each do |user| %>
+<%= check_box_tag "classroom[user_ids][]", user.id, @classroom.users.include?(user) %>
+  <%= user.fname.first+". "+user.lname %>
+
+  <% end%>
+  <div class="actions">
+    <%= f.submit "Potvrď" %>
+  </div>
+<% end %>

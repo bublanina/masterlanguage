@@ -1,0 +1,47 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= datetime_select("event", "zaciatok", 
+	:prompt => {:day => 'Deň', 
+	:month => 'Mesiac', 
+	:year => 'Rok'}) %>
+
+
+  <div class="field">
+    <%= f.label :subject_id %><br />
+    <%= f.number_field :subject_id %>
+  </div>
+  <div class="field">
+    <%= f.label :classroom_id %><br />
+    <%= f.number_field :classroom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :popis %><br />
+    <%= f.text_field :popis %>
+  </div>
+  <div class="field">
+    <%= f.label :zastupujuci %><br />
+    <%= f.number_field :zastupujuci %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

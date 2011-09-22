@@ -1,0 +1,21 @@
+
+
+<p>
+  <b>Buyer:</b>
+  <%= @job.buyer_id %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @job.subject_id %>
+</p>
+
+<p>
+  <b>Howmany:</b>
+  <%= @job.persons %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

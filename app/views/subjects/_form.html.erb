@@ -1,0 +1,57 @@
+<%= form_for(@subject) do |f| %>
+  <% if @subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+      <% @subject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Názov:<br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    Typ kurzu:<br />
+     <%= f.radio_button :typ, "firemný" %>firemný
+   <%= f.radio_button :typ, "one-to-one" %>one-to-one
+   <%= f.radio_button :typ, "public" %>public
+     </div>
+  <div class="field">
+    Kapacita:<br />
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="field">
+    Dĺžka výučbovej hodiny(v minútach):<br />
+    <%= f.number_field :mins_per_hour %>
+  </div>
+  <div class="field">
+    Celkový počet výučbových hodín:<br />
+    <%= f.number_field :how_many_hours %>
+  </div>
+  <div class="field">
+    Popis kurzu:<br />
+    <%= f.text_area :info, :cols=>50, :rows=>5 %>
+  </div>
+  
+  <% if admin_signed_in? %>
+  	<div class="field">
+    	Poznámka (vidí len admin):<br />
+    	<%= f.text_area :admin_note %>
+  	</div>
+  <% end %>
+  
+  Lektori vyučujúci tento kurz (označ lektorov, ktorí kurz učia):<br/>
+  <% User.all.each do |user| %>
+	<%= check_box_tag "subject[user_ids][]", user.id, @subject.users.include?(user) %>
+  	<%= user.fname.first+". "+user.lname %>
+  
+	<% end%>  
+  <div class="actions">
+    <%= f.submit "Potvrdiť" %>
+  </div>
+<% end %>

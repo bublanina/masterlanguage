@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  buyer_id: 1
+  subject_id: 1
+  howmany: 1
+  price: 1
+
+two:
+  buyer_id: 1
+  subject_id: 1
+  howmany: 1
+  price: 1

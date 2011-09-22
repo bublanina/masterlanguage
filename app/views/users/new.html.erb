@@ -1,0 +1,48 @@
+<h2>Vytvorenie profilu lektora</h2>
+
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :heslo %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+  
+    <div><%= f.label :meno %><br />
+  <%= f.text_field :fname %></div>
+  
+    <div><%= f.label :priezvisko %><br />
+  <%= f.text_field :lname %></div>
+  
+      <div><%= f.label :telefón %><br />
+  <%= f.text_field :phone %></div>
+  Pracovný pomer: 
+   <%= f.radio_button :prac_pomer, "živnosť" %>živnosť
+   <%= f.radio_button :prac_pomer, "dohoda"%>dohoda
+ 
+  
+    <div><%= f.label :ulica %><br />
+  <%= f.text_field :street %></div>
+  
+    <div><%= f.label :mesto %><br />
+  <%= f.text_field :city %></div>
+  
+    <div><%= f.label :psc %><br />
+  <%= f.text_field :zip %></div>
+  
+    <div><%= f.label :poznámka %><br />
+  <%= f.text_area :info %></div>
+  
+  Priradiť existujúce kurzy (označ kurzy, ktoré bude učiť):<br/>
+  <% Subject.all.each do |subject| %>
+	<%= check_box_tag "user[subject_ids][]", subject.id, @user.subjects.include?(subject) %>
+  	<%= subject.title %>
+  
+	<% end%>  
+  
+  <div><%= f.submit "Vytvor profil" %></div>
+<% end %>

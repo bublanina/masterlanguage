@@ -1,0 +1,33 @@
+<h1>Zoznam miestností</h1>
+
+<table class="classic">
+  <tr>
+    <th>Názov</th>
+    <th>Kapacita</th>
+    <th>Poznámka</th>
+    <th>Viditeľná pre</th>
+    <th></th>
+  </tr>
+
+<% @classrooms.each do |classroom| %>
+  <tr>
+    <td><%= classroom.name %></td>
+    <td><%= classroom.capacity %></td>
+    <td><%= classroom.note %></td>
+    <td><% if classroom.users %>
+    	<% classroom.users.each do |i| %>
+    	<%= i.fname.first+". "+i.lname+", "%>
+    	<% end %>
+    	<% else %>žiadni lektori
+    	<%end%>
+    <td><%= link_to 'Ukáž', classroom %> ||
+    	<%= link_to 'Uprav', edit_classroom_path(classroom) %> ||
+    	<%= link_to 'Zmaž', classroom, confirm: 'Zmazať miestnosť?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<p class="center">
+<%= link_to 'Pridaj novú miestnosť', new_classroom_path %>
+</p>

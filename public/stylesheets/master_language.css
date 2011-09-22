@@ -1,0 +1,193 @@
+
+p {
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 12px;
+}
+p.center {
+    text-align: center;
+    font-size: 12px;
+    }
+body,html {
+    margin: 0;
+    padding: 0;
+}
+html {
+background-color: #abd5c7;
+color: #003344;
+}
+
+body {
+    font-family: Arial;
+    font-size: .9em;
+}
+
+
+
+p.menu {
+    padding-left: 20px;
+}
+
+#main {
+    width: 1050px;
+    max-width: 1050px;
+    min-width: 1050px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+    background: white;
+}
+
+
+#content {
+ 	width: 830px;
+	max-width: 830px;
+    padding: 15px;
+    background: #e0f0b0;
+    padding-bottom: 40px;
+	float: left;
+	min-height: 300px;
+
+}
+
+#right_menu {
+ 	width: 160px;
+	max-width: 160px;
+    padding-left: 10px;
+    background: #fff;
+    padding-bottom: 40px;
+    padding-top: 15px;
+    float: left;
+}
+
+.clr {
+    clear: both;
+}
+
+#footer {
+    background: #0ff;
+    padding: 10px;
+    margin: 3px;
+    background-color: #d3f07a;
+    font-size: .8em;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+
+table {
+    width: 579px;
+    max-width: 579px;
+    border-collapse: separate;
+    border: 1px solid #ffffff;
+}
+
+table t {
+	border-color: silver;
+	text-align: center;
+	    max-width: 579px;
+    width: 579px;
+    border-collapse: separate;
+}
+
+table.classic
+{
+    text-align: center;
+    border-collapse: collapse;
+    max-width: 579px;
+    width: 579px;
+}
+
+table.classic td
+{
+    width: 144px;
+    max-width: 145px;
+    padding-top: 10px;
+}
+
+table.calendar,table.day_rozvrh {
+	max-width: 750px;
+	text-align: center;
+	margin: 1px auto 1px; 
+	border-collapse: collapse;
+	border: 1px;
+	border-style: solid;
+	border-color: black;
+	background-color: white;
+	font-size: 12px;
+}
+table th {
+	font-size: 14px;
+}
+table.calendar,table.day_rozvrh td,th {
+		border: 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+table.day_rozvrh td.riadna {
+	background-color: #cfe5cf;	
+}
+
+
+table.calendar td.no {
+	background-color: #828282;
+}
+
+table.calendar td.weekend {
+	background-color: #ffa290;
+}
+
+table th
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table.message
+{
+    text-align: left;
+    max-width: 579px;
+    width: 579px;
+}
+
+#content a:hover img
+{
+   outline-style: solid;
+   outline-color: yellow;
+}
+
+.redspan
+{
+    color: red;
+}
+
+.greenspan
+{
+    color: green;
+}
+
+.ispan {
+    font-style: italic;
+}
+
+.bspan {
+    font-weight: bold;
+}
+
+h3
+{
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+h4
+{
+    color: red;
+}
+
+h5 {
+    text-align: center;
+    font-size: 13px;
+}
