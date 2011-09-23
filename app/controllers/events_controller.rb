@@ -54,7 +54,7 @@ class EventsController < ApplicationController
     12.times do |i| 
       @starty << Date.today-Date.today.wday+1.day+i.weeks 
     end      
-    @rozvrhy = Event.where(:zaciatok => @start..@start+1.week).order(:zaciatok).group_by(&:user_id)
+    @rozvrhy = Event.where(:zaciatok => @start..(@start+1.week)).order(:zaciatok).group_by(&:user_id)
   end
   
   def podla_miestnosti
