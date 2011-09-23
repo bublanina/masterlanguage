@@ -33,7 +33,6 @@ gem 'validates_timeliness', '~> 3.0.2'
 gem 'ckeditor', '3.5.0'
 gem 'uglifier'
 gem 'dynamic_form'
-gem 'multi_json-1.0.3 '
 
 gem 'therubyracer'
 
