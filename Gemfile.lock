@@ -145,6 +145,8 @@ DEPENDENCIES
   ckeditor (= 3.5.0)
   devise
   dynamic_form
+  execjs
+  libv8
   magic_encoding
   mysql
   mysql2

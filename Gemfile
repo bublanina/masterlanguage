@@ -34,7 +34,9 @@ gem 'ckeditor', '3.5.0'
 gem 'uglifier'
 gem 'dynamic_form'
 
+gem 'execjs'
 gem 'therubyracer'
+gem 'libv8'
 
 
 
