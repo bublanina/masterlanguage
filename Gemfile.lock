@@ -68,7 +68,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
-    mysql (2.8.1)
     mysql2 (0.3.7)
     nested_form (0.1.1)
     net-scp (1.0.4)
@@ -152,7 +151,6 @@ DEPENDENCIES
   execjs
   libv8!
   magic_encoding
-  mysql
   mysql2
   nested_form
   nifty-generators
