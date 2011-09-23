@@ -153,6 +153,7 @@ DEPENDENCIES
   paperclip
   rack
   rails (= 3.1)
+  rake (= 0.9.2)
   rmagick
   sanitize
   therubyracer
