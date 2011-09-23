@@ -47,8 +47,6 @@ namespace :bundler do
     run "if [ -d #{bundle_dir} ]; then rm -rf #{bundle_dir}; fi" # in the event it already exists..?
     run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{bundle_dir}")
     
-    run "cd #{release_path}; RAILS_ENV=production rake assets:precompile"
-    
   end
 
   task :bundle_new_release, :roles => :app do
