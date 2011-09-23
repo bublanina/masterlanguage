@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
-set :whenever_command, "bundle exec whenever"
-
-
 require "bundler/capistrano"
+
+#set :whenever_command, "bundle exec whenever"
+
 
 #default_run_options[:pty] = true
 set :application, "masterlanguage"
