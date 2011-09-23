@@ -8,7 +8,7 @@ gem 'rake', '0.9.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', "0.2.6"
+gem 'mysql2'#, "0.2.6"
 
 gem "rack"
 gem 'rmagick'
@@ -36,7 +36,7 @@ gem 'dynamic_form'
 
 gem 'execjs'
 gem 'therubyracer'
-gem 'libv8', :git=>'git://github.com/fractaloop/libv8.git'
+#gem 'libv8', :git=>'git://github.com/fractaloop/libv8.git'
 
 
 
