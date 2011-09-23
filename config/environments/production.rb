@@ -5,7 +5,7 @@ MasterLanguage::Application.configure do
 config.action_mailer.default_url_options = { :host => 'masterlanguage.free.railshosting.cz' }
 
   # Code is not reloaded between requests
-  config.cache_classes = false
+  config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
@@ -21,7 +21,7 @@ config.action_mailer.default_url_options = { :host => 'masterlanguage.free.rails
   config.assets.compile = false
 
   # Generate digests for assets URLs
-  config.assets.digest = false
+  config.assets.digest = true
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH

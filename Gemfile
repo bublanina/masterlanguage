@@ -34,6 +34,10 @@ gem 'ckeditor', '3.5.0'
 gem 'uglifier'
 gem 'dynamic_form'
 
+group :production do
+  gem 'therubyracer'
+end
+
 
 
 # Use unicorn as the web server
