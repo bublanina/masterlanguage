@@ -21,7 +21,7 @@ config.action_mailer.default_url_options = { :host => 'masterlanguage.free.rails
   config.assets.compile = false
 
   # Generate digests for assets URLs
-  config.assets.digest = true
+  config.assets.digest = false
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
