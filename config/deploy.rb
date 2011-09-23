@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 set :whenever_command, "bundle exec whenever"
-#require "whenever/capistrano"
+
+
+require "bundler/capistrano"
 
 #default_run_options[:pty] = true
 set :application, "masterlanguage"
@@ -38,22 +40,6 @@ namespace :deploy do
 end
 
 
-after "deploy:update_code", "bundler:bundle_new_release"
-namespace :bundler do
-  task :create_symlink, :roles => :app do
-    set :bundle_dir, File.join(release_path, 'vendor/bundle')
-
-    shared_dir = File.join(shared_path, 'bundle')
-    run "if [ -d #{bundle_dir} ]; then rm -rf #{bundle_dir}; fi" # in the event it already exists..?
-    run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{bundle_dir}")
-    
-  end
-
-  task :bundle_new_release, :roles => :app do
-    bundler.create_symlink
-    run "cd #{release_path} ; RB_USER_INSTALL=1 bundle install --path #{bundle_dir} --deployment"
-  end
-end
 
 
 

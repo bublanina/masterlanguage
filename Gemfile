@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 source 'http://github.com'
+source "http://gems.rubyforge.org"
 
 gem 'rails', '3.1'
 gem 'rake', '0.9.2'
