@@ -74,6 +74,7 @@ class EventsController < ApplicationController
     @zaciatok = params[:zac]
     @koniec = @zaciatok + (params[:dlzka]*5).minutes
     @classroom = params[:classroom]
+    @rozvrh = Event.where(:zaciatok => @zaciatok.date..@zaciatok+1.day, :classroom_id=>@classroom).order(:zaciatok)
   end
   
   
