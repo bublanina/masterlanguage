@@ -70,6 +70,12 @@ class EventsController < ApplicationController
     @rozvrhy = Event.where(:zaciatok => @start..@start+1.week).where("classroom_id is not null").order(:zaciatok).group_by(&:classroom_id)
   end
   
+  def planuj_public
+    @zaciatok = params[:zac]
+    @koniec = @zaciatok + (params[:dlzka]*5).minutes
+    @classroom = params[:classroom]
+  end
+  
   
   def new
     @event = Event.new

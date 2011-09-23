@@ -6,6 +6,9 @@ MasterLanguage::Application.routes.draw do
   match '/podla_lektorov' => 'events#podla_lektorov'
   match '/podla_miestnosti' => 'events#podla_miestnosti'
   match '/new_public' => 'events#new_public'
+  match '/planuj_public/:zac/:dlzka' => 'events#planuj_public'
+  match '/planuj_kurz' => 'events#planuj_kurz'
+  
 
   resources :bad_dates
 
