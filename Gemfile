@@ -17,7 +17,7 @@ gem "will_paginate", "~> 3.0.pre2"
 
 gem 'paperclip'#, :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'nifty-generators'
-gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
+gem "nested_form"
 
 
                  
