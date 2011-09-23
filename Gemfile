@@ -35,7 +35,7 @@ gem 'dynamic_form'
 
 gem 'execjs'
 gem 'therubyracer'
-gem 'libv8', :git=>'git://github.com/fractaloop/libv8.git'
+gem 'libv8'
 
 
 
