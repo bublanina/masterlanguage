@@ -35,7 +35,7 @@ gem 'uglifier'
 gem 'dynamic_form'
 
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+
 #gem 'therubyracer'
 #gem 'libv8'
 
