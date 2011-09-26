@@ -1,0 +1,175 @@
+/home/iva/.rvm/rubies/ruby-1.9.2-p136/bin/ruby extconf.rb 
+cat: ../../dist/Linux_All_DBG.OBJ/nspr/Version: No such file or directory
+cd editline; make -f Makefile.ref all
+make[1]: Entering directory `/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey/editline'
+gcc -o Linux_All_DBG.OBJ/editline.o -c -Wall -Wno-format -MMD -DXP_UNIX -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva  -DJSFILE  -DANSI_ARROWS -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT -DSYS_UNIX -DHAVE_STDLIB -DUNIQUE_HISTORY editline.c
+editline.c: In function ‘readline’:
+editline.c:1038: warning: implicit declaration of function ‘getpid’
+editline.c: In function ‘add_history’:
+editline.c:1051: warning: pointer targets in passing argument 2 of ‘strcmp’ differ in signedness
+/usr/include/string.h:142: note: expected ‘const char *’ but argument is of type ‘CHAR *’
+gcc -o Linux_All_DBG.OBJ/sysunix.o -c -Wall -Wno-format -MMD -DXP_UNIX -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva  -DJSFILE  -DANSI_ARROWS -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT -DSYS_UNIX -DHAVE_STDLIB -DUNIQUE_HISTORY sysunix.c
+ar rv Linux_All_DBG.OBJ/libedit.a Linux_All_DBG.OBJ/editline.o Linux_All_DBG.OBJ/sysunix.o
+ar: creating Linux_All_DBG.OBJ/libedit.a
+a - Linux_All_DBG.OBJ/editline.o
+a - Linux_All_DBG.OBJ/sysunix.o
+echo Linux_All_DBG.OBJ/libedit.a
+Linux_All_DBG.OBJ/libedit.a
+make[1]: Leaving directory `/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey/editline'
+make -f Makefile.ref  Linux_All_DBG.OBJ/libjs.a Linux_All_DBG.OBJ/libjs.so Linux_All_DBG.OBJ/js  Linux_All_DBG.OBJ/jsautocfg.h Linux_All_DBG.OBJ/jscpucfg Linux_All_DBG.OBJ/jscpucfg.o
+cat: ../../dist/Linux_All_DBG.OBJ/nspr/Version: No such file or directory
+make[1]: Entering directory `/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey'
+make[1]: Circular jscpucfg.h <- Linux_All_DBG.OBJ/jsautocfg.h dependency dropped.
+gcc -o Linux_All_DBG.OBJ/jscpucfg.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jscpucfg.c
+gcc -o Linux_All_DBG.OBJ/jscpucfg Linux_All_DBG.OBJ/jscpucfg.o
+make[1]: Circular Linux_All_DBG.OBJ/jsautocfg.h <- Linux_All_DBG.OBJ/jsautocfg.h dependency dropped.
+rm -f Linux_All_DBG.OBJ/jsautocfg.h
+Linux_All_DBG.OBJ/jscpucfg > Linux_All_DBG.OBJ/jsautocfg.h
+gcc -o Linux_All_DBG.OBJ/jsapi.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsapi.c
+gcc -o Linux_All_DBG.OBJ/jsarena.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsarena.c
+gcc -o Linux_All_DBG.OBJ/jsarray.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsarray.c
+gcc -o Linux_All_DBG.OBJ/jsatom.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsatom.c
+gcc -o Linux_All_DBG.OBJ/jsbool.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsbool.c
+gcc -o Linux_All_DBG.OBJ/jscntxt.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jscntxt.c
+gcc -o Linux_All_DBG.OBJ/jsdate.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsdate.c
+gcc -o Linux_All_DBG.OBJ/jsdbgapi.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsdbgapi.c
+gcc -o Linux_All_DBG.OBJ/jsdhash.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsdhash.c
+gcc -o Linux_All_DBG.OBJ/jsdtoa.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsdtoa.c
+gcc -o Linux_All_DBG.OBJ/jsemit.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsemit.c
+gcc -o Linux_All_DBG.OBJ/jsexn.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsexn.c
+gcc -o Linux_All_DBG.OBJ/jsfun.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsfun.c
+gcc -o Linux_All_DBG.OBJ/jsgc.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsgc.c
+gcc -o Linux_All_DBG.OBJ/jshash.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jshash.c
+gcc -o Linux_All_DBG.OBJ/jsinterp.o -c -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ   jsinterp.c
+gcc -o Linux_All_DBG.OBJ/jsinvoke.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsinvoke.c
+gcc -o Linux_All_DBG.OBJ/jsiter.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsiter.c
+gcc -o Linux_All_DBG.OBJ/jslock.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jslock.c
+gcc -o Linux_All_DBG.OBJ/jslog2.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jslog2.c
+gcc -o Linux_All_DBG.OBJ/jslong.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jslong.c
+gcc -o Linux_All_DBG.OBJ/jsmath.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsmath.c
+gcc -o Linux_All_DBG.OBJ/jsnum.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsnum.c
+gcc -o Linux_All_DBG.OBJ/jsobj.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsobj.c
+gcc -o Linux_All_DBG.OBJ/jsopcode.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsopcode.c
+gcc -o Linux_All_DBG.OBJ/jsparse.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsparse.c
+gcc -o Linux_All_DBG.OBJ/jsprf.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsprf.c
+gcc -o Linux_All_DBG.OBJ/jsregexp.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsregexp.c
+gcc -o Linux_All_DBG.OBJ/jskwgen.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jskwgen.c
+gcc -o Linux_All_DBG.OBJ/jskwgen -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ   -lm Linux_All_DBG.OBJ/jskwgen.o
+Linux_All_DBG.OBJ/jskwgen Linux_All_DBG.OBJ/jsautokw.h
+gcc -o Linux_All_DBG.OBJ/jsscan.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsscan.c
+gcc -o Linux_All_DBG.OBJ/jsscope.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsscope.c
+gcc -o Linux_All_DBG.OBJ/jsscript.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsscript.c
+gcc -o Linux_All_DBG.OBJ/jsstr.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsstr.c
+gcc -o Linux_All_DBG.OBJ/jsutil.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsutil.c
+gcc -o Linux_All_DBG.OBJ/jsxdrapi.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsxdrapi.c
+gcc -o Linux_All_DBG.OBJ/jsxml.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  jsxml.c
+gcc -o Linux_All_DBG.OBJ/prmjtime.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  prmjtime.c
+ar rv Linux_All_DBG.OBJ/libjs.a Linux_All_DBG.OBJ/jsapi.o Linux_All_DBG.OBJ/jsarena.o Linux_All_DBG.OBJ/jsarray.o Linux_All_DBG.OBJ/jsatom.o Linux_All_DBG.OBJ/jsbool.o Linux_All_DBG.OBJ/jscntxt.o Linux_All_DBG.OBJ/jsdate.o Linux_All_DBG.OBJ/jsdbgapi.o Linux_All_DBG.OBJ/jsdhash.o Linux_All_DBG.OBJ/jsdtoa.o Linux_All_DBG.OBJ/jsemit.o Linux_All_DBG.OBJ/jsexn.o Linux_All_DBG.OBJ/jsfun.o Linux_All_DBG.OBJ/jsgc.o Linux_All_DBG.OBJ/jshash.o Linux_All_DBG.OBJ/jsinterp.o Linux_All_DBG.OBJ/jsinvoke.o Linux_All_DBG.OBJ/jsiter.o Linux_All_DBG.OBJ/jslock.o Linux_All_DBG.OBJ/jslog2.o Linux_All_DBG.OBJ/jslong.o Linux_All_DBG.OBJ/jsmath.o Linux_All_DBG.OBJ/jsnum.o Linux_All_DBG.OBJ/jsobj.o Linux_All_DBG.OBJ/jsopcode.o Linux_All_DBG.OBJ/jsparse.o Linux_All_DBG.OBJ/jsprf.o Linux_All_DBG.OBJ/jsregexp.o Linux_All_DBG.OBJ/jsscan.o Linux_All_DBG.OBJ/jsscope.o Linux_All_DBG.OBJ/jsscript.o Linux_All_DBG.OBJ/jsstr.o Linux_All_DBG.OBJ/jsutil.o Linux_All_DBG.OBJ/jsxdrapi.o Linux_All_DBG.OBJ/jsxml.o Linux_All_DBG.OBJ/prmjtime.o
+ar: creating Linux_All_DBG.OBJ/libjs.a
+a - Linux_All_DBG.OBJ/jsapi.o
+a - Linux_All_DBG.OBJ/jsarena.o
+a - Linux_All_DBG.OBJ/jsarray.o
+a - Linux_All_DBG.OBJ/jsatom.o
+a - Linux_All_DBG.OBJ/jsbool.o
+a - Linux_All_DBG.OBJ/jscntxt.o
+a - Linux_All_DBG.OBJ/jsdate.o
+a - Linux_All_DBG.OBJ/jsdbgapi.o
+a - Linux_All_DBG.OBJ/jsdhash.o
+a - Linux_All_DBG.OBJ/jsdtoa.o
+a - Linux_All_DBG.OBJ/jsemit.o
+a - Linux_All_DBG.OBJ/jsexn.o
+a - Linux_All_DBG.OBJ/jsfun.o
+a - Linux_All_DBG.OBJ/jsgc.o
+a - Linux_All_DBG.OBJ/jshash.o
+a - Linux_All_DBG.OBJ/jsinterp.o
+a - Linux_All_DBG.OBJ/jsinvoke.o
+a - Linux_All_DBG.OBJ/jsiter.o
+a - Linux_All_DBG.OBJ/jslock.o
+a - Linux_All_DBG.OBJ/jslog2.o
+a - Linux_All_DBG.OBJ/jslong.o
+a - Linux_All_DBG.OBJ/jsmath.o
+a - Linux_All_DBG.OBJ/jsnum.o
+a - Linux_All_DBG.OBJ/jsobj.o
+a - Linux_All_DBG.OBJ/jsopcode.o
+a - Linux_All_DBG.OBJ/jsparse.o
+a - Linux_All_DBG.OBJ/jsprf.o
+a - Linux_All_DBG.OBJ/jsregexp.o
+a - Linux_All_DBG.OBJ/jsscan.o
+a - Linux_All_DBG.OBJ/jsscope.o
+a - Linux_All_DBG.OBJ/jsscript.o
+a - Linux_All_DBG.OBJ/jsstr.o
+a - Linux_All_DBG.OBJ/jsutil.o
+a - Linux_All_DBG.OBJ/jsxdrapi.o
+a - Linux_All_DBG.OBJ/jsxml.o
+a - Linux_All_DBG.OBJ/prmjtime.o
+echo Linux_All_DBG.OBJ/libjs.a
+Linux_All_DBG.OBJ/libjs.a
+ld -shared  -o Linux_All_DBG.OBJ/libjs.so Linux_All_DBG.OBJ/jsapi.o Linux_All_DBG.OBJ/jsarena.o Linux_All_DBG.OBJ/jsarray.o Linux_All_DBG.OBJ/jsatom.o Linux_All_DBG.OBJ/jsbool.o Linux_All_DBG.OBJ/jscntxt.o Linux_All_DBG.OBJ/jsdate.o Linux_All_DBG.OBJ/jsdbgapi.o Linux_All_DBG.OBJ/jsdhash.o Linux_All_DBG.OBJ/jsdtoa.o Linux_All_DBG.OBJ/jsemit.o Linux_All_DBG.OBJ/jsexn.o Linux_All_DBG.OBJ/jsfun.o Linux_All_DBG.OBJ/jsgc.o Linux_All_DBG.OBJ/jshash.o Linux_All_DBG.OBJ/jsinterp.o Linux_All_DBG.OBJ/jsinvoke.o Linux_All_DBG.OBJ/jsiter.o Linux_All_DBG.OBJ/jslock.o Linux_All_DBG.OBJ/jslog2.o Linux_All_DBG.OBJ/jslong.o Linux_All_DBG.OBJ/jsmath.o Linux_All_DBG.OBJ/jsnum.o Linux_All_DBG.OBJ/jsobj.o Linux_All_DBG.OBJ/jsopcode.o Linux_All_DBG.OBJ/jsparse.o Linux_All_DBG.OBJ/jsprf.o Linux_All_DBG.OBJ/jsregexp.o Linux_All_DBG.OBJ/jsscan.o Linux_All_DBG.OBJ/jsscope.o Linux_All_DBG.OBJ/jsscript.o Linux_All_DBG.OBJ/jsstr.o Linux_All_DBG.OBJ/jsutil.o Linux_All_DBG.OBJ/jsxdrapi.o Linux_All_DBG.OBJ/jsxml.o Linux_All_DBG.OBJ/prmjtime.o   -lm 
+gcc -o Linux_All_DBG.OBJ/js.o -c -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  js.c
+gcc -o Linux_All_DBG.OBJ/js -Wall -Wno-format -MMD -g3 -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DHAVE_LOCALTIME_R -DX86_LINUX  -DDEBUG -DDEBUG_iva -DEDITLINE -ILinux_All_DBG.OBJ  Linux_All_DBG.OBJ/js.o Linux_All_DBG.OBJ/libjs.a  -lm  \
+	    editline/Linux_All_DBG.OBJ/libedit.a
+make[1]: `Linux_All_DBG.OBJ/jsautocfg.h' is up to date.
+make[1]: `Linux_All_DBG.OBJ/jscpucfg' is up to date.
+make[1]: `Linux_All_DBG.OBJ/jscpucfg.o' is up to date.
+make[1]: Leaving directory `/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey'
+checking for jsautocfg.h in /media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey/Linux_All_DBG.OBJ... yes
+checking for jsapi.h in /media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey... yes
+creating Makefile
+
+make
+gcc -I. -I/home/iva/.rvm/rubies/ruby-1.9.2-p136/include/ruby-1.9.1/i686-linux -I/home/iva/.rvm/rubies/ruby-1.9.2-p136/include/ruby-1.9.1/ruby/backward -I/home/iva/.rvm/rubies/ruby-1.9.2-p136/include/ruby-1.9.1 -I. -I/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey/Linux_All_DBG.OBJ -I/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey -D_FILE_OFFSET_BITS=64  -fPIC -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC -g  -Wall  -Wextra  -Wcast-qual  -Wwrite-strings  -Wconversion  -Wmissing-noreturn  -Winline  -DXP_UNIX  -o context.o -c context.c
+gcc -I. -I/home/iva/.rvm/rubies/ruby-1.9.2-p136/include/ruby-1.9.1/i686-linux -I/home/iva/.rvm/rubies/ruby-1.9.2-p136/include/ruby-1.9.1/ruby/backward -I/home/iva/.rvm/rubies/ruby-1.9.2-p136/include/ruby-1.9.1 -I. -I/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey/Linux_All_DBG.OBJ -I/media/data/NB_projekty/master_language/vendor/bundle/ruby/1.9.1/gems/johnson-1.2.0/vendor/spidermonkey -D_FILE_OFFSET_BITS=64  -fPIC -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC -g  -Wall  -Wextra  -Wcast-qual  -Wwrite-strings  -Wconversion  -Wmissing-noreturn  -Winline  -DXP_UNIX  -o conversions.o -c conversions.c
+In file included from conversions.c:2:
+js_land_proxy.h:11:18: error: node.h: No such file or directory
+In file included from conversions.c:2:
+js_land_proxy.h:17: error: expected specifier-qualifier-list before ‘NODE’
+conversions.c: In function ‘convert_symbol_to_js’:
+conversions.c:33: error: ‘ruby_errinfo’ undeclared (first use in this function)
+conversions.c:33: error: (Each undeclared identifier is reported only once
+conversions.c:33: error: for each function it appears in.)
+conversions.c:34: warning: initialization makes integer from pointer without a cast
+conversions.c:35: error: ‘struct RString’ has no member named ‘len’
+conversions.c: In function ‘convert_regexp_to_js’:
+conversions.c:54: error: ‘ruby_errinfo’ undeclared (first use in this function)
+conversions.c:55: warning: initialization makes integer from pointer without a cast
+conversions.c:60: error: ‘struct RString’ has no member named ‘len’
+conversions.c: In function ‘convert_to_js’:
+conversions.c:75: warning: format not a string literal and no format arguments
+conversions.c:79: warning: format not a string literal and no format arguments
+conversions.c:83: warning: format not a string literal and no format arguments
+conversions.c:86: error: ‘T_BLKTAG’ undeclared (first use in this function)
+conversions.c:87: warning: format not a string literal and no format arguments
+conversions.c:91: warning: format not a string literal and no format arguments
+conversions.c:95: warning: format not a string literal and no format arguments
+conversions.c:98: error: ‘T_VARMAP’ undeclared (first use in this function)
+conversions.c:99: warning: format not a string literal and no format arguments
+conversions.c:116: error: ‘ruby_errinfo’ undeclared (first use in this function)
+conversions.c:116: warning: initialization makes integer from pointer without a cast
+conversions.c:118: error: ‘struct RString’ has no member named ‘len’
+conversions.c:171: warning: format not a string literal and no format arguments
+conversions.c: In function ‘convert_js_string_to_ruby’:
+conversions.c:192: warning: conversion to ‘long int’ from ‘size_t’ may change the sign of the result
+conversions.c: In function ‘convert_regexp_to_ruby’:
+conversions.c:204: error: ‘ruby_errinfo’ undeclared (first use in this function)
+conversions.c:204: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:204: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:204: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c: In function ‘js_value_is_symbol’:
+conversions.c:228: warning: conversion to ‘long unsigned int’ from ‘jsval’ may change the sign of the result
+conversions.c:229: warning: format not a string literal and no format arguments
+conversions.c:233: warning: conversion to ‘long unsigned int’ from ‘jsval’ may change the sign of the result
+conversions.c:234: warning: format not a string literal and no format arguments
+conversions.c: In function ‘convert_to_ruby’:
+conversions.c:262: error: ‘ruby_errinfo’ undeclared (first use in this function)
+conversions.c:262: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:268: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:276: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:278: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:284: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:288: warning: conversion to ‘VALUE’ from ‘JSBool’ may change the sign of the result
+conversions.c:291: warning: format not a string literal and no format arguments
+conversions.c: In function ‘raise_js_error_in_ruby’:
+conversions.c:319: warning: format not a string literal and no format arguments
+conversions.c: In function ‘report_ruby_error_in_js’:
+conversions.c:333: error: ‘ruby_errinfo’ undeclared (first use in this function)
+make: *** [conversions.o] Chyba 1

@@ -1,0 +1,17 @@
+*.so
+*.o
+*.log
+Makefile
+\#.*
+.\#.*
+*.a
+*.exe
+build
+pkg
+tmp
+eproject.cfg
+.eproject
+*.bundle
+.svn
+.DS_Store
+*.gem

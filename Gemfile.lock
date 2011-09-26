@@ -146,6 +146,7 @@ DEPENDENCIES
   devise
   dynamic_form
   execjs
+  libv8
   magic_encoding
   mysql2
   nested_form

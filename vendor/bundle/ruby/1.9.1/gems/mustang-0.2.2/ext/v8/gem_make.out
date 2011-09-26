@@ -1,0 +1,31 @@
+/home/iva/.rvm/rubies/ruby-1.9.2-p136/bin/ruby extconf.rb 
+checking for main() in -lv8... no
+hash: 1: scons: not found
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/iva/.rvm/rubies/ruby-1.9.2-p136/bin/ruby
+	--with-v8lib
+	--without-v8lib
+	--with-v8-dir
+	--without-v8-dir
+	--with-v8-include
+	--without-v8-include=${v8-dir}/include
+	--with-v8-lib
+	--without-v8-lib=${v8-dir}/lib
+extconf.rb:23:in `make_sure_scons_installed!': ERROR: To compile V8 engine you need to install the Scons library! (RuntimeError)
+	from extconf.rb:32:in `compile_vendor_v8!'
+	from extconf.rb:49:in `<main>'

@@ -35,10 +35,12 @@ gem 'uglifier'
 gem 'dynamic_form'
 
 gem 'execjs'
-gem "therubyracer", :require => 'v8'
+gem 'libv8'
+gem "therubyracer"#, :require => 'v8'
+
 
 #gem 'therubyracer'
-#gem 'libv8'
+
 
 
 
