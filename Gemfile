@@ -36,13 +36,7 @@ gem 'dynamic_form'
 
 gem 'execjs'
 gem 'libv8'
-gem "therubyracer"#, :require => 'v8'
-
-
-#gem 'therubyracer'
-
-
-
+gem "therubyracer"
 
 
 # Use unicorn as the web server
