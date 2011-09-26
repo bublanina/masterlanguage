@@ -71,12 +71,18 @@ class EventsController < ApplicationController
   end
   
   def planuj_public
-    @zaciatok = params[:zac]
-    @koniec = @zaciatok + (params[:dlzka]*5).minutes
-    @classroom = params[:classroom]
-    @rozvrh = Event.where(:zaciatok => @zaciatok.date..@zaciatok+1.day, :classroom_id=>@classroom).order(:zaciatok)
+    @zaciatok = DateTime.parse(params[:zac])
+    @koniec = @zaciatok + (params[:dlzka].to_i*5).minutes
+    @classroom = Classroom.find(params[:classroom_id])
+    @rozvrh = Event.where(:zaciatok => @zaciatok.to_date..@zaciatok.to_date+1.day, 
+                          :classroom_id=>@classroom).order(:zaciatok)
+    @udalosti_u = @rozvrh.group_by(&:user_id)
+    @udalosti_c = @rozvrh.group_by(&:classroom_id)
   end
   
+  def pridaj_terminy
+    
+  end
   
   def new
     @event = Event.new
