@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "multi_json/vendor/ok_json" unless defined?(::OkJson)
 
 module MultiJson

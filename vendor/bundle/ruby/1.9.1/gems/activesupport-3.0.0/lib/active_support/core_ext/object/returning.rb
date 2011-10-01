@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Object
   # Returns +value+ after yielding +value+ to the block. This simplifies the
   # process of constructing an object, performing work on the object, and then

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'devise/rails/routes'
 require 'devise/rails/warden_compat'
 

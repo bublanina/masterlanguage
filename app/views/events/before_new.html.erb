@@ -68,10 +68,13 @@ Vyber dátumy k zvolenému kurzu <%= @subject.title %>
 				<td style="width: 2px; max-width: 2px; min-width: 2px;"></td>
 			<% end %>
 		</tr>
-		<% @udalosti.each do |user, events| %>
+		<% User.all.each do |user1| %>
+
 		<tr>
-		<td><%= User.find(user).lname %></td>
+		<td><%= User.find(user1).lname %></td>
 				<% start=Time.parse("7:00") %>
+				<% @udalosti.each do |user,events|%>
+				<% if user==user1 %>
 				<% events.each do |event| %>
 					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
 					<td colspan="<%=n%>" ></td>
@@ -86,10 +89,17 @@ Vyber dátumy k zvolenému kurzu <%= @subject.title %>
 					<td colspan="<%= 156-(n+n2)%>">
 					</td>
 					<% end %>
+				<% end %>					
 				<% end %>
+				<% end %>
+				<% if user1.events.where(:zaciatok=>@detail..@detail+1.day).empty? %>
+				<td colspan="156"><%= link_to "pridaj", :action=>"planuj_public", :zac=>@detail, :dlzka=>@subject.mins_per_hour, :subject_id=>@subject.id %></td>
+				<% end%>
+
 
 				</tr>
 			<% end %>	
+
 		
 	</table>
 <% end %>

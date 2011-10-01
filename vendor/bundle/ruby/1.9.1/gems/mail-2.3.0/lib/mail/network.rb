@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'mail/network/retriever_methods/base'
 
 module Mail

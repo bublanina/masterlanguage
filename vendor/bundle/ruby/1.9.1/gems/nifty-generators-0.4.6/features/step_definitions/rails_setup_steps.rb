@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Given /^a new Rails app$/ do
   FileUtils.mkdir_p("tmp")
   system("rails new tmp/rails_app").should be_true

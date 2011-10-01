@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Necessary monkeypatching to make AR fiber-friendly.
 
 module ActiveRecord

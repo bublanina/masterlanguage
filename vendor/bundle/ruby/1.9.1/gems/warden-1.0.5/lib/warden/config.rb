@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 module Warden
   # This is a class which is yielded on use Warden::Manager. If you have a plugin

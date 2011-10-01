@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Object
   # Returns a hash that maps instance variable names without "@" to their
   # corresponding values. Keys are strings both in Ruby 1.8 and 1.9.

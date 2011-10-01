@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class String
 
   # Form can be either :utc (default) or :local.

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord::Associations::Builder
   class Association #:nodoc:
     class_attribute :valid_options

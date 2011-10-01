@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ### WARNING: there be hax in this file.
 
 require 'rack/session/abstract/id'

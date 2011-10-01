@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'yaml'
 
 YAML.add_builtin_type("omap") do |type, val|

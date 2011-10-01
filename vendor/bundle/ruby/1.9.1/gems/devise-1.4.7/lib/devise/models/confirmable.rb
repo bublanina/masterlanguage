@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   module Models
     # Confirmable is responsible to verify if an account is already confirmed to

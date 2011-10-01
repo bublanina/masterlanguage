@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 @title = 'Users List'
 @users = [
    { 'name'=>'foo', 'mail'=>'foo@mail.com' },

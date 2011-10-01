@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Mysql2
   class Client
     attr_reader :query_options

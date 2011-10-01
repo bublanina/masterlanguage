@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # We represent the various high-level code constructs that appear in Ruby
 # programs: classes, modules, methods, and so on.
 

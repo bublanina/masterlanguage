@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 namespace :test do
   desc "run test suite with aggressive GC"
   task :gc => :build do

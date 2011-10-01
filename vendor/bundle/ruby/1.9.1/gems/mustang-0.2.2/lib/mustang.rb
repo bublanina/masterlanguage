@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'mustang/support/delegated'
 
 require 'mustang/v8'

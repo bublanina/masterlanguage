@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   Inflector.inflections do |inflect|
     inflect.plural(/$/, 's')

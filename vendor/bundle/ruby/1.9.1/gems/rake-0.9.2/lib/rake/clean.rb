@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # The 'rake/clean' file defines two file lists (CLEAN and CLOBBER) and
 # two rake tasks (:clean and :clobber).
 #

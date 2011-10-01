@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 class String #:nodoc:
   def to_crlf
     gsub(/\n|\r\n|\r/) { "\r\n" }

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   def create
     @<%= instance_name %> = <%= class_name %>.new(params[:<%= instance_name %>])
     if @<%= instance_name %>.save

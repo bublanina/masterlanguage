@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Rails::InfoController < ActionController::Base
   def properties
     if consider_all_requests_local? || request.local?

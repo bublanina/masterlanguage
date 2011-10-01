@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 # AR adapter for using a fibered mysql2 connection with EM
 # This adapter should be used within Thin or Unicorn with the rack-fiber_pool middleware.

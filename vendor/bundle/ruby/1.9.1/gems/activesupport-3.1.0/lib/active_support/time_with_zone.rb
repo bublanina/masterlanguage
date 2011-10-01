@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "active_support/values/time_zone"
 require 'active_support/core_ext/object/acts_like'
 require 'active_support/core_ext/object/inclusion'

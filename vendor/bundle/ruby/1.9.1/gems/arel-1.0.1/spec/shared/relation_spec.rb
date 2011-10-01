@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 share_examples_for 'A Relation' do
 
   before :all do

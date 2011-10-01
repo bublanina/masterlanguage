@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # This backports the Ruby 1.9 String interpolation syntax to Ruby 1.8.
 #
 # This backport has been shipped with I18n for a number of versions. Meanwhile

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'thor/parser/argument'
 require 'thor/parser/arguments'
 require 'thor/parser/option'

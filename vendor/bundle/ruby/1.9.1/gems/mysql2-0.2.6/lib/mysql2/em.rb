@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 require 'eventmachine' unless defined? EventMachine
 require 'mysql2' unless defined? Mysql2

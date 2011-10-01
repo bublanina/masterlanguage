@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   require 'i18n'
   require 'active_support/lazy_load_hooks'

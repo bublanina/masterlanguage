@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module NestedForm
   class Builder < ::ActionView::Helpers::FormBuilder
     # Adds a link to insert a new associated records. The first argument is the name of the link, the second is the name of the association.

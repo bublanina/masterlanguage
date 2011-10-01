@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack::Mount
   class Multimap #:nodoc:
     def initialize(default = [])

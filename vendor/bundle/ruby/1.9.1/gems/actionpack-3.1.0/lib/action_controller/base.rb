@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "action_controller/log_subscriber"
 
 module ActionController

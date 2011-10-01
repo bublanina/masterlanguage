@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rails
   class TestUnitRailtie < Rails::Railtie
     config.app_generators do |c|

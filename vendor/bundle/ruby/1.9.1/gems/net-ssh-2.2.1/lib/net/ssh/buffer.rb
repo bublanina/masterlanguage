@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/ruby_compat'
 require 'net/ssh/transport/openssl'
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'RMagick'
 
 #   The Image#find_similar_region searches for a region in the image

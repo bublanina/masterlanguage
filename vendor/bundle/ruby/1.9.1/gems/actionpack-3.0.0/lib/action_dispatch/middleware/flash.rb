@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   class Request
     # Access the contents of the flash. Use <tt>flash["notice"]</tt> to

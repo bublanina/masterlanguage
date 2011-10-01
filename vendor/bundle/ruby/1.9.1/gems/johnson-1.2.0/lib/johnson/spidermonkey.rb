@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 
 # the native SpiderMonkey extension
 require "johnson/spidermonkey/spidermonkey"

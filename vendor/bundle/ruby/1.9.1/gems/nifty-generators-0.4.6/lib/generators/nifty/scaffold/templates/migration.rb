@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Create<%= class_name.pluralize.delete('::') %> < ActiveRecord::Migration
   def self.up
     create_table :<%= table_name || plural_name.split('/').last %> do |t|

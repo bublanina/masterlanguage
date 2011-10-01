@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'time'
 require 'rack/conditionalget'
 require 'rack/mock'

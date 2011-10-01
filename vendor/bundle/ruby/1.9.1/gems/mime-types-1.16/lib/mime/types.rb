@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # vim: ft=ruby encoding=utf-8
 #--
 # MIME::Types

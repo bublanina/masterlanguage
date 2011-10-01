@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 ## $Rev$
 ## $Release: 2.7.0 $

@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 require 'contest'
 require 'tilt'
 require 'erb'

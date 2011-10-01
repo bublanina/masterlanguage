@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Object
   # Alias of <tt>to_s</tt>.
   def to_param

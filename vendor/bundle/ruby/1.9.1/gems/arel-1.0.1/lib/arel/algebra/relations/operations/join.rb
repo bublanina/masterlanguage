@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Join
     include Relation

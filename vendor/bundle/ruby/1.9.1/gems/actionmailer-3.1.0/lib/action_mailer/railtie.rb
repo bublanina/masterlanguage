@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "action_mailer"
 require "rails"
 require "abstract_controller/railties/routes_helpers"

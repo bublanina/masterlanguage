@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'singleton'
 require 'active_model/observer_array'
 require 'active_support/core_ext/array/wrap'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rails/engine'
 require 'active_support/core_ext/array/conversions'
 

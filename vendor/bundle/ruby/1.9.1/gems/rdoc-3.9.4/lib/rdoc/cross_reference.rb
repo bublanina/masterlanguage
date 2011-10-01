@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # RDoc::CrossReference is a reusable way to create cross references for names.
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack
   module Auth
     # Rack::Auth::AbstractHandler implements common authentication functionality.

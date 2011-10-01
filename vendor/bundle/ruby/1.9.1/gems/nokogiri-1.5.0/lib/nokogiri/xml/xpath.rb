@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'nokogiri/xml/xpath/syntax_error'
 
 module Nokogiri

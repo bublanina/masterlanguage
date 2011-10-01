@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #FIXME Remove if ArJdbcMysql will give.
 module ArJdbcMySQL
   class Error < StandardError

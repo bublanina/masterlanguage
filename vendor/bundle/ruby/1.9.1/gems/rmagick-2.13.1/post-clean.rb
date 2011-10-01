@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # delete RMagick documentation created by post-setup.rb
 # doc/*.rb.html
 # doc/ex/* (!rb)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'nokogiri/xslt/stylesheet'
 
 module Nokogiri

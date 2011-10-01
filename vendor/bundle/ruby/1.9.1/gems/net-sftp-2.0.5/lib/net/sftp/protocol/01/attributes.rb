@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/buffer'
 
 module Net; module SFTP; module Protocol; module V01

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'arel/engines/sql/attributes'
 require 'arel/engines/sql/engine'
 require 'arel/engines/sql/relations'

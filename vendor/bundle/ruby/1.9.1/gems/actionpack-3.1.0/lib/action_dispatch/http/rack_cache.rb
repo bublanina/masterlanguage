@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "rack/cache"
 require "rack/cache/context"
 require "active_support/cache"

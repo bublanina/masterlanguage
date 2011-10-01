@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'chronic'
 require 'active_support/all'
 require 'thread'

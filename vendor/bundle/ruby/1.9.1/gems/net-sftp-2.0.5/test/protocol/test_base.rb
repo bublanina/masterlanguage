@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'common'
 
 class Protocol::TestBase < Net::SFTP::TestCase

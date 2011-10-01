@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # This module is intended to be mixed into the ActiveRecord backend to allow
 # storing Ruby Procs as translation values in the database.
 #

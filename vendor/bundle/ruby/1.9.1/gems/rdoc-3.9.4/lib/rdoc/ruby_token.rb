@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #--
 #   irb/ruby-token.rb - ruby tokens
 #   	$Release Version: 0.9.5$

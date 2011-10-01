@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # install RMagick documentation
 
 require 'fileutils'

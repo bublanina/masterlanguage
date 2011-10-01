@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterYear < Repeater #:nodoc:
     YEAR_SECONDS =  31536000  # 365 * 24 * 60 * 60

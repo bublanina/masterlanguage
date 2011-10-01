@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # A section of text that is added to the output document as-is
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   module Notifications
     # This is a default queue implementation that ships with Notifications.

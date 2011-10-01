@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/buffer'
 require 'net/ssh/transport/constants'
 require 'net/ssh/authentication/constants'

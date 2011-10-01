@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Ckeditor::AttachmentsController < Ckeditor::BaseController
 
   def index

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # -*- coding: utf-8 -*-
 # Modify the PATH on windows so that the external DLLs will get loaded.
 

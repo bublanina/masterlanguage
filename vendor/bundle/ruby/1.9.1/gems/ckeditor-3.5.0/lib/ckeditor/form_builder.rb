@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Ckeditor
   module FormBuilder
     def self.included(base)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   def destroy
     @<%= instance_name %> = <%= class_name %>.find(params[:id])
     @<%= instance_name %>.destroy

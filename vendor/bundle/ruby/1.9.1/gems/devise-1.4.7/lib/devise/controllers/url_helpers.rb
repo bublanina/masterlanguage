@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   module Controllers
     # Create url helpers to be used with resource/scope configuration. Acts as

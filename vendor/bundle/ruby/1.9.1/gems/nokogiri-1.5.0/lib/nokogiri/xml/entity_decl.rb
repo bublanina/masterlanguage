@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Nokogiri
   module XML
     class EntityDecl < Nokogiri::XML::Node

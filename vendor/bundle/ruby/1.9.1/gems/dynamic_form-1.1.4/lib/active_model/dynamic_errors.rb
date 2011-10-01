@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveModel
   class Errors
     # Redefine the ActiveModel::Errors::full_messages method:

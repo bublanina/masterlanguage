@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'RMagick'
 
 # Draw a big red Bezier curve on a transparent background.

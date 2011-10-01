@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # You will paginate!
 module WillPaginate
 end

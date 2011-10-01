@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Extensions to +nil+ which allow for more helpful error messages for people who
 # are new to Rails.
 #

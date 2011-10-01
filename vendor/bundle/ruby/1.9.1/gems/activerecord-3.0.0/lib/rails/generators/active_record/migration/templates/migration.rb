@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= migration_class_name %> < ActiveRecord::Migration
   def self.up
 <% attributes.each do |attribute| -%>

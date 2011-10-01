@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/inflector/methods'
 require 'active_support/core_ext/time/publicize_conversion_methods'
 require 'active_support/values/time_zone'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if [nil, "-h", "--help"].include?(ARGV.first)
   $stderr.puts "Usage: rails profiler 'Person.expensive_method(10)' [times] [flat|graph|graph_html]"
   exit(1)

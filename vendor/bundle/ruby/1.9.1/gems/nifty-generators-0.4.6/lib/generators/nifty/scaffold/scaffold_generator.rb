@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'generators/nifty'
 require 'rails/generators/migration'
 require 'rails/generators/generated_attribute'

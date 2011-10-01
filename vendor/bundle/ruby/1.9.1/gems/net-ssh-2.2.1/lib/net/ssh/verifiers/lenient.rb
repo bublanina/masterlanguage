@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/verifiers/strict'
 
 module Net; module SSH; module Verifiers

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   module Controllers
     # Those helpers are convenience methods added to ApplicationController.

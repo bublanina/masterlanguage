@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Ckeditor::Picture < Ckeditor::Asset
   has_attached_file :data,
                     :url  => "/ckeditor_assets/pictures/:id/:style_:basename.:extension",

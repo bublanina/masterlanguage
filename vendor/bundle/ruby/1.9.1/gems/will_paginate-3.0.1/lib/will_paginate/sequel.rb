@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'sequel'
 require 'sequel/extensions/pagination'
 require 'will_paginate/collection'

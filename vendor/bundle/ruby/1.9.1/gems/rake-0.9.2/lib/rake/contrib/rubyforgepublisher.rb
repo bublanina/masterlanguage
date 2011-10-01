@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rake/contrib/sshpublisher'
 
 module Rake

@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 #
 # Thanks to Nicolas Fouché for this wrapper
 #

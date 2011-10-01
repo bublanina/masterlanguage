@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # Manages changes of attributes in a block of text
 

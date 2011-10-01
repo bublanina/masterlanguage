@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'abbrev'
 require 'optparse'
 

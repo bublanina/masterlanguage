@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 require 'will_paginate/active_record'
 require File.expand_path('../activerecord_test_connector', __FILE__)

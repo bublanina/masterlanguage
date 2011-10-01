@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'sprockets/asset_attributes'
 require 'sprockets/bundled_asset'
 require 'sprockets/caching'

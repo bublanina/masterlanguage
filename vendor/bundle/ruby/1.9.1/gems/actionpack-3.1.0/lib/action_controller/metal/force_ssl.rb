@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   # This module provides a method which will redirects browser to use HTTPS
   # protocol. This will ensure that user's sensitive information will be

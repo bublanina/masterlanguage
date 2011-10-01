@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'mail'
 require 'action_mailer/tmail_compat'
 require 'action_mailer/collector'

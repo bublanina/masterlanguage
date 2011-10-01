@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rails/generators/active_record'
 require 'generators/devise/orm_helpers'
 

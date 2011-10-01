@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Optional publish task for Rake
 
 require 'rake/contrib/sshpublisher'

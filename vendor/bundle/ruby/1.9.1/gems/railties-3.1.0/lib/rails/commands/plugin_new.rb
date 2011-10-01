@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if ARGV.first != "new"
   ARGV[0] = "--help"
 else

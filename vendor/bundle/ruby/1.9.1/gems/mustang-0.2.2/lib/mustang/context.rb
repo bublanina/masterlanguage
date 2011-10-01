@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Mustang
   # Raised when file specified to load doesn't exist. 
   class ScriptNotFoundError < Errno::ENOENT 

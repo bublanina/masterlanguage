@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   module Predications
     def not_eq other

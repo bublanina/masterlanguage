@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/object/try'
 require 'action_controller/vendor/html-scanner'
 require 'action_view/helpers/tag_helper'

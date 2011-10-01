@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'capistrano/errors'
 
 module Capistrano

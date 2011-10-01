@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   it "update action should render edit template when model is invalid" do
     <%= class_name %>.any_instance.stubs(:valid?).returns(false)
     put :update, :id => <%= class_name %>.first

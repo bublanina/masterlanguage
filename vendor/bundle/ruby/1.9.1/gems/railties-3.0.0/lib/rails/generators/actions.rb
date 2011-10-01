@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'open-uri'
 require 'active_support/deprecation'
 require 'rbconfig'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Thor
   module Invocation
     def self.included(base) #:nodoc:

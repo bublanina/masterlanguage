@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   context "new action" do
     should "render new template" do
       get :new

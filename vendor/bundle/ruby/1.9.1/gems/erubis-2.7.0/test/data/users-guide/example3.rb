@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'erubis'
 input = File.read('example3.eruby')
 eruby = Erubis::EscapedEruby.new(input)    # or Erubis::XmlEruby

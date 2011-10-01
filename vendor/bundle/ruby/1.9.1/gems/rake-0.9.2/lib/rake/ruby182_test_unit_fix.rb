@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Local Rake override to fix bug in Ruby 0.8.2
 module Test                     # :nodoc:
   # Local Rake override to fix bug in Ruby 0.8.2

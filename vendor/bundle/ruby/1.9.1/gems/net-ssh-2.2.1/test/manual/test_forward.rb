@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #     $ ruby -Ilib -Itest -rrubygems test/test_forward.rb
 
 # Tests for the following patch:

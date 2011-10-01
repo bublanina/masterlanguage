@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
 require 'rack'
 require 'rack/handler/mongrel'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'arel/algebra/core_extensions'
 
 require 'arel/algebra/attributes'

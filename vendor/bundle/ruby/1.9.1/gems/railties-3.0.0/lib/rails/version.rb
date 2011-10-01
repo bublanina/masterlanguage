@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rails
   module VERSION #:nodoc:
     MAJOR = 3

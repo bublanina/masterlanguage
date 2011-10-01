@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ENV["RC_ARCHS"] = "" if RUBY_PLATFORM =~ /darwin/
 
 require "find"

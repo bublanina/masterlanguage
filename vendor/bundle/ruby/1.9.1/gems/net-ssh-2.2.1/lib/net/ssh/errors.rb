@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SSH
   # A general exception class, to act as the ancestor of all other Net::SSH
   # exception classes.

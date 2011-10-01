@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rake/task.rb'
 require 'rake/early_time'
 

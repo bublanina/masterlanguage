@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #  This extension stores translation stub records for missing translations to
 #  the database.
 #

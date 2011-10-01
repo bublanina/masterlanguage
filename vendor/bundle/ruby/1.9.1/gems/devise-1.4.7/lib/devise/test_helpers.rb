@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   # Devise::TestHelpers provides a facility to test controllers in isolation
   # when using ActionController::TestCase allowing you to quickly sign_in or

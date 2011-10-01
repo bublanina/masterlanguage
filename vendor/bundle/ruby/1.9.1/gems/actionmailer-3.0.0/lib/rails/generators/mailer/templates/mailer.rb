@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= class_name %> < ActionMailer::Base
   default :from => "from@example.com"
 <% for action in actions -%>

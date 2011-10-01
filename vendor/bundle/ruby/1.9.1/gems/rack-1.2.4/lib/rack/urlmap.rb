@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack
   # Rack::URLMap takes a hash mapping urls or paths to apps, and
   # dispatches accordingly.  Support for HTTP/1.1 host names exists if

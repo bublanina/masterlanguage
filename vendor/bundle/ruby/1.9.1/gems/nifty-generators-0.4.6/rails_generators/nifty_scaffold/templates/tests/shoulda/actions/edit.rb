@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   context "edit action" do
     should "render edit template" do
       get :edit, :id => <%= class_name %>.first

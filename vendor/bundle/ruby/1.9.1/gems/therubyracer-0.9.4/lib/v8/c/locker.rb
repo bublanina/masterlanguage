@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module V8
   module C
     # Shim to support the old style locking syntax. We don't currently

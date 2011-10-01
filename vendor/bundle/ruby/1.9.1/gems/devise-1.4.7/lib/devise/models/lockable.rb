@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   module Models
     # Handles blocking a user access after a certain number of attempts.

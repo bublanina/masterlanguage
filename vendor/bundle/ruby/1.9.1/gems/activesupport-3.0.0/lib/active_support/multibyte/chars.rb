@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/string/access'
 require 'active_support/core_ext/string/behavior'
 

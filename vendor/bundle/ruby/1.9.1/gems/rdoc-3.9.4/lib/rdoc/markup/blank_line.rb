@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # An empty line.  This class is a singleton.
 

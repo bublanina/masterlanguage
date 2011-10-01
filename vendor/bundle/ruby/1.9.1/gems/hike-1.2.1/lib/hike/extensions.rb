@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'hike/normalized_array'
 
 module Hike

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Value
     attr_reader :value, :relation

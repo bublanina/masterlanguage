@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rails/version'
 if %w(--version -v).include? ARGV.first
   puts "Rails #{Rails::VERSION::STRING}"

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module I18n
   module Locale
   autoload :Fallbacks, 'i18n/locale/fallbacks'

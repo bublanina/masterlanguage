@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Regin
   class Expression < Collection
     attr_reader :ignorecase, :multiline, :extended

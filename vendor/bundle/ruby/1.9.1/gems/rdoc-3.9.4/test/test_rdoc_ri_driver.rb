@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'pp'
 require 'rubygems'
 require 'minitest/autorun'

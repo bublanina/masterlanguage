@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "RMagick"
 
 def draw_centers(img, all_four = true)

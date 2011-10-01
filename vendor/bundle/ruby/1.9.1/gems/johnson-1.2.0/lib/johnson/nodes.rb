@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'johnson/nodes/node'
 require 'johnson/nodes/function'
 require 'johnson/nodes/list'

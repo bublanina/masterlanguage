@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   module Caching
     # Sweepers are the terminators of the caching world and responsible for expiring caches when model objects change.

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Hash
   # Returns a new hash with +self+ and +other_hash+ merged recursively.
   def deep_merge(other_hash)

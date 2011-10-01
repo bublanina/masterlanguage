@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord
   class PredicateBuilder # :nodoc:
     def self.build_from_hash(engine, attributes, default_table)

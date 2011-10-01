@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TestEvents < Test::Unit::TestCase
 
   class Target

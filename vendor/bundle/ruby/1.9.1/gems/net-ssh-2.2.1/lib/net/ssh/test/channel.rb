@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SSH; module Test
 
   # A mock channel, used for scripting actions in tests. It wraps a

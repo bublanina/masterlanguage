@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "test/unit"
 
 # Test::Unit loads a default test if the suite is empty, whose purpose is to

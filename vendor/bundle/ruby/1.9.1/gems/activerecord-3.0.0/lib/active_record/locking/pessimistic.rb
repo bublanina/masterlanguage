@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord
   module Locking
     # Locking::Pessimistic provides support for row-level locking using

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   old_verbose = $VERBOSE
   $VERBOSE = nil

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/loggable'
 
 module Net; module SFTP; module Operations

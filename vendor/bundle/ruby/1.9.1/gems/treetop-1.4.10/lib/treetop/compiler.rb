@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'treetop/ruby_extensions'
 
 require 'treetop/compiler/lexical_address_space'

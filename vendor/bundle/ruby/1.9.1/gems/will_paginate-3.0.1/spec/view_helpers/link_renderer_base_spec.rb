@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 require 'will_paginate/view_helpers/link_renderer_base'
 require 'will_paginate/collection'

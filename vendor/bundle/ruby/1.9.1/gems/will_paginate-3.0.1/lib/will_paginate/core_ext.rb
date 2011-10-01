@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'set'
 
 # copied from ActiveSupport so we don't depend on it

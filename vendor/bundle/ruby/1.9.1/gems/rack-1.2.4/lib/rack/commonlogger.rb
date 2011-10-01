@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack
   # Rack::CommonLogger forwards every request to an +app+ given, and
   # logs a line in the Apache common log format to the +logger+, or

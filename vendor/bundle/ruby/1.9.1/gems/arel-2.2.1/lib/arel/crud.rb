@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   ###
   # FIXME hopefully we can remove this

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionMailer
   module TestHelper
     extend ActiveSupport::Concern

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 =begin
   poparser.rb - Generate a .mo
 

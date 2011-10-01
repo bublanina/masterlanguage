@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Ckeditor::Picture < Ckeditor::Asset
   has_attachment :content_type => :image, 
                  :storage => :file_system, :path_prefix => 'public/assets/pictures',

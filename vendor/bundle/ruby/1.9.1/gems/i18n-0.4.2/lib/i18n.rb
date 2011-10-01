@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 # Authors::   Sven Fuchs (http://www.artweb-design.de),
 #             Joshua Harvey (http://www.workingwithrails.com/person/759-joshua-harvey),

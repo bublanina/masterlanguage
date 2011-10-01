@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/array/extract_options'
 require 'active_support/core_ext/kernel/singleton_class'

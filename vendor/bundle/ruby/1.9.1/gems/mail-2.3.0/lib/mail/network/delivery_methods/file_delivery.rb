@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Mail
   
   # FileDelivery class delivers emails into multiple files based on the destination

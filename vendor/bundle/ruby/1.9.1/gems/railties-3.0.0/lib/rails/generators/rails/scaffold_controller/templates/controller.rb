@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= controller_class_name %>Controller < ApplicationController
   # GET <%= route_url %>
   # GET <%= route_url %>.xml

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Ckeditor::Asset < ActiveRecord::Base
   set_table_name "ckeditor_assets"
   

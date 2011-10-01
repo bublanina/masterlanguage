@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Treetop #:nodoc:
   module VERSION #:nodoc:
     MAJOR = 1

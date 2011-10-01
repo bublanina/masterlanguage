@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/showstatus'
 require 'rack/mock'
 

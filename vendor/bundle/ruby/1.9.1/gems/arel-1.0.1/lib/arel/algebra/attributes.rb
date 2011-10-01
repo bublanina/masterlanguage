@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "arel/algebra/attributes/attribute"
 require "arel/algebra/attributes/boolean"
 require "arel/algebra/attributes/decimal"

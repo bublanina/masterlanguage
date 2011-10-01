@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/hash/reverse_merge'
 require 'active_support/file_update_checker'
 require 'fileutils'

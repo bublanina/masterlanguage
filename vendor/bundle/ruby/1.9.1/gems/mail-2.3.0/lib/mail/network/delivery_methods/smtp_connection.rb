@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Mail
   # == Sending Email with SMTP
   # 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'date'
 require 'active_support/duration'
 require 'active_support/core_ext/object/acts_like'

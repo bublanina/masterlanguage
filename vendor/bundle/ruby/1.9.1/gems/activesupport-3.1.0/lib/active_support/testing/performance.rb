@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'fileutils'
 require 'rails/version'
 require 'active_support/concern'

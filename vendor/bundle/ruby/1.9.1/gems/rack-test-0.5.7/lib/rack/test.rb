@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "uri"
 require "rack"
 require "rack/mock_session"

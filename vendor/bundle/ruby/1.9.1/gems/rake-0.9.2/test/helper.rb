@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rubygems'
 require 'minitest/unit'
 require 'flexmock/test_unit_integration'

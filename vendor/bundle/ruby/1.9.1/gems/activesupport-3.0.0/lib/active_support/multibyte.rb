@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/module/attribute_accessors'
 
 module ActiveSupport #:nodoc:

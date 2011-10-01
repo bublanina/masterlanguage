@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 
 # Try loading mongoid and connecting. Otherwise, abort and skip spec.

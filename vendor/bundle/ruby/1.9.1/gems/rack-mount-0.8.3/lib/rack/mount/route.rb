@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/mount/generatable_regexp'
 require 'rack/mount/regexp_with_named_groups'
 require 'rack/mount/utils'

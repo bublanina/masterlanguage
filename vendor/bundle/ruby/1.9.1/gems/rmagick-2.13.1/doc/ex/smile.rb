@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #! /usr/local/bin/ruby -w
 # RMagick version of ImageMagick's "smile.c" example program.
 

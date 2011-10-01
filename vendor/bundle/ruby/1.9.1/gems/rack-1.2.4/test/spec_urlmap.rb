@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/urlmap'
 require 'rack/mock'
 

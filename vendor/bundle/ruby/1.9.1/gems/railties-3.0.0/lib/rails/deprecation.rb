@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "active_support/string_inquirer"
 require "active_support/basic_object"
 

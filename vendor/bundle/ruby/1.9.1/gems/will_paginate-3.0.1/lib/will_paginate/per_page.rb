@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module WillPaginate
   module PerPage
     def per_page

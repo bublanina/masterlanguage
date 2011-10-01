@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Ordering < Struct.new(:attribute)
     delegate :relation, :to => :attribute

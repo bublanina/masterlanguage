@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ENV['RDOC_TEST'] = 'yes'
 
 require 'rubygems'

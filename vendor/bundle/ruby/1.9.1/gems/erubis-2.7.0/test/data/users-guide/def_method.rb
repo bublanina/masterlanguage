@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'erubis'
 s = "hello <%= name %>"
 eruby = Erubis::Eruby.new(s)

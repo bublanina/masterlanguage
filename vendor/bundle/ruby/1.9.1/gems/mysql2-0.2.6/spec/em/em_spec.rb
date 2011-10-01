@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# -*- encoding : utf-8 -*-
 if defined? EventMachine
   require 'spec_helper'
   require 'mysql2/em'

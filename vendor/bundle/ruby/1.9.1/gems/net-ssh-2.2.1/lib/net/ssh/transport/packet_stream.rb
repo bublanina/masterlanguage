@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/buffered_io'
 require 'net/ssh/errors'
 require 'net/ssh/packet'

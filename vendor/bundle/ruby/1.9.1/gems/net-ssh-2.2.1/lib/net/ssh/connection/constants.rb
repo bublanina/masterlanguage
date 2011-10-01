@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SSH; module Connection
 
   # Definitions of constants that are specific to the connection layer of the

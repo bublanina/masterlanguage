@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # A horizontal rule with a weight
 

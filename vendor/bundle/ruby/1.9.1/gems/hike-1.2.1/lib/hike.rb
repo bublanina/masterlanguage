@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Hike
   VERSION = "1.2.0"
 

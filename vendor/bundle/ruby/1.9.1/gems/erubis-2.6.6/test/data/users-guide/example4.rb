@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'erubis'
 input = File.read('example4.eruby')
 eruby = Erubis::Eruby.new(input, :pattern=>'<!--% %-->')

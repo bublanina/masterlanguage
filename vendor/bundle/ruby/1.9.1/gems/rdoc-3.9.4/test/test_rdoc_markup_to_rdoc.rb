@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rubygems'
 require 'rdoc/markup/text_formatter_test_case'
 require 'rdoc/markup/to_rdoc'

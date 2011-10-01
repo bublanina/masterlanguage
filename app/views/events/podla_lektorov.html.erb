@@ -51,7 +51,8 @@ Rozvrhy lektorov pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.day
 					<% n2=event.subject.mins_per_hour/5 %>
 					<% trieda=event.status %>
 					<td class="<%=trieda%>" colspan="<%=n2%>" >
-						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.") %>
+						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.")+"-"+(event.zaciatok+event.subject.mins_per_hour.minutes).strftime("%H:%M") %>
+						<%= event.classroom.name %>
 					</td>
 
 					<% start=event.zaciatok+event.subject.mins_per_hour.minutes %>

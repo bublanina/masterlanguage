@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack
   # A multipart form data parser, adapted from IOWA.
   #

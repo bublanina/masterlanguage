@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   class RemoteIp
     class IpSpoofAttackError < StandardError ; end

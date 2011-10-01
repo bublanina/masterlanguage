@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionMailer
   module AdvAttrAccessor #:nodoc:
     def adv_attr_accessor(name, deprecation=nil)

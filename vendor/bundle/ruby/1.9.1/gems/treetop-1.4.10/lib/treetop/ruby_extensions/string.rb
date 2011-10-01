@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class String
   def column_of(index)
     return 1 if index == 0

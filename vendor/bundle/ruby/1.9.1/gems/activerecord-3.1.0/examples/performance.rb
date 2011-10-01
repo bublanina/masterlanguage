@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 TIMES = (ENV['N'] || 10000).to_i
 
 require 'rubygems'

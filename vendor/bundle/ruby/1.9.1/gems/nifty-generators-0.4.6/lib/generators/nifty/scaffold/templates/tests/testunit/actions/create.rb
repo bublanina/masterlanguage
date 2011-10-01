@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   def test_create_invalid
     <%= class_name %>.any_instance.stubs(:valid?).returns(false)
     post :create

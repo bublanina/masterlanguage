@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   class AbstractRenderer #:nodoc:
     delegate :find_template, :template_exists?, :with_fallbacks, :update_details,

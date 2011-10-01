@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'orm_adapter/base'
 require 'orm_adapter/to_adapter'
 require 'orm_adapter/version'

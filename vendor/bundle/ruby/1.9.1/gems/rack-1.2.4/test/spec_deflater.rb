@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'stringio'
 require 'time'  # for Time#httpdate
 require 'rack/deflater'

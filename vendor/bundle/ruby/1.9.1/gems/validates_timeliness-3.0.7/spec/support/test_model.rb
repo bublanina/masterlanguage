@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module TestModel
   extend ActiveSupport::Concern
   extend ActiveModel::Translation

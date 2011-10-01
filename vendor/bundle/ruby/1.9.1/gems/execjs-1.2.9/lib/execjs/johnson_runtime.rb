@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ExecJS
   class JohnsonRuntime
     class Context

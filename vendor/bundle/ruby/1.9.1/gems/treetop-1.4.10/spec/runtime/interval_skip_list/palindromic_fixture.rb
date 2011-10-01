@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module PalindromicFixtureSharedContext
   extend RSpec::Core::SharedContext
   include IntervalSkipListSpecHelper

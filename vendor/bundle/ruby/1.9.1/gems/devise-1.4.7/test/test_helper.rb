@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ENV["RAILS_ENV"] = "test"
 DEVISE_ORM = (ENV["DEVISE_ORM"] || :active_record).to_sym
 

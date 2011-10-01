@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # An item within a List that contains paragraphs, headings, etc.
 

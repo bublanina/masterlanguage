@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'multimap'
 
 # NestedMultimap allows values to be assoicated with a nested

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 When /^I run "([^\"]*)"$/ do |command|
   system("cd #{@current_directory} && #{command}").should be_true
 end

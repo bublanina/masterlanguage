@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rspec'
 require './spec/support/with_exitstatus'
 require './spec/support/stub_os'

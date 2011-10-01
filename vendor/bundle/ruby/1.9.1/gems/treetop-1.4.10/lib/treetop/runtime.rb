@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'treetop/ruby_extensions'
 
 require 'treetop/runtime/compiled_parser'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Devise::OmniauthCallbacksController < ApplicationController
   include Devise::Controllers::InternalHelpers
 

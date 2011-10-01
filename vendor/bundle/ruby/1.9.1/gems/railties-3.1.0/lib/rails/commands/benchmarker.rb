@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'optparse'
 require 'rails/test_help'
 require 'rails/performance_test_help'

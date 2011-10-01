@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/content_length'
 
 describe Rack::ContentLength do

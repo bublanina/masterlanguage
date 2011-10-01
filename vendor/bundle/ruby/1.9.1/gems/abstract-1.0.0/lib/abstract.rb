@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 ## $Rev: 1 $
 ## $Release: 1.0.0 $

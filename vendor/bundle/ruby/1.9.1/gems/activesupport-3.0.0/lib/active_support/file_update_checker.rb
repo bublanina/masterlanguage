@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   # This class is responsible to track files and invoke the given block
   # whenever one of these files are changed. For example, this class

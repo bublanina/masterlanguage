@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   class BestStandardsSupport
     def initialize(app, type = true)

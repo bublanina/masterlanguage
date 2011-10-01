@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Common setup for all test files.
 
 begin

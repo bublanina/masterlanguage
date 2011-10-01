@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Capistrano
   class CLI
     module Help

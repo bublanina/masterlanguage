@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Make double-sure the RAILS_ENV is set to test,
 # so fixtures are loaded to the right database
 abort("Abort testing: Your Rails environment is not running in test mode!") unless Rails.env.test?

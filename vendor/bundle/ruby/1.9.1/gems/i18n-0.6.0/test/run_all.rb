@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 def bundle_check
   `bundle check` == "The Gemfile's dependencies are satisfied\n"
 end

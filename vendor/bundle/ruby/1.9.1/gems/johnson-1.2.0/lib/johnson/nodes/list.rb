@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Johnson
   module Nodes
     LIST_NODES = %w{

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SSH; module Verifiers
 
   # The Null host key verifier simply allows every key it sees, without

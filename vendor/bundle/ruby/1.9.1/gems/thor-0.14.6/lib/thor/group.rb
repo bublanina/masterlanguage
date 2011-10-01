@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'thor/base'
 
 # Thor has a special class called Thor::Group. The main difference to Thor class

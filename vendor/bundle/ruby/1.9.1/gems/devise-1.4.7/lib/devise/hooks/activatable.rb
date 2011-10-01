@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Deny user access whenever his account is not active yet. All strategies that inherits from
 # Devise::Strategies::Authenticatable and uses the validate already check if the user is active_for_authentication?
 # before actively signing him in. However, we need this as hook to validate the user activity

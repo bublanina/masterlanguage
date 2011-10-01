@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/loggable'
 require 'net/ssh/connection/constants'
 require 'net/ssh/connection/term'

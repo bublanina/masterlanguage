@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #--
 # Copyright (c) 2003, 2004 Jim Weirich, 2009 Eric Hodel
 #

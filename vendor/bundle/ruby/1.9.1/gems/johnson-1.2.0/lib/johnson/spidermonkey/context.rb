@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Johnson #:nodoc:
   module SpiderMonkey #:nodoc:
     class Context # native

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterMinute < Repeater #:nodoc:
     MINUTE_SECONDS = 60

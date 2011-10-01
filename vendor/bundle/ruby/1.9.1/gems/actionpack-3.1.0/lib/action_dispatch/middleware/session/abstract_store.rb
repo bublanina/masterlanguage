@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/utils'
 require 'rack/request'
 require 'rack/session/abstract/id'

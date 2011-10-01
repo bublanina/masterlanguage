@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
 require File.expand_path('../testrequest', __FILE__)
 require 'rack/handler/cgi'

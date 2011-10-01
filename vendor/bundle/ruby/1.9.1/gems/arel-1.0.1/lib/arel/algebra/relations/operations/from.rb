@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class From < Compound
     attr_reader :sources

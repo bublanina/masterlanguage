@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Regin
   class Group
     attr_reader :expression, :quantifier, :lookahead, :capture, :index, :name

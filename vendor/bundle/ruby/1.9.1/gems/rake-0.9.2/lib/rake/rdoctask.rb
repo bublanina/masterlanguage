@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # rake/rdoctask is deprecated in favor of rdoc/task
 
 warn 'rake/rdoctask is deprecated.  Use rdoc/task instead (in RDoc 2.4.2+)'

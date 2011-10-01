@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ValidatesTimeliness
   module Extensions
     autoload :DateTimeSelect,        'validates_timeliness/extensions/date_time_select'

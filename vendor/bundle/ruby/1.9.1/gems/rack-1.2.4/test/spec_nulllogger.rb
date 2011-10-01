@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/nulllogger'
 
 describe Rack::NullLogger do

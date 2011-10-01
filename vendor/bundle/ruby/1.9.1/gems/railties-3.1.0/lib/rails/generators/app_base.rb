@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'digest/md5'
 require 'active_support/secure_random'
 require 'active_support/core_ext/string/strip'

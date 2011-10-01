@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'runtime/interval_skip_list/spec_helper'
 
 describe IntervalSkipList, :palindromic => true do

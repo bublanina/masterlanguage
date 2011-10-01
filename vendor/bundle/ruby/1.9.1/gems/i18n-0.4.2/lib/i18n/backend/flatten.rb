@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module I18n
   module Backend
     # This module contains several helpers to assist flattening translations.

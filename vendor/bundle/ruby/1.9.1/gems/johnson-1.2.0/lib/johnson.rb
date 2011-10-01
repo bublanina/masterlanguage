@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "generator"
 
 # the 'public' interface

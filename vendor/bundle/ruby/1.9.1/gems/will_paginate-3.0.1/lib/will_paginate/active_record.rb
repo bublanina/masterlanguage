@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'will_paginate/per_page'
 require 'will_paginate/page_number'
 require 'will_paginate/collection'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SFTP; module Protocol; module V01
 
   # Represents a single named item on the remote server. This includes the

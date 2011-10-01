@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Kernel
   unless respond_to?(:debugger)
     # Starts a debugging session if ruby-debug has been loaded (call rails server --debugger to do load it).

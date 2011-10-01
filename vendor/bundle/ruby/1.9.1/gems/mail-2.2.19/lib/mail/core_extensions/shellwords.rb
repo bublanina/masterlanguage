@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # The following is imported from ruby 1.9.2 shellwords.rb
 #
 module Shellwords

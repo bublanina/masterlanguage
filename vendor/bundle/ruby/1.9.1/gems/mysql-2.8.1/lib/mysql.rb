@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # support multiple ruby version (fat binaries under windows)
 begin
   require 'mysql_api'

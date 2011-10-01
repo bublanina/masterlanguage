@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- encoding : utf-8 -*-
 require "#{File.dirname(__FILE__)}/../redjs_helper.rb"
 
 describe "Ruby Javascript API" do

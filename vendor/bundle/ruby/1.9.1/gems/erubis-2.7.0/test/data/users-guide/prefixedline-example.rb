@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'erubis'
 
 class PrefixedLineEruby < Erubis::Eruby

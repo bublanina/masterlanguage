@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/head'
 require 'rack/mock'
 

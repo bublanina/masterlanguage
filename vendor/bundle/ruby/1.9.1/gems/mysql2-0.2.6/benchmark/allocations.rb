@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# -*- encoding : utf-8 -*-
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 raise Mysql2::Mysql2Error.new("GC allocation benchmarks only supported on Ruby 1.9!") unless RUBY_VERSION =~ /1\.9/

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 
 describe ValidatesTimeliness::Validator, ":is_at option" do

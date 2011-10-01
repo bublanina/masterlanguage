@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class String
   # Enable more predictable duck-typing on String-like classes. See
   # Object#acts_like?.

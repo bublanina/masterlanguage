@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "action_dispatch/http/mime_type"
 
 module AbstractController

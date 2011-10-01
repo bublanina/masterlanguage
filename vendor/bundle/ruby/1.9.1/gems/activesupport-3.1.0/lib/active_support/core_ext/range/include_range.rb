@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Range
   # Extends the default Range#include? to support range comparisons.
   #  (1..5).include?(1..5) # => true

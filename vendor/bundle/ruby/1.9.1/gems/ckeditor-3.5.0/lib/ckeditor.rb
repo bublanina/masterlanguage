@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Ckeditor
   autoload :ViewHelper,        'ckeditor/view_helper'
   autoload :FormBuilder,       'ckeditor/form_builder'

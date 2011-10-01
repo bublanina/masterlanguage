@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Warden::Mixins::Common
   def request
     @request ||= ActionDispatch::Request.new(env)

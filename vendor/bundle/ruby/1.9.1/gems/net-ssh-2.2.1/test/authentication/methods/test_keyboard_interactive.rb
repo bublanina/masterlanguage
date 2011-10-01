@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'common'
 require 'net/ssh/authentication/methods/keyboard_interactive'
 require 'authentication/methods/common'

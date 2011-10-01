@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # ---------------------------------------------------------------------------
 #
 # This script validates the generated guides against the W3C Validator.

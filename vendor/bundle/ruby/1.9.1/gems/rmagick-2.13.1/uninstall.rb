@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # uninstall RMagick - called from Makefile uninstall target
 
 require 'fileutils'

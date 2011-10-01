@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if RUBY_VERSION < '1.8.7'
   desc = defined?(RUBY_DESCRIPTION) ? RUBY_DESCRIPTION : "ruby #{RUBY_VERSION} (#{RUBY_RELEASE_DATE})"
   abort <<-end_message

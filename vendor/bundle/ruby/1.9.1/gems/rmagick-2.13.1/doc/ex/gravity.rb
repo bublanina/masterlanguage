@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #! /usr/local/bin/ruby -w
 #
 #   A RMagick version of Magick++/demo/gravity.cpp

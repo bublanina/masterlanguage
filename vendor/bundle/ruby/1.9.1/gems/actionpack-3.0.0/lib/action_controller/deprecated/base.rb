@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   class Base
     # Deprecated methods. Wrap them in a module so they can be overwritten by plugins

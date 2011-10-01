@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'thor/actions/create_file'
 
 class Thor

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= user_plural_class_name %>Controller < ApplicationController
   def new
     @<%= user_singular_name %> = <%= user_class_name %>.new

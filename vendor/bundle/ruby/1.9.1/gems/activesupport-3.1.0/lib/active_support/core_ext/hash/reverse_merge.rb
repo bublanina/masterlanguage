@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Hash
   # Merges the caller into +other_hash+. For example,
   #

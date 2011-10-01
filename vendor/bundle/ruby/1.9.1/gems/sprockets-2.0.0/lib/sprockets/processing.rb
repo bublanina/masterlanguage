@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'sprockets/engines'
 require 'sprockets/mime'
 require 'sprockets/processor'

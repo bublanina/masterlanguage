@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Thor
   class Option < Argument #:nodoc:
     attr_reader :aliases, :group, :lazy_default

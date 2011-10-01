@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   # Implements a way of adding different encryptions.
   # The class should implement a self.digest method that taks the following params:

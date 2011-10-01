@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "johnson"
 require "johnson/cli/options"
 

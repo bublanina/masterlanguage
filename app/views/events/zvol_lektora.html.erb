@@ -1,0 +1,33 @@
+<h2>Zvoľ lektora k daným hodinám</h2>
+<%= form_tag :action=>"pridaj_terminy" do |f| %>
+
+Lektor: <%= select_tag(:user_id, options_from_collection_for_select(@event.subject.users, :id, :lname)) %><br/>
+Začiatok lekcie:<%= @event.zaciatok.strftime("%d.%m.%y, %H:%M") %><br />
+
+Kurz:<%= @event.subject.title %><br />
+<%= hidden_field_tag :subject_id,"", :value=>@event.subject.id %>
+Miestnosť:<%= @event.classroom.name %>
+<%= hidden_field_tag :classroom_id,"", :value=>@event.classroom.id %>
+<% end %>
+<%= hidden_field_tag :zaciatok, "", :value=>@event.zaciatok %>
+<p>
+Hodinu opakuj (bez prvej):<br />
+<% if params[:kolko]=="nie" %>neopakuj<br />
+<% elsif params[:kolko]== "vsetky" %>až do konca kurzu (kým sa neminú všetky hodiny)<br />
+<% elsif params[:kolko]=="polovica" %>do polovice kurzu (rozloží sa max.50% z nenaplánovaných kurzových hodín)<br />
+<% else %><%= params[:kolko] %>-krát<br /><br />
+<%end%>
+<% if params[:kolko]!="nie" %>
+Hodinu opakovať s periódou:<br/>
+<% if params[:opakovat]=="2" %>2 dni mimo SO,NE (s tým, že podľa prvého týždňa sa nastavia ďalšie)<br/>
+<% elsif params[:opakovat]=="3" %>3 dni mimo SO,NE (s tým, že podľa prvého týždňa sa nastavia ďalšie)<br/>
+<% elsif params[:opakovat]=="7" %>1 týždeň<br />
+<% elsif params[:opakovat]=="14" %>2 týždne<br />
+<% end %>
+<% end %>
+<% end %>
+</p>
+<p>
+<%= submit_tag "Vytvor" %>
+</p>
+<% end %>

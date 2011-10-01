@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/time_with_zone'
 
 class Time

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'devise/strategies/rememberable'
 require 'devise/hooks/rememberable'
 require 'devise/hooks/forgetable'

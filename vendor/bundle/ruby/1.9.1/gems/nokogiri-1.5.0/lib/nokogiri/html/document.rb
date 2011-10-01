@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Nokogiri
   module HTML
     class Document < Nokogiri::XML::Document

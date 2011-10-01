@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'uri'
 require 'rack/cache/metastore'
 require 'rack/cache/entitystore'

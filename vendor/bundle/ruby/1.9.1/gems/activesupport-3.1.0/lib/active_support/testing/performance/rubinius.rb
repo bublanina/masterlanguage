@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rubinius/agent'
 
 module ActiveSupport

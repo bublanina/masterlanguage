@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView #:nodoc:
   # = Action View Raw Output Helper
   module Helpers #:nodoc:

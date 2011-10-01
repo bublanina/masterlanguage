@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #!/usr/bin/env ruby
 
 # The 'rake/clean' file defines two file lists (CLEAN and CLOBBER) and

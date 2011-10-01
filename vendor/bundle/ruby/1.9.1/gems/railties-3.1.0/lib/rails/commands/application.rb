@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rails/version'
 
 if ['--version', '-v'].include?(ARGV.first)

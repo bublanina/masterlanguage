@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Matchers
   class DisambiguateAttributes
     def initialize(attributes)

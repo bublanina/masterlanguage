@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   class ClosedError < StandardError #:nodoc:
     def initialize(kind)

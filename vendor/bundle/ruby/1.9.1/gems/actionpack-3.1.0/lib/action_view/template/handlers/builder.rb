@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   module Template::Handlers
     class Builder

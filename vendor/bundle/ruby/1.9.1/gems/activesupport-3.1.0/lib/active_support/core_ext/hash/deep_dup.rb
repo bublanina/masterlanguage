@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Hash
   # Returns a deep copy of hash.
   def deep_dup

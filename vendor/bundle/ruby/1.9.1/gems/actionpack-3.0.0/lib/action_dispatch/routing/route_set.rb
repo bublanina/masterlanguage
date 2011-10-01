@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/mount'
 require 'forwardable'
 require 'active_support/core_ext/object/to_query'

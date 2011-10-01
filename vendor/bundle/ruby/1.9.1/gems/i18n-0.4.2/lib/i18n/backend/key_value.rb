@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 require 'i18n/backend/base'
 require 'active_support/json'

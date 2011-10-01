@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Row
     attr_reader :tuple, :relation

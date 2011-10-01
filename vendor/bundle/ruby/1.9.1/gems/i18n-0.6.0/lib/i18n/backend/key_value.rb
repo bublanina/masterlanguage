@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'i18n/backend/base'
 require 'active_support/json'
 require 'active_support/ordered_hash' # active_support/json/encoding uses ActiveSupport::OrderedHash but does not require it

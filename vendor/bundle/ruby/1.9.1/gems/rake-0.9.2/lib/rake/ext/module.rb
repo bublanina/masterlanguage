@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rake/ext/core'
 require 'rake/task'
 require 'rake/file_task'

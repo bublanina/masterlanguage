@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/transport/hmac/abstract'
 
 module Net::SSH::Transport::HMAC

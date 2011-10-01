@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'sprockets/eco_template'
 require 'sprockets/ejs_template'
 require 'sprockets/jst_processor'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Whenever
   class Job
     attr_reader :at

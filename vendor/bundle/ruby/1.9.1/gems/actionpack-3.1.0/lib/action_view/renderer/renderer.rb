@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   # This is the main entry point for rendering. It basically delegates
   # to other objects like TemplateRenderer and PartialRenderer which

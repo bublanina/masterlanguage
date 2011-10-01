@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord::Associations::Builder
   class SingularAssociation < Association #:nodoc:
     self.valid_options += [:remote, :dependent, :counter_cache, :primary_key, :inverse_of]

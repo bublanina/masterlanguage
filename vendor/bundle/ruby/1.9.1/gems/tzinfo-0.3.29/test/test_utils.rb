@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Kernel
   # Suppresses any warnings raised in a specified block.
   def without_warnings

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # A typical module looks like this
 #
 #   module M

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 puts "Using native Oracle"
 require "active_record"
 require 'logger'

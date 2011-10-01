@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Process
   def self.daemon(nochdir = nil, noclose = nil)
     exit if fork                     # Parent exits, child continues.

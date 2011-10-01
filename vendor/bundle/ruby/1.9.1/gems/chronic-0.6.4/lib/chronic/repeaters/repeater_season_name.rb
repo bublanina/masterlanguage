@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterSeasonName < RepeaterSeason #:nodoc:
     SEASON_SECONDS = 7_862_400 # 91 * 24 * 60 * 60

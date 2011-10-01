@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # A wrapper for OpenBSD's bcrypt/crypt_blowfish password-hashing algorithm.
 
 if RUBY_PLATFORM == "java"

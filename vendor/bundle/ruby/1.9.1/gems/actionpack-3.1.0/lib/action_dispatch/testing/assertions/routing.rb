@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'uri'
 require 'active_support/core_ext/hash/diff'
 require 'active_support/core_ext/hash/indifferent_access'

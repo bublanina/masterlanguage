@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Thor
   # Thor::Error is raised when it's caused by wrong usage of thor classes. Those
   # errors have their backtrace supressed and are nicely shown to the user.

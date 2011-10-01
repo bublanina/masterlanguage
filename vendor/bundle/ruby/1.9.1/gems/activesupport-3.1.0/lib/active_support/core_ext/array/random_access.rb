@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Array
   # Backport of Array#sample based on Marc-Andre Lafortune's https://github.com/marcandre/backports/
   # Returns a random element or +n+ random elements from the array.

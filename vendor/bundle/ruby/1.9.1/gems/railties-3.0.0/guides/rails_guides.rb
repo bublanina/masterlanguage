@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 pwd = File.dirname(__FILE__)
 $:.unshift pwd
 

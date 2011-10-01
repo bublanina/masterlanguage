@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/file'
 require 'rack/mock'
 

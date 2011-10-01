@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'abstract_controller/collector'
 require 'active_support/core_ext/class/attribute'
 require 'active_support/core_ext/object/inclusion'

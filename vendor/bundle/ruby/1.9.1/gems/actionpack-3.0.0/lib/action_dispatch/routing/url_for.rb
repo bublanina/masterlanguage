@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   module Routing
     # In <b>routes.rb</b> one defines URL-to-controller mappings, but the reverse

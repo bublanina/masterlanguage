@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'treetop/compiler/node_classes/parsing_expression'
 require 'treetop/compiler/node_classes/atomic_expression'
 require 'treetop/compiler/node_classes/inline_module'

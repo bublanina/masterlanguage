@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Delegates all missing methods to object specified by <tt>#delegate</tt> method.
 module Delegated
   alias_method :old_method_missing, :method_missing

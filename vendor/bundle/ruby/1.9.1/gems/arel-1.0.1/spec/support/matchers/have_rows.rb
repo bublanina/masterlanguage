@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Matchers
   def have_rows(expected)
     simple_matcher "have rows" do |given, matcher|

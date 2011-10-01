@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'benchmark'
 require 'zlib'
 require 'active_support/core_ext/array/extract_options'

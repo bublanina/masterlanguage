@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Paperclip
   module Storage
     # fog is a modern and versatile cloud computing library for Ruby.

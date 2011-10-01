@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ActiveRecord::Base.connection.increment_open_transactions
 ActiveRecord::Base.connection.begin_db_transaction
 at_exit do

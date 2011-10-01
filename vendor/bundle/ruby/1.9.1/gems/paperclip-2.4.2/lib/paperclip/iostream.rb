@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Provides method that can be included on File-type objects (IO, StringIO, Tempfile, etc) to allow stream copying
 # and Tempfile conversion.
 module IOStream

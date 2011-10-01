@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack
   # *Handlers* connect web servers with Rack.
   #

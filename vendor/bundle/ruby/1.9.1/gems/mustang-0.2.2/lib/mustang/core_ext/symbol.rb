@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Symbol
   # Returns symbol with function name normalized for javascript. eg:
   #

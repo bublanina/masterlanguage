@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'action_dispatch/middleware/session/abstract_store'
 require 'rack/session/memcache'
 

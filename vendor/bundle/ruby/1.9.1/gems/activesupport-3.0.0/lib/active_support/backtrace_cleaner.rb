@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   # Many backtraces include too much information that's not relevant for the context. This makes it hard to find the signal
   # in the backtrace and adds debugging time. With a BacktraceCleaner, you can setup filters and silencers for your particular

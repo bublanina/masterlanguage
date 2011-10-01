@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord
   module Associations
     # Helper class module which gets mixed into JoinDependency::JoinAssociation and AssociationScope

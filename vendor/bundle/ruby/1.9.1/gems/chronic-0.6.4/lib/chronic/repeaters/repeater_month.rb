@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterMonth < Repeater #:nodoc:
     MONTH_SECONDS = 2_592_000 # 30 * 24 * 60 * 60

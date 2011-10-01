@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #  $ ruby -I../net-ssh/lib -Ilib -Itest -rrubygems test/test_all.rb
 #require 'net/ssh'
 #puts Net::SSH::Version::CURRENT

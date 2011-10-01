@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'html/tokenizer'
 require 'html/node'
 require 'html/selector'

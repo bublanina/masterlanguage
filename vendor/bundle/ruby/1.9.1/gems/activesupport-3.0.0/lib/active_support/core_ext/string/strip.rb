@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class String
   # Strips indentation in heredocs.
   #

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'common'
 
 # NOTE: these tests assume that the interface to Net::SFTP::Session#send_packet

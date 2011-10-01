@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rdoc/markup/to_html'
 require 'rdoc/cross_reference'
 

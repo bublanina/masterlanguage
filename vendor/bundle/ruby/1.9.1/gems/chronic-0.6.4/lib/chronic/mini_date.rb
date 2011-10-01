@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   class MiniDate
     attr_accessor :month, :day

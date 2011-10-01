@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module StubOS
   def on_windows!(host_string = 'mswin')
     stub_os(host_string)

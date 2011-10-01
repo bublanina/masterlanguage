@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/array/wrap'
 require "active_support/core_ext/module/anonymous"
 require 'active_support/core_ext/object/blank'

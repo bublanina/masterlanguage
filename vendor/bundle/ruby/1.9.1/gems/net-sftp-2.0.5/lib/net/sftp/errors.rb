@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SFTP
 
   # The base exception class for the SFTP system.

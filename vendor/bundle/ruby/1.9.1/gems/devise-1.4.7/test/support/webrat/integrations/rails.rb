@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'webrat/core/elements/form'
 require 'action_dispatch/testing/integration'
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # Stats printer that prints just the files being documented with a progress
 # bar

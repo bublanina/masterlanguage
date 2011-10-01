@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rubygems/test_case'
 require 'rubygems'
 require 'rdoc/rubygems_hook'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/sftp/protocol/03/base'
 require 'net/sftp/protocol/04/attributes'
 require 'net/sftp/protocol/04/name'

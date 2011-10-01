@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AttachmentFile < Asset
 
   # === List of columns ===

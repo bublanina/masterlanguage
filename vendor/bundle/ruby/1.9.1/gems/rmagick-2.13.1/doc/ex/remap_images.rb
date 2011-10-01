@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'RMagick'
 
 images = Magick::ImageList.new("images/Apple.miff", "images/Rocks_On_Beach.miff", "images/Leaf.miff")

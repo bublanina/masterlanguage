@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'digest/md5'
 require 'active_support/secure_random'
 require 'rails/version' unless defined?(Rails::VERSION)

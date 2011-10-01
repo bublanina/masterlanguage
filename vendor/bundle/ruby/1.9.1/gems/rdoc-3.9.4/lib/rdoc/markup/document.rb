@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # A Document containing lists, headings, paragraphs, etc.
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/class/attribute.rb'
 require 'active_support/core_ext/array/wrap'
 require 'active_model/mass_assignment_security/permission_set'

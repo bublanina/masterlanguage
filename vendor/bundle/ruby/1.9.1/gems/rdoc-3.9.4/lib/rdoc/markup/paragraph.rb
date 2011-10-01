@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # A Paragraph of text
 

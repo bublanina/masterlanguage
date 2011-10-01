@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 # This is not loaded if ActiveSupport is already loaded
 

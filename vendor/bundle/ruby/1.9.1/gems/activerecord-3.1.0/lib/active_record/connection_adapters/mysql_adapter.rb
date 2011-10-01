@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_record/connection_adapters/abstract_adapter'
 require 'active_support/core_ext/kernel/requires'
 require 'active_support/core_ext/object/blank'

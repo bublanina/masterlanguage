@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'i18n/version'
 require 'i18n/exceptions'
 require 'i18n/interpolate/ruby'

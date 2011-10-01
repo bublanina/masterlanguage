@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rspec'
 require File.expand_path('../view_helpers/view_example_group', __FILE__)
 begin

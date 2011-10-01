@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'nokogiri/css/node'
 require 'nokogiri/css/xpath_visitor'
 x = $-w

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'jruby/profiler'
 require 'java'
 java_import java.lang.management.ManagementFactory

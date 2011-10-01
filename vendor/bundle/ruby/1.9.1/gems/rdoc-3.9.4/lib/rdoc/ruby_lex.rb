@@ -1,4 +1,4 @@
-# coding: US-ASCII
+# -*- encoding : utf-8 -*-
 
 #--
 #   irb/ruby-lex.rb - ruby lexcal analyzer

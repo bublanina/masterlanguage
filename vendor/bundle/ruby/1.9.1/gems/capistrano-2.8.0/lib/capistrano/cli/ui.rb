@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'highline'
 
 # work around problem where HighLine detects an eof on $stdin and raises an

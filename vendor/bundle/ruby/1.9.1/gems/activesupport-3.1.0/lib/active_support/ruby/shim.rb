@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Backported Ruby builtins so you can code with the latest & greatest
 # but still run on any Ruby 1.8.x.
 #

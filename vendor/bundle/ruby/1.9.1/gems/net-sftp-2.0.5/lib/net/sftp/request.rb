@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/sftp/constants'
 require 'net/sftp/response'
 

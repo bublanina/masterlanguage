@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= user_class_name %> < ActiveRecord::Base
 <%- if options[:authlogic] -%>
   acts_as_authentic

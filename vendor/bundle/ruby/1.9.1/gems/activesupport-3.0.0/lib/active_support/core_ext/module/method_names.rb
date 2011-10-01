@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Module
   if instance_methods[0].is_a?(Symbol)
     def instance_method_names(*args)

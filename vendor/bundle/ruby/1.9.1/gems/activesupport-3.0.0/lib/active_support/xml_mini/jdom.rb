@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 raise "JRuby is required to use the JDOM backend for XmlMini" unless RUBY_PLATFORM =~ /java/
 
 require 'jruby'

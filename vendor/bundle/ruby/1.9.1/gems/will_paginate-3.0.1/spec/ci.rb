@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #!/usr/bin/env ruby
 databases = %w[ sqlite3 mysql mysql2 postgres ]
 databases.delete 'mysql2' if ENV['BUNDLE_GEMFILE'].to_s.include? 'rails3.0'

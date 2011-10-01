@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rake
 
   # The TaskManager module is a mixin for managing tasks.

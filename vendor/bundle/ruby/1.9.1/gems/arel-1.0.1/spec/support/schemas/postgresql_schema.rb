@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 sql = <<-SQL
   DROP TABLE IF EXISTS users;
   CREATE TABLE users (

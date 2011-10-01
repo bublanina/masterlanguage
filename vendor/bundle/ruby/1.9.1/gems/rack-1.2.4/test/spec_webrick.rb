@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/mock'
 require File.expand_path('../testrequest', __FILE__)
 

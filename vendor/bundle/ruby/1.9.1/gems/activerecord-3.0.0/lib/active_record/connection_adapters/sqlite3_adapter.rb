@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_record/connection_adapters/sqlite_adapter'
 
 module ActiveRecord

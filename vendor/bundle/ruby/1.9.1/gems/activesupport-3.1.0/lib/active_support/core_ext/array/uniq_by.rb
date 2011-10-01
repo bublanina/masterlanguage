@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Array
   # Returns an unique array based on the criteria given as a +Proc+.
   #

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Ckeditor::BaseHelper
   def ckeditor_attachment_path(kind)
     path = case kind

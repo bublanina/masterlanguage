@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'nokogiri/html/entity_lookup'
 require 'nokogiri/html/document'
 require 'nokogiri/html/document_fragment'

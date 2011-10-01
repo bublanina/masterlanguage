@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/errors'
 require 'net/ssh/transport/constants'
 require 'net/ssh/transport/kex/diffie_hellman_group1_sha1'

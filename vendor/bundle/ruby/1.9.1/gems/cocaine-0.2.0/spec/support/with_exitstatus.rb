@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module WithExitstatus
   def with_exitstatus_returning(code)
     saved_exitstatus = $?.nil? ? 0 : $?.exitstatus

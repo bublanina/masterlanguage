@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Create<%= plural_class_name %> < ActiveRecord::Migration
   def self.up
     create_table :<%= plural_name %> do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Timeliness
   class CompilationError < StandardError; end
 

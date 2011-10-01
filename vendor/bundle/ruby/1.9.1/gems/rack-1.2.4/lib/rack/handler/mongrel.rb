@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'mongrel'
 require 'stringio'
 require 'rack/content_length'

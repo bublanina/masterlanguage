@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'capistrano/recipes/deploy/strategy/base'
 require 'fileutils'
 require 'tempfile'  # Dir.tmpdir

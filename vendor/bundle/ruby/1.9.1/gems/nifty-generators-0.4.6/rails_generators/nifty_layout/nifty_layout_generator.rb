@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NiftyLayoutGenerator < Rails::Generator::Base
   def initialize(runtime_args, runtime_options = {})
     super

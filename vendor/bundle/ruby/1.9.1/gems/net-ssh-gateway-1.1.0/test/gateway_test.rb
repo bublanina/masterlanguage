@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'test/unit'
 require 'mocha'
 require 'net/ssh/gateway'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Thor
   class Argument #:nodoc:
     VALID_TYPES = [ :numeric, :hash, :array, :string ]

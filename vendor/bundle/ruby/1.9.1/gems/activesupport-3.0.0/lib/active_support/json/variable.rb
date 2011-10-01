@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   module JSON
     # A string that returns itself as its JSON-encoded form.

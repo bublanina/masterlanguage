@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   module Caching
     # Fragment caching is used for caching various blocks within 

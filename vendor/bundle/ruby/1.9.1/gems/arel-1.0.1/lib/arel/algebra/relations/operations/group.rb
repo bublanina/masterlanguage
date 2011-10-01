@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Group < Compound
     attr_reader :groupings

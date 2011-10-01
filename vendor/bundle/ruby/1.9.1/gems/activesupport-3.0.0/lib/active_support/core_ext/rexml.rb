@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/core_ext/kernel/reporting'
 
 # Fixes the rexml vulnerability disclosed at:

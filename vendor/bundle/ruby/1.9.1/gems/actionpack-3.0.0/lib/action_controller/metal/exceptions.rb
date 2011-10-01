@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   class ActionControllerError < StandardError #:nodoc:
   end

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rational' unless RUBY_VERSION >= '1.9.2'
 
 class DateTime

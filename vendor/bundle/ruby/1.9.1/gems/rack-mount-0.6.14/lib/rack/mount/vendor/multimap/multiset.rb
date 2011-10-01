@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'set'
 
 # Multiset implements a collection of unordered values and

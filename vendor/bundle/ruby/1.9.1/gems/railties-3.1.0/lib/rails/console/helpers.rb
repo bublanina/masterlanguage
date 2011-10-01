@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 def helper
   @helper ||= ApplicationController.helpers
 end

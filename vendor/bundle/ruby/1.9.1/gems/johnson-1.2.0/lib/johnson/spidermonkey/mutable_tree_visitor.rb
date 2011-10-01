@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Johnson
   module SpiderMonkey
     class MutableTreeVisitor

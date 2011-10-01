@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 
 # Demonstrate ImageMagick's new (5.5.7-3 and later) built-in patterns.
 # Create a Fill class that can be reused to fill in new Image backgrounds.

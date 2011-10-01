@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/request'
 require 'rack/utils'
 require 'time'

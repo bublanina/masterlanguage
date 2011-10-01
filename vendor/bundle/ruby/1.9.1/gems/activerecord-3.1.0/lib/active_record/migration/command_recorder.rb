@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord
   class Migration
     # ActiveRecord::Migration::CommandRecorder records commands done during

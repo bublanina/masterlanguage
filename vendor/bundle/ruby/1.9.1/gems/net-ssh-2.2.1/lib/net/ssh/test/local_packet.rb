@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/packet'
 require 'net/ssh/test/packet'
 

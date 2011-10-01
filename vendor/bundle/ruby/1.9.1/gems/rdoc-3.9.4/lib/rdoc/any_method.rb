@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rdoc/method_attr'
 require 'rdoc/token_stream'
 

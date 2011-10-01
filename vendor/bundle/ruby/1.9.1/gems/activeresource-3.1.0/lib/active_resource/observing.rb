@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveResource
   module Observing
     extend ActiveSupport::Concern

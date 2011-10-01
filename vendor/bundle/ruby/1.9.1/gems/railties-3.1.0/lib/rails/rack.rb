@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rails
   module Rack
     autoload :ContentLength, "rails/rack/content_length"

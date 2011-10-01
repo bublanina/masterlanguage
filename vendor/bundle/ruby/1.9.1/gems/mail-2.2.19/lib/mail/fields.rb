@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Mail
   autoload :UnstructuredField, 'mail/fields/unstructured_field'
   autoload :StructuredField, 'mail/fields/structured_field'

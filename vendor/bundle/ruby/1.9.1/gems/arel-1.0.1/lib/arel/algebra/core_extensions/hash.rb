@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Hash
   def bind(relation)
     Hash[map { |key, value|

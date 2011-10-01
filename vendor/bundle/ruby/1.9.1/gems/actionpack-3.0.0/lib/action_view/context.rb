@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   module CompiledTemplates #:nodoc:
     # holds compiled template code

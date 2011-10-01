@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'common'
 require 'protocol/05/test_base'
 

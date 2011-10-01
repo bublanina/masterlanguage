@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Sprockets
   # `Utils`, we didn't know where else to put it!
   module Utils

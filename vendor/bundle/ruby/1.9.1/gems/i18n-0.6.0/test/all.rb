@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 dir = File.dirname(__FILE__)
 $LOAD_PATH.unshift(dir)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # Parse a non-source file. We basically take the whole thing as one big
 # comment.

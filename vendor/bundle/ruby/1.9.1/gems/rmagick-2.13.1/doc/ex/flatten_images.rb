@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #! /usr/local/bin/ruby -w
 
 # Demonstrate flatten_images method. Create an image with a drop-shadow effect.

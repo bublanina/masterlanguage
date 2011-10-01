@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Darwin (OSX) special cases for universal binaries
 # This is to avoid the lack of UB binaries for MySQL
 if RUBY_PLATFORM =~ /darwin/

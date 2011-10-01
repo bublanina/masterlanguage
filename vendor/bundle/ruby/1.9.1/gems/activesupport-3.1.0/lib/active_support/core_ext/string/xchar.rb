@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   # See http://fast-xs.rubyforge.org/ by Eric Wong.
   # Also included with hpricot.

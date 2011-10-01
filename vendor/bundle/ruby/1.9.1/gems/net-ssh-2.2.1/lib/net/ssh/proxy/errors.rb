@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/errors'
 
 module Net; module SSH; module Proxy

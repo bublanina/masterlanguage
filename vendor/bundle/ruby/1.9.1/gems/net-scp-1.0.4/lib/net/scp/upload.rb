@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/scp/errors'
 
 module Net; class SCP

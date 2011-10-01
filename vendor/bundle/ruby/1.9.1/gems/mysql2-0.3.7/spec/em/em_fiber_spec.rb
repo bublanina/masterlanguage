@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# -*- encoding : utf-8 -*-
 if defined? EventMachine && defined? Fiber
   require 'spec_helper'
   require 'mysql2/em_fiber'

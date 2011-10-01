@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module LambdaCalculus
   include Treetop::Runtime
   

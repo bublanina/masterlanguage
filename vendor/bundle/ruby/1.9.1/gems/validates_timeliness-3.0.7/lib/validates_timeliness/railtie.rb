@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ValidatesTimeliness
   class Railtie < Rails::Railtie
     initializer "validates_timeliness.initialize_active_record", :after => 'active_record.initialize_timezone' do

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Paperclip
   module Storage
     # The default place to store attachments is in the filesystem. Files on the local

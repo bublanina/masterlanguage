@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # A heading with a level (1-6) and text
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Polyglot #:nodoc:
   module VERSION #:nodoc:
     MAJOR = 0

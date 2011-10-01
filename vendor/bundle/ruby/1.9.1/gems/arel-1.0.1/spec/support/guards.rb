@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module AdapterGuards
   def adapter_is(*names)
     names = names.map(&:to_s)

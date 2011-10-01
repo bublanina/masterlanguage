@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   context "index action" do
     should "render index template" do
       get :index

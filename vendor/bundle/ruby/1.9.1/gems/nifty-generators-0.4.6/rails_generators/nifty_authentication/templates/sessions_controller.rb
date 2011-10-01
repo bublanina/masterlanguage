@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= session_plural_class_name %>Controller < ApplicationController
 <%- if options[:authlogic] -%>
   def new

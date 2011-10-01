@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module WillPaginate::Deprecation
   class << self
     def warn(message, stack = caller)

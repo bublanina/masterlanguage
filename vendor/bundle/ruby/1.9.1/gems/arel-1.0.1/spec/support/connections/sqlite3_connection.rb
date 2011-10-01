@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 puts "Using native SQLite3"
 require "active_record"
 require 'logger'

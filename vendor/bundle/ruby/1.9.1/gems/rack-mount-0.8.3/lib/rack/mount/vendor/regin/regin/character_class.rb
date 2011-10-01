@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Regin
   class CharacterClass < Character
     def initialize(value, options = {})

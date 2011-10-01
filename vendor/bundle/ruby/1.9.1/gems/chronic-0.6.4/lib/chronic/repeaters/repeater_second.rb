@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterSecond < Repeater #:nodoc:
     SECOND_SECONDS = 1 # haha, awesome

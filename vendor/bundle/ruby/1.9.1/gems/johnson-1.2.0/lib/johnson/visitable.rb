@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Johnson
   module Visitable
     # Based off the visitor pattern from RubyGarden

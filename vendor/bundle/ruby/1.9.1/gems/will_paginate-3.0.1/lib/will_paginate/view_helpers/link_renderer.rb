@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'cgi'
 require 'will_paginate/core_ext'
 require 'will_paginate/view_helpers'

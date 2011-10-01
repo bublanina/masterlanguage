@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Define some basic Sprockets error classes
 module Sprockets
   class Error           < StandardError; end

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 $DEBUG_RDOC = nil
 
 # :main: README.txt

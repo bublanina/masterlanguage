@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rake
   # ##########################################################################
   # Mixin for creating easily cloned objects.

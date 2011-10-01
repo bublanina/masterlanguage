@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'devise/strategies/database_authenticatable'
 require 'bcrypt'
 

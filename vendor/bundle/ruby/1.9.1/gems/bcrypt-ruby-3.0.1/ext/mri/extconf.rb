@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if RUBY_PLATFORM == "java"
   # Don't do anything when run in JRuby; this allows gem installation to pass.
   # We need to write a dummy Makefile so that RubyGems doesn't think compilation

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/ordered_hash'
 
 # Usually key value pairs are handled something like this:

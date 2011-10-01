@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   require 'rack/session/memcache'
   require 'rack/mock'

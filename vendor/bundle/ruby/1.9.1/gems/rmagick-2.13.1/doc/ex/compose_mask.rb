@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'RMagick'
 
 background = Magick::Image.read('images/Flower_Hat.jpg').first

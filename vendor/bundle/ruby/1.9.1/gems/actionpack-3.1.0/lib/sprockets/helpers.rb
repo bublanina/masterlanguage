@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Sprockets
   module Helpers
     autoload :RailsHelper, "sprockets/helpers/rails_helper"

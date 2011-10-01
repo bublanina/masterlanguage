@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 =begin
   heavily based on Masao Mutoh's gettext String interpolation extension

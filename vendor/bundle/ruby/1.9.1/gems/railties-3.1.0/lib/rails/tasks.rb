@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 $VERBOSE = nil
 
 # Load Rails rakefile extensions

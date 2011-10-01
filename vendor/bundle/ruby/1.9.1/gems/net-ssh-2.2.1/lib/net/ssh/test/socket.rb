@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'socket'
 require 'stringio'
 require 'net/ssh/test/extensions'

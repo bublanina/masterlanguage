@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 
 unless Object.method_defined?(:tap)
   class Object

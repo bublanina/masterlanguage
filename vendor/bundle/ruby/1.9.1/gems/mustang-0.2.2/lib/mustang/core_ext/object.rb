@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Object
   # From now on each object can be easily converted to <tt>V8::*</tt> object
   # using <tt>#to_v8</tt> method. 

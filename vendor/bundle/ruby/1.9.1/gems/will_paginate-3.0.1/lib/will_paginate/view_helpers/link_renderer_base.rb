@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module WillPaginate
   module ViewHelpers
     # This class does the heavy lifting of actually building the pagination

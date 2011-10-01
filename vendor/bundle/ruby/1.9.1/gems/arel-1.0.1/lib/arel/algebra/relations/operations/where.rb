@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Where < Compound
     attr_reader :predicates

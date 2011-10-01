@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'erubis'
 eruby = Erubis::Eruby.new(File.read('template2.rhtml'))
 items = ['foo', 'bar', 'baz']

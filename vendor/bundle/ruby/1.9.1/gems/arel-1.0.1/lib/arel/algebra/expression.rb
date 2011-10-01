@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Expression < Attribute
     attr_reader :attribute

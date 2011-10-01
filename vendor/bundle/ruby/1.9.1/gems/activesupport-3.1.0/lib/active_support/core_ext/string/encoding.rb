@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class String
   if defined?(Encoding) && "".respond_to?(:encode)
     def encoding_aware?

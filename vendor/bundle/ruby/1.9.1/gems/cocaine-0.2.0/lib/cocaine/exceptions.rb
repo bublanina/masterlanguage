@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Cocaine
   class CommandLineError     < StandardError; end
   class CommandNotFoundError < CommandLineError; end

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'date'
 def days_in_month(year, month)
   (Date.new(year, 12, 31) << (12-month)).day

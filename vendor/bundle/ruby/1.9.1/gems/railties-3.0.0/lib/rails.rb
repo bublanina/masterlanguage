@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rails/ruby_version_check'
 
 require 'pathname'

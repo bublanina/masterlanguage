@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/configurable'
 require 'active_support/descendants_tracker'
 require 'active_support/core_ext/module/anonymous'

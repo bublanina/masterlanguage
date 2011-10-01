@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Class
   # Returns list of public instance methods of current class excluding methods
   # inherited from the <tt>Object</tt>.

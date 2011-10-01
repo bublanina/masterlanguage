@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class <%= user_plural_class_name %>Controller < ApplicationController
   before_filter :login_required, :except => [:new, :create]
 

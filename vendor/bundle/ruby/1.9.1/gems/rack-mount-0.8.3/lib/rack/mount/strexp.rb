@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/mount/strexp/parser'
 
 module Rack::Mount

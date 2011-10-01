@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack::Mount
   if Regin.regexp_supports_named_captures?
     RegexpWithNamedGroups = Regexp

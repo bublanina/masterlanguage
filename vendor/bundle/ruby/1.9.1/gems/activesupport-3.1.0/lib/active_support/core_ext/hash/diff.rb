@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Hash
   # Returns a hash that represents the difference between two hashes.
   #

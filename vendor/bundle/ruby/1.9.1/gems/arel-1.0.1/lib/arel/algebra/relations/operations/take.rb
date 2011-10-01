@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Take < Compound
     attr_reader :taken

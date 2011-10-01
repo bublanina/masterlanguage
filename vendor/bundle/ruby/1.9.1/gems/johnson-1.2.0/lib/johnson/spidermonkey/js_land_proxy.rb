@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # FIXME: This definition should probably be somewhere else
 class Array
   def js_property?(name)

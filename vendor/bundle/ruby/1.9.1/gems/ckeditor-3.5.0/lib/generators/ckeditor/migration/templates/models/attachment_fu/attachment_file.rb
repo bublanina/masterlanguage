@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Ckeditor::AttachmentFile < Ckeditor::Asset
   has_attachment :storage => :file_system, :path_prefix => 'public/assets/attachments',
                  :max_size => 10.megabytes

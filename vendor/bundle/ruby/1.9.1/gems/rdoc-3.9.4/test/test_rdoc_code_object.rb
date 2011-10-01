@@ -1,4 +1,4 @@
-# coding: US-ASCII
+# -*- encoding : utf-8 -*-
 
 require 'rubygems'
 require 'minitest/autorun'

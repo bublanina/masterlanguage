@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'enumerator'
 require 'net/ssh/gateway'
 require 'capistrano/ssh'

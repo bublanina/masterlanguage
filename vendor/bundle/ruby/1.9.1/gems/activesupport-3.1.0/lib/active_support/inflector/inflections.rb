@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   module Inflector
     # A singleton instance of this class is yielded by Inflector.inflections, which can then be used to specify additional

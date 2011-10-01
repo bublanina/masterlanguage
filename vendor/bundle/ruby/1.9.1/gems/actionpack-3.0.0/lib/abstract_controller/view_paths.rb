@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module AbstractController
   module ViewPaths
     extend ActiveSupport::Concern

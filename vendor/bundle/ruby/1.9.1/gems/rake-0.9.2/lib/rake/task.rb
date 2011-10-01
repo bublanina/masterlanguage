@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rake/invocation_exception_mixin'
 
 module Rake

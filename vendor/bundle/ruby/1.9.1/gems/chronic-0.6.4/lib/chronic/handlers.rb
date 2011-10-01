@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   module Handlers
     module_function

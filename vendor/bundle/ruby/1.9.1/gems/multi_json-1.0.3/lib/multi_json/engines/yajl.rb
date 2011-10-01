@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'yajl' unless defined?(Yajl)
 
 module MultiJson

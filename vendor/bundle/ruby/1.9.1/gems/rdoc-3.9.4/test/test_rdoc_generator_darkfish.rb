@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'minitest/autorun'
 require 'rdoc/rdoc'
 require 'rdoc/generator/darkfish'

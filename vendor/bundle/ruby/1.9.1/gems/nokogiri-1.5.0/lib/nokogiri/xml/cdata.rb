@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Nokogiri
   module XML
     class CDATA < Nokogiri::XML::Text

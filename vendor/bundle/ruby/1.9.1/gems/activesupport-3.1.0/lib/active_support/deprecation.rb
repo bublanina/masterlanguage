@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/deprecation/behaviors'
 require 'active_support/deprecation/reporting'
 require 'active_support/deprecation/method_wrappers'

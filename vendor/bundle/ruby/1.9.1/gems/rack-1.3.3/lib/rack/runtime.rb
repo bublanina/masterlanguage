@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack
   # Sets an "X-Runtime" response header, indicating the response
   # time of the request, in seconds

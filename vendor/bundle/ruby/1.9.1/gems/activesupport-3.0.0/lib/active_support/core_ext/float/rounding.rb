@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Float
   alias precisionless_round round
   private :precisionless_round

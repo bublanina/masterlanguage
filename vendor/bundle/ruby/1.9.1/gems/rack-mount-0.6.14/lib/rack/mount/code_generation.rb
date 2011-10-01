@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack::Mount
   module CodeGeneration #:nodoc:
     def _expired_recognize(env) #:nodoc:

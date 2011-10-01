@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net module SFTP
 
   # The packet types and other general constants used by the SFTP protocol.

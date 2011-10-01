@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # Collection of methods for writing parsers against RDoc::RubyLex and
 # RDoc::RubyToken

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/auth/digest/md5'
 require 'rack/mock'
 

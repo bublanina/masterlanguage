@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Thor
   # This is a modified version of Daniel Berger's Getopt::Long class, licensed
   # under Ruby's license.

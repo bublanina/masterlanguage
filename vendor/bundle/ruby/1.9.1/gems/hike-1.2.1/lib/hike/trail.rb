@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'pathname'
 require 'hike/extensions'
 require 'hike/index'

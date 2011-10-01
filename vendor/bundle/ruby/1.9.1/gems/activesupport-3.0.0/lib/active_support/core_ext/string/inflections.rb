@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/inflector/methods'
 require 'active_support/inflector/inflections'
 require 'active_support/inflector/transliterate'

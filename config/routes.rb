@@ -9,6 +9,8 @@ MasterLanguage::Application.routes.draw do
   match '/planuj_public/:zac/:dlzka' => 'events#planuj_public'
   match '/planuj_kurz' => 'events#planuj_kurz'
   match '/pridaj_terminy' => 'events#pridaj_terminy'
+  match '/udalosti_pridane' => 'events#udalosti_pridane'
+  match '/zvol_lektora' => 'events#zvol_lektora'
   
 
   resources :bad_dates

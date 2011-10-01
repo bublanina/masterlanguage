@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 module Mail
   # The Pop3 retriever allows to get the last, first or all emails from a POP3 server.

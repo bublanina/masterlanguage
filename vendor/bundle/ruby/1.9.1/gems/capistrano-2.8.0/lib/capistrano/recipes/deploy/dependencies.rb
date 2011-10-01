@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'capistrano/recipes/deploy/local_dependency'
 require 'capistrano/recipes/deploy/remote_dependency'
 

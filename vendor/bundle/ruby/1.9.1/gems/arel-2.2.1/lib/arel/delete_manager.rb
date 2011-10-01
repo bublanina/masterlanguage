@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class DeleteManager < Arel::TreeManager
     def initialize engine

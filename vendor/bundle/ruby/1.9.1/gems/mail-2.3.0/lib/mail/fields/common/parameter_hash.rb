@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 module Mail
 
   # ParameterHash is an intelligent Hash that allows you to add

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ARGV << '--help' if ARGV.empty?
 
 aliases = {

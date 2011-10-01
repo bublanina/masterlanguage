@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Sprockets
   autoload :Helpers, "sprockets/helpers"
   autoload :LazyCompressor, "sprockets/compressors"

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'test_helper'
 
 class <%= user_plural_class_name %>ControllerTest < ActionController::TestCase

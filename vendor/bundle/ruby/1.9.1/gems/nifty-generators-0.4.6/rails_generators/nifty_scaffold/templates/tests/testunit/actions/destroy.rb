@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   def test_destroy
     <%= singular_name %> = <%= class_name %>.first
     delete :destroy, :id => <%= singular_name %>

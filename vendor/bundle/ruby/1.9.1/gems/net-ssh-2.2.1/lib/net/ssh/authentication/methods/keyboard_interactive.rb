@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/prompt'
 require 'net/ssh/authentication/methods/abstract'
 

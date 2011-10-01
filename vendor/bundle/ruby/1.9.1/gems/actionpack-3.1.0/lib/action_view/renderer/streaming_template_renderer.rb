@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # 1.9 ships with Fibers but we need to require the extra
 # methods explicitly. We only load those extra methods if
 # Fiber is available in the first place.

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/sftp/protocol/01/attributes'
 
 module Net; module SFTP; module Protocol; module V04

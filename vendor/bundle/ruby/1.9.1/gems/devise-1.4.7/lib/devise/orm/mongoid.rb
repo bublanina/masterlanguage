@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'orm_adapter/adapters/mongoid'
 
 module Devise

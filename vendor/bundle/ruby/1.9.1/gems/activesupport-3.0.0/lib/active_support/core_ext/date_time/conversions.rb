@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/inflector'
 require 'active_support/core_ext/time/conversions'
 require 'active_support/core_ext/date_time/calculations'

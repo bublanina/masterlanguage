@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 XREF_DATA = <<-XREF_DATA
 class C1
 

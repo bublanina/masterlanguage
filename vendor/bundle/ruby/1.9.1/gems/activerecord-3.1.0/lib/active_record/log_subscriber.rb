@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord
   class LogSubscriber < ActiveSupport::LogSubscriber
     def self.runtime=(value)

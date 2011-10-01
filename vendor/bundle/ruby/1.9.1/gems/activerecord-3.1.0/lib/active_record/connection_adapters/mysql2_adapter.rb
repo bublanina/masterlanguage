@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 
 gem 'mysql2', '~> 0.3.6'
 require 'mysql2'

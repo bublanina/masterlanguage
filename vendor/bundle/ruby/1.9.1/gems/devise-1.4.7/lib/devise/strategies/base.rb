@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   module Strategies
     # Base strategy for Devise. Responsible for verifying correct scope and mapping.

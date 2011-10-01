@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/deprecation'
 require 'active_support/ordered_options'
 require 'active_support/core_ext/hash/deep_dup'

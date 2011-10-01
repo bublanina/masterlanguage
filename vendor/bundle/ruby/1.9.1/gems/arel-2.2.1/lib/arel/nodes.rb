@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # node
 require 'arel/nodes/node'
 require 'arel/nodes/select_statement'

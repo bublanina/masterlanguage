@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rvg/rvg'
 
 hat = Magick::Image.read('images/Flower_Hat.jpg').first

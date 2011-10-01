@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   # Holds devise schema information. To use it, just include its methods
   # and overwrite the apply_schema method.

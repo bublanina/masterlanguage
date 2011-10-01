@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Ckeditor::PicturesController < Ckeditor::BaseController
 
   def index

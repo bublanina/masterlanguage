@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/body_proxy'
 
 describe Rack::BodyProxy do

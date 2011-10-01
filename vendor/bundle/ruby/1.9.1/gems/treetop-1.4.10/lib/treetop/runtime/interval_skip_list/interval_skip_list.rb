@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class IntervalSkipList
   attr_reader :probability
 

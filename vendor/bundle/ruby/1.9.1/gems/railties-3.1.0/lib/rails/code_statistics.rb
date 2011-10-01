@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CodeStatistics #:nodoc:
 
   TEST_TYPES = %w(Units Functionals Unit\ tests Functional\ tests Integration\ tests)

@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 require './test/helper'
 
 class StyleTest < Test::Unit::TestCase

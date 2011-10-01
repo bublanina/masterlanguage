@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveSupport
   # Wrapping a string in this class gives you a prettier way to test
   # for equality. The value returned by <tt>Rails.env</tt> is wrapped

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 RSpec::Matchers.define :exist do |path|
   match do
     File.exist?(path)

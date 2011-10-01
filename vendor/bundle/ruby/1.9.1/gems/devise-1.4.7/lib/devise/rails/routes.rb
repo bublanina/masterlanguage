@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch::Routing
   class RouteSet #:nodoc:
     # Ensure Devise modules are included only after loading routes, because we

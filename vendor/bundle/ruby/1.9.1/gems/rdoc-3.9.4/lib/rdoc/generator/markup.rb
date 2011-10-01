@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # This file is loaded by generators.  It allows RDoc's CodeObject tree to
 # avoid loading generator code to increase startup time (for ri).
 

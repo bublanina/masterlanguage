@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Chronic
   # Tokens are tagged with subclassed instances of this class when
   # they match specific criteria

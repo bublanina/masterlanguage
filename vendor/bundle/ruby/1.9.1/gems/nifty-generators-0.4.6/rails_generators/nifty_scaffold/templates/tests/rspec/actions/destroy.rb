@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   it "destroy action should destroy model and redirect to index action" do
     <%= singular_name %> = <%= class_name %>.first
     delete :destroy, :id => <%= singular_name %>

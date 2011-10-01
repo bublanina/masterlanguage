@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Regin
   autoload :Alternation, 'regin/alternation'
   autoload :Anchor, 'regin/anchor'

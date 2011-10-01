@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rdoc'
 require 'rdoc/code_objects'
 require 'rdoc/markup/pre_process'

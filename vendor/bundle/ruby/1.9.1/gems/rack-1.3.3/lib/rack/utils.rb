@@ -1,4 +1,4 @@
-# -*- encoding: binary -*-
+# -*- encoding : utf-8 -*-
 require 'fileutils'
 require 'set'
 require 'tempfile'

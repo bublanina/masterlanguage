@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module FileCreation
   OLDFILE = "testdata/old"
   NEWFILE = "testdata/new"

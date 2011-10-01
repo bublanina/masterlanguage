@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module V8
   class Portal
     class FunctionAdapter

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support'
 require 'active_support/core_ext/class/attribute_accessors'
 require 'active_support/core_ext/class/attribute'

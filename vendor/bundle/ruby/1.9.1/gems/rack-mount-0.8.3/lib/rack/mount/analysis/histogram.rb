@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rack::Mount
   module Analysis
     class Histogram < Hash #:nodoc:

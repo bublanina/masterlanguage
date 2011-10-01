@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord #:nodoc:
   # = Active Record Serialization
   module Serialization

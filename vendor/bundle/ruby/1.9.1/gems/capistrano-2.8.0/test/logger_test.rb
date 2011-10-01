@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "utils"
 require 'capistrano/logger'
 require 'stringio'

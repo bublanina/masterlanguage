@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   context "update action" do
     should "render edit template when model is invalid" do
       <%= class_name %>.any_instance.stubs(:valid?).returns(false)

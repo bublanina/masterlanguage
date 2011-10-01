@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'mongoid/version'
 
 Mongoid.configure do |config|

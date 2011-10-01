@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'dm-core'
 require 'dm-aggregates'
 require 'will_paginate/per_page'

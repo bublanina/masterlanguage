@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
   context "destroy action" do
     should "destroy model and redirect to index action" do
       <%= instance_name %> = <%= class_name %>.first

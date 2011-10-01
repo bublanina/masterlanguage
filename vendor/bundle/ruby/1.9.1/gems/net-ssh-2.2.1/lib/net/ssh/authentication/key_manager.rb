@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/errors'
 require 'net/ssh/key_factory'
 require 'net/ssh/loggable'

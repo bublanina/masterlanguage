@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ModelHelpers 
 
   # Some test helpers from Rails source 

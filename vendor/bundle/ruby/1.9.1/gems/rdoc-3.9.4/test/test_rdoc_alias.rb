@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require File.expand_path '../xref_test_case', __FILE__
 
 class TestRDocAlias < XrefTestCase

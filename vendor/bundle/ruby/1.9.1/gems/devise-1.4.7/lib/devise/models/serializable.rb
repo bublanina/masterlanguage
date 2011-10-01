@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Devise
   module Models
     # This module redefine to_xml and serializable_hash in models for more

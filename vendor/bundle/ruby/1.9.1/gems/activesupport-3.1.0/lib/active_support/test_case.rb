@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'test/unit/testcase'
 require 'active_support/testing/setup_and_teardown'
 require 'active_support/testing/assertions'

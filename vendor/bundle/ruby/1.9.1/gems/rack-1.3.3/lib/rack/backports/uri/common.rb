@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # :stopdoc:
 
 # Stolen from ruby core's uri/common.rb, with modifications to support 1.8.x

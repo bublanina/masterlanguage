@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require File.expand_path(File.dirname(__FILE__) + "/lib/insert_commands.rb")
 class NiftyAuthenticationGenerator < Rails::Generator::Base
   attr_accessor :user_name, :session_name

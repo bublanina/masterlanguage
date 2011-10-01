@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Project < Compound
     attr_reader :projections, :attributes, :christener

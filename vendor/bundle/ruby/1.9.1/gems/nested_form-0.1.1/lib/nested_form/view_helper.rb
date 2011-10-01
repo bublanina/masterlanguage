@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module NestedForm
   module ViewHelper
     def nested_form_for(*args, &block)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # ###########################################################################
 # Extensions to time to allow comparisons with an early time class.
 #

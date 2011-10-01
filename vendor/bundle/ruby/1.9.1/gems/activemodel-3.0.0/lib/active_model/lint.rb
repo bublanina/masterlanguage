@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # == Active Model Lint Tests
 #
 # You can test whether an object is compliant with the Active Model API by

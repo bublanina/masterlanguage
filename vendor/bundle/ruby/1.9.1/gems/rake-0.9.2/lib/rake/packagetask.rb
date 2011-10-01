@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Define a package task library to aid in the definition of
 # redistributable package files.
 

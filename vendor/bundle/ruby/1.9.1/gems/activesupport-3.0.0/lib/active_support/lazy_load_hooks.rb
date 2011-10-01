@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # lazy_load_hooks allows rails to lazily load a lot of components and thus making the app boot faster. Because of
 # this feature now there is no need to require <tt>ActiveRecord::Base</tt> at boot time purely to apply configuration. Instead
 # a hook is registered that applies configuration once <tt>ActiveRecord::Base</tt> is loaded. Here <tt>ActiveRecord::Base</tt> is used

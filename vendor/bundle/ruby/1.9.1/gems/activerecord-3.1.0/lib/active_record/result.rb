@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActiveRecord
   ###
   # This class encapsulates a Result returned from calling +exec_query+ on any

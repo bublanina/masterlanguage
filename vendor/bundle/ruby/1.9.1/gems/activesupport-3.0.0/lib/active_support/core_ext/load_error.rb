@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class LoadError
   REGEXPS = [
     /^no such file to load -- (.+)$/i,

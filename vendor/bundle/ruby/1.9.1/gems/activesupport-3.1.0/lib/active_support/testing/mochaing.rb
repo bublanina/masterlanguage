@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   silence_warnings { require 'mocha' }
 rescue LoadError

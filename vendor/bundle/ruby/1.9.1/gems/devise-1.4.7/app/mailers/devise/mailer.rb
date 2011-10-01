@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Devise::Mailer < ::ActionMailer::Base
   include Devise::Mailers::Helpers
 

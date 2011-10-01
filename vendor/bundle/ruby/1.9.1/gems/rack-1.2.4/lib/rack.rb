@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Copyright (C) 2007, 2008, 2009, 2010 Christian Neukirchen <purl.org/net/chneukirchen>
 #
 # Rack is freely distributable under the terms of an MIT-style license.

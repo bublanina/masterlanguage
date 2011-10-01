@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 namespace :docs do
   desc "generate HTML docs for nokogiri.org"
   task :website do

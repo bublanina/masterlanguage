@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ActiveRecord::Schema.define do
   suppress_messages do
     create_table :users, :primary_key_trigger => true, :force => true do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class MyData
   attr_accessor :val, :list
 end

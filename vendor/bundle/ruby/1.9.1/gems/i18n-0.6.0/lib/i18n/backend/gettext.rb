@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'i18n/gettext'
 require 'i18n/gettext/po_parser'
 

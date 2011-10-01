@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rake'
 
 # Load the test files from the command line.

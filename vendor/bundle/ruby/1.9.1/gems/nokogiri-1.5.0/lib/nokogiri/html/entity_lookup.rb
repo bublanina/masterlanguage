@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Nokogiri
   module HTML
     class EntityDescription < Struct.new(:value, :name, :description); end

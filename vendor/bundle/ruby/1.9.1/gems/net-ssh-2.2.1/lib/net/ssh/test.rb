@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/transport/session'
 require 'net/ssh/connection/session'
 require 'net/ssh/test/kex'

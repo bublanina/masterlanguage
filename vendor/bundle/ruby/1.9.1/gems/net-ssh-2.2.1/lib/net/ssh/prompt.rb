@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Net; module SSH
 
   # A basic prompt module that can be mixed into other objects. If HighLine is

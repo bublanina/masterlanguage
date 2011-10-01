@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NameError
   # Extract the name of the missing constant from the exception message.
   def missing_name

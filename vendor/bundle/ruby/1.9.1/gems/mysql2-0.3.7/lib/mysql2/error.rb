@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Mysql2
   class Error < StandardError
     attr_accessor :error_number, :sql_state

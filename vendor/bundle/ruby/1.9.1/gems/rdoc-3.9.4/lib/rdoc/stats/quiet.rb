@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # Stats printer that prints nothing
 

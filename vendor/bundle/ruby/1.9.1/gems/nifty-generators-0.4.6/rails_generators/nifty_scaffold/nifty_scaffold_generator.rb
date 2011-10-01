@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NiftyScaffoldGenerator < Rails::Generator::Base
   attr_accessor :name, :attributes, :controller_actions
 

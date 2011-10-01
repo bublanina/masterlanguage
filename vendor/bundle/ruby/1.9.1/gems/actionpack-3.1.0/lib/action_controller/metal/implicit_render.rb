@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module ImplicitRender
     def send_action(method, *args)

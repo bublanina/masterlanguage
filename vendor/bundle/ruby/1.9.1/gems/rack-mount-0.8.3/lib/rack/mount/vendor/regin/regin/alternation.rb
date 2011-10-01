@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Regin
   class Alternation < Collection
     def initialize(*args)

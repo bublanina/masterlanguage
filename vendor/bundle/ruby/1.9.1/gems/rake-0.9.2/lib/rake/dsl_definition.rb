@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Rake DSL functions.
 require 'rake/file_utils_ext'
 

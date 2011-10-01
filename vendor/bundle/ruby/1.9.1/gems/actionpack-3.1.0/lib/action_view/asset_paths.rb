@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'zlib'
 require 'active_support/core_ext/file'
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   module Assertions
     autoload :DomAssertions, 'action_dispatch/testing/assertions/dom'

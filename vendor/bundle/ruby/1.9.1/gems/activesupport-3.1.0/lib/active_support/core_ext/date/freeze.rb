@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Date memoizes some instance methods using metaprogramming to wrap
 # the methods with one that caches the result in an instance variable.
 #

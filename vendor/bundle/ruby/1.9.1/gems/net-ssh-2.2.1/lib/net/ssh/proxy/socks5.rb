@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'socket'
 require 'net/ssh/ruby_compat'
 require 'net/ssh/proxy/errors'

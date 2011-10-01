@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView #:nodoc:
   # = Action View PathSet
   class PathSet < Array #:nodoc:

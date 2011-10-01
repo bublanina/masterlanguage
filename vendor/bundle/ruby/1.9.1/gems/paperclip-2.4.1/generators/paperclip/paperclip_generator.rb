@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PaperclipGenerator < Rails::Generator::NamedBase
   attr_accessor :attachments, :migration_name
 

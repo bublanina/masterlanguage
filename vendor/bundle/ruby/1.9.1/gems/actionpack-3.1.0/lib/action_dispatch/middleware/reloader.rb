@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionDispatch
   # ActionDispatch::Reloader provides prepare and cleanup callbacks,
   # intended to assist with code reloading during development.

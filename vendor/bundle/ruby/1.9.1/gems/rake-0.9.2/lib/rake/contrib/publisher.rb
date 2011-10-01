@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Copyright 2003-2010 by Jim Weirich (jim.weirich@gmail.com)
 # All rights reserved.
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Module
   # Declare that a method has been deprecated.
   #   deprecate :foo

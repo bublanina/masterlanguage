@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ##
 # This file contains stuff stolen outright from:
 #

@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 module Mail
 
   # Field List class provides an enhanced array that keeps a list of 

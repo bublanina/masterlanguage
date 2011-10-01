@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'uri/generic'
 
 module URI

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'net/ssh/transport/openssl'
 require 'net/ssh/prompt'
 

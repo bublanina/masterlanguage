@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module NestedForm
   module Generators
     class InstallGenerator < Rails::Generators::Base

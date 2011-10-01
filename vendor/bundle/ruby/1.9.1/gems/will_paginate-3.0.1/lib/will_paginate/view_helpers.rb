@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 require 'will_paginate/core_ext'
 require 'will_paginate/i18n'
 require 'will_paginate/deprecation'

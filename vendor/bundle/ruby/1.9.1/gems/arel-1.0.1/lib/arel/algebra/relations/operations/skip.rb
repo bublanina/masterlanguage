@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   class Skip < Compound
     attr_reader :relation, :skipped

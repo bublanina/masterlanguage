@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Define a task library for running unit tests.
 
 require 'rake'

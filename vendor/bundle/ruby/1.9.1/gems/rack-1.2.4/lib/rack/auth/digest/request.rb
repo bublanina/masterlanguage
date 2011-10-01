@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rack/auth/abstract/request'
 require 'rack/auth/digest/params'
 require 'rack/auth/digest/nonce'

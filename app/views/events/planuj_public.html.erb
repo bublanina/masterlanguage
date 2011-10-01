@@ -12,25 +12,29 @@ Začiatok lekcie:<%= select_time @zaciatok.to_time, :prefix=>:zaciatok %><br />
 
 <% if @classroom %>
 Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(Subject.joins(:users).where("users.id like ?", User.where(:id=>@classroom.users)), :id, :title)) %><br />
+<%= hidden_field_tag :classroom_id,"", :value=>@classroom.id %>
 <% elsif @lektor %>
+Lektor: <%= @lektor.fname+" "+@lektor.lname %>
+<%= hidden_field_tag :user_id%><br/>
 Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(@lektor.subjects, :id, :title)) %><br />
 Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(@lektor.classrooms, :id, :name)) %><br />
 <% else %>
 Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(Subject.all, :id, :title)) %><br />
-Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(Classroom.all, :id, :title)) %><br />
+Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(Classroom.all, :id, :name)) %><br />
 <% end %>
+<%= hidden_field_tag :zac, "", :value=>@zaciatok %>
 <p>
 Hodinu opakuj (bez prvej):<br />
 <%= radio_button_tag :kolko, "nie", true %>neopakuj<br />
 <%= radio_button_tag :kolko, "vsetky" %>až do konca kurzu (kým sa neminú všetky hodiny)<br />
-<%= radio_button_tag :kolko, "polovica" %>do polovice kurzu (rozloží sa 50% z kurzových hodín)<br />
+<%= radio_button_tag :kolko, "polovica" %>do polovice kurzu (rozloží sa max.50% z nenaplánovaných kurzových hodín)<br />
 <%= radio_button_tag :kolko, "cislo" %>zvolený počet: 
 <%= number_field_tag :cislo, "1", :size=>1 %> -krát<br /><br />
 
 Túto hodinu chcem opakovať s periódou:<br/>
 <%= radio_button_tag :opakovat, "2" %>2 dni mimo SO,NE (s tým, že podľa prvého týždňa sa nastavia ďalšie)<br/>
 <%= radio_button_tag :opakovat, "3" %>3 dni mimo SO,NE (s tým, že podľa prvého týždňa sa nastavia ďalšie)<br/>
-<%= radio_button_tag :opakovat, "7" %>1 týždeň<br />
+<%= radio_button_tag :opakovat, "7", true %>1 týždeň<br />
 <%= radio_button_tag :opakovat, "14" %>2 týždne<br />
 </p>
 <p>

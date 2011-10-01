@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Rails
   class Engine < Railtie
     class Railties

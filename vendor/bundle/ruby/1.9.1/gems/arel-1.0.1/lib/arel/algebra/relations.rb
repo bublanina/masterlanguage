@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'arel/algebra/relations/relation'
 require 'arel/algebra/relations/utilities/compound'
 require 'arel/algebra/relations/utilities/nil'

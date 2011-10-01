@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Arel
   module Nodes
     class UnqualifiedColumn < Arel::Nodes::Unary
