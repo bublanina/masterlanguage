@@ -1,11 +1,6 @@
 # -*- encoding : utf-8 -*-
 require "bundler/capistrano"
 
-# setup rvm
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-require 'rvm/capistrano'
-set :rvm_ruby_string, '1.9.2-p136'
-set :rvm_type, :root
 
 
 #set :whenever_command, "bundle exec whenever"
