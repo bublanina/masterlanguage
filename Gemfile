@@ -34,7 +34,7 @@ gem 'ckeditor', '3.5.0'
 gem 'uglifier'
 gem 'dynamic_form'
 
-gem 'execjs'
+gem 'execjs', :git => 'git://github.com/sstephenson/execjs.git'
 gem 'libv8', :git=>'git://github.com/fractaloop/libv8.git'
 gem "therubyracer"
 
