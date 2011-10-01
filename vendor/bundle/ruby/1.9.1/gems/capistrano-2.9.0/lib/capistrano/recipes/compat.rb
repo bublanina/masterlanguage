@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # A collection of compatibility scripts, to ease the transition between
 # Capistrano 1.x and Capistrano 2.x.
 

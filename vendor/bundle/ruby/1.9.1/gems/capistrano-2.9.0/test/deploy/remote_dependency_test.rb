@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require "utils"
 require 'capistrano/recipes/deploy/remote_dependency'
 

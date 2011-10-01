@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterFortnight < Repeater #:nodoc:
     FORTNIGHT_SECONDS = 1_209_600 # (14 * 24 * 60 * 60)

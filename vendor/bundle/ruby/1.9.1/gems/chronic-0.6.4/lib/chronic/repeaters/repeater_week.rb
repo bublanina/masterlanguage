@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterWeek < Repeater #:nodoc:
     WEEK_SECONDS = 604800 # (7 * 24 * 60 * 60)

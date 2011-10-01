@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 role :test, "www.capistrano.test"
 
 task :testing, :roles => :test do

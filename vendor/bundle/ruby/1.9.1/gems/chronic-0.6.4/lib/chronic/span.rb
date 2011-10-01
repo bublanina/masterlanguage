@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   # A Span represents a range of time. Since this class extends
   # Range, you can use #begin and #end to get the beginning and

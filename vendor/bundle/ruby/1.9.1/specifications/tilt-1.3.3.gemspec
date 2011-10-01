@@ -1,23 +1,21 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{tilt}
+  s.name = "tilt"
   s.version = "1.3.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Tomayko"]
-  s.date = %q{2011-08-25 00:00:00.000000000Z}
-  s.default_executable = %q{tilt}
-  s.description = %q{Generic interface to multiple Ruby template engines}
-  s.email = %q{r@tomayko.com}
+  s.date = "2011-08-25"
+  s.description = "Generic interface to multiple Ruby template engines"
+  s.email = "r@tomayko.com"
   s.executables = ["tilt"]
-  s.files = ["COPYING", "Gemfile", "README.md", "Rakefile", "TEMPLATES.md", "bin/tilt", "lib/tilt.rb", "lib/tilt/builder.rb", "lib/tilt/coffee.rb", "lib/tilt/css.rb", "lib/tilt/erb.rb", "lib/tilt/haml.rb", "lib/tilt/liquid.rb", "lib/tilt/markaby.rb", "lib/tilt/markdown.rb", "lib/tilt/nokogiri.rb", "lib/tilt/radius.rb", "lib/tilt/rdoc.rb", "lib/tilt/string.rb", "lib/tilt/template.rb", "lib/tilt/textile.rb", "lib/tilt/wiki.rb", "lib/tilt/yajl.rb", "test/contest.rb", "test/markaby/locals.mab", "test/markaby/markaby.mab", "test/markaby/markaby_other_static.mab", "test/markaby/render_twice.mab", "test/markaby/scope.mab", "test/markaby/yielding.mab", "test/tilt_blueclothtemplate_test.rb", "test/tilt_buildertemplate_test.rb", "test/tilt_cache_test.rb", "test/tilt_coffeescripttemplate_test.rb", "test/tilt_compilesite_test.rb", "test/tilt_creoletemplate_test.rb", "test/tilt_erbtemplate_test.rb", "test/tilt_erubistemplate_test.rb", "test/tilt_fallback_test.rb", "test/tilt_hamltemplate_test.rb", "test/tilt_kramdown_test.rb", "test/tilt_lesstemplate_test.rb", "test/tilt_liquidtemplate_test.rb", "test/tilt_markaby_test.rb", "test/tilt_markdown_test.rb", "test/tilt_marukutemplate_test.rb", "test/tilt_nokogiritemplate_test.rb", "test/tilt_radiustemplate_test.rb", "test/tilt_rdiscounttemplate_test.rb", "test/tilt_rdoctemplate_test.rb", "test/tilt_redcarpettemplate_test.rb", "test/tilt_redclothtemplate_test.rb", "test/tilt_sasstemplate_test.rb", "test/tilt_stringtemplate_test.rb", "test/tilt_template_test.rb", "test/tilt_test.rb", "test/tilt_wikiclothtemplate_test.rb", "test/tilt_yajltemplate_test.rb", "tilt.gemspec"]
-  s.homepage = %q{http://github.com/rtomayko/tilt/}
+  s.files = ["bin/tilt"]
+  s.homepage = "http://github.com/rtomayko/tilt/"
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Tilt", "--main", "Tilt"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
-  s.summary = %q{Generic interface to multiple Ruby template engines}
-  s.test_files = ["test/tilt_blueclothtemplate_test.rb", "test/tilt_buildertemplate_test.rb", "test/tilt_cache_test.rb", "test/tilt_coffeescripttemplate_test.rb", "test/tilt_compilesite_test.rb", "test/tilt_creoletemplate_test.rb", "test/tilt_erbtemplate_test.rb", "test/tilt_erubistemplate_test.rb", "test/tilt_fallback_test.rb", "test/tilt_hamltemplate_test.rb", "test/tilt_kramdown_test.rb", "test/tilt_lesstemplate_test.rb", "test/tilt_liquidtemplate_test.rb", "test/tilt_markaby_test.rb", "test/tilt_markdown_test.rb", "test/tilt_marukutemplate_test.rb", "test/tilt_nokogiritemplate_test.rb", "test/tilt_radiustemplate_test.rb", "test/tilt_rdiscounttemplate_test.rb", "test/tilt_rdoctemplate_test.rb", "test/tilt_redcarpettemplate_test.rb", "test/tilt_redclothtemplate_test.rb", "test/tilt_sasstemplate_test.rb", "test/tilt_stringtemplate_test.rb", "test/tilt_template_test.rb", "test/tilt_test.rb", "test/tilt_wikiclothtemplate_test.rb", "test/tilt_yajltemplate_test.rb"]
+  s.rubygems_version = "1.8.10"
+  s.summary = "Generic interface to multiple Ruby template engines"
 
   if s.respond_to? :specification_version then
     s.specification_version = 2

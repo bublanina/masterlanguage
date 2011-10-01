@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'benchmark'
 require 'yaml'
 require 'capistrano/recipes/deploy/scm'

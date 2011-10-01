@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'rack'
 
 # = HTTP Caching For Rack

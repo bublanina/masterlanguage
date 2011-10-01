@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterDay < Repeater #:nodoc:
     DAY_SECONDS = 86_400 # (24 * 60 * 60)

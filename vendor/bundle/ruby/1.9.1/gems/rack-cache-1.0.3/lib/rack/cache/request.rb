@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'rack/request'
 require 'rack/cache/cachecontrol'
 

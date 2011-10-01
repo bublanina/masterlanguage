@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Capistrano
   class Role
     include Enumerable

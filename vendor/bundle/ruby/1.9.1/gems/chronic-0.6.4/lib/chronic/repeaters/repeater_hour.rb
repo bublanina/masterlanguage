@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterHour < Repeater #:nodoc:
     HOUR_SECONDS = 3600 # 60 * 60

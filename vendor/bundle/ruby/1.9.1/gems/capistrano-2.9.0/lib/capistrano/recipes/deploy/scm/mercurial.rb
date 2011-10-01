@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # Copyright 2007 Matthew Elder <sseses@gmail.com>
 # based on work by Tobias Luetke
 

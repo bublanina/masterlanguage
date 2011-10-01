@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   class RepeaterDayPortion < Repeater #:nodoc:
     PORTIONS = {

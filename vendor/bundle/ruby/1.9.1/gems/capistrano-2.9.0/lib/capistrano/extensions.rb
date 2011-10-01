@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Capistrano
   class ExtensionProxy #:nodoc:
     def initialize(config, mod)

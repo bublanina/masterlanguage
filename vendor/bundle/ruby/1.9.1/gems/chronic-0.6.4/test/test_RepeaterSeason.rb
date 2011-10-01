@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'helper'
 
 class TestRepeaterSeason < Test::Unit::TestCase

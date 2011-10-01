@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'tilt/template'
 
 module Tilt

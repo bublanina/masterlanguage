@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # Environment defaults to production
 set :environment, "production"
 # Path defaults to the directory `whenever` was run from

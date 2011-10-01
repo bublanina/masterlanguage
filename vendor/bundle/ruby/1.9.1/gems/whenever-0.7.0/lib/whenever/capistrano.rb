@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 Capistrano::Configuration.instance(:must_exist).load do
   _cset(:whenever_roles)        { :db }
   _cset(:whenever_command)      { "whenever" }

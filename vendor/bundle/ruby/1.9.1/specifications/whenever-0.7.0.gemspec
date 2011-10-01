@@ -1,21 +1,20 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{whenever}
+  s.name = "whenever"
   s.version = "0.7.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Javan Makhmali"]
-  s.date = %q{2011-09-02 00:00:00.000000000Z}
-  s.description = %q{Clean ruby syntax for writing and deploying cron jobs.}
+  s.date = "2011-09-02"
+  s.description = "Clean ruby syntax for writing and deploying cron jobs."
   s.email = ["javan@javan.us"]
   s.executables = ["whenever", "wheneverize"]
-  s.files = [".gitignore", ".travis.yml", "CHANGELOG.md", "Gemfile", "LICENSE", "README.md", "Rakefile", "bin/whenever", "bin/wheneverize", "lib/whenever.rb", "lib/whenever/capistrano.rb", "lib/whenever/command_line.rb", "lib/whenever/cron.rb", "lib/whenever/job.rb", "lib/whenever/job_list.rb", "lib/whenever/output_redirection.rb", "lib/whenever/setup.rb", "lib/whenever/version.rb", "test/functional/command_line_test.rb", "test/functional/output_at_test.rb", "test/functional/output_default_defined_jobs_test.rb", "test/functional/output_defined_job_test.rb", "test/functional/output_env_test.rb", "test/functional/output_redirection_test.rb", "test/test_helper.rb", "test/unit/cron_test.rb", "test/unit/job_test.rb", "whenever.gemspec"]
-  s.homepage = %q{}
+  s.files = ["bin/whenever", "bin/wheneverize"]
+  s.homepage = ""
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
-  s.summary = %q{Cron jobs in ruby.}
-  s.test_files = ["test/functional/command_line_test.rb", "test/functional/output_at_test.rb", "test/functional/output_default_defined_jobs_test.rb", "test/functional/output_defined_job_test.rb", "test/functional/output_env_test.rb", "test/functional/output_redirection_test.rb", "test/unit/cron_test.rb", "test/unit/job_test.rb"]
+  s.rubygems_version = "1.8.10"
+  s.summary = "Cron jobs in ruby."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

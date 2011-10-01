@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require "#{File.dirname(__FILE__)}/spec_setup"
 
 def dumb_app(env)

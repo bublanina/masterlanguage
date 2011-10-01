@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'capistrano/transfer'
 
 module Capistrano

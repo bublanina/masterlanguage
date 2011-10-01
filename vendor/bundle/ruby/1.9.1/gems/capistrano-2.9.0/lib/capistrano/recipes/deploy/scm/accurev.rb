@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 require 'capistrano/recipes/deploy/scm/base'
 require 'rexml/xpath'
 require 'rexml/document'

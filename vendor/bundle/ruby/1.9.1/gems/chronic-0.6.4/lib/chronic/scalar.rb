@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Chronic
   class Scalar < Tag
     DAY_PORTIONS = %w( am pm morning afternoon evening night )

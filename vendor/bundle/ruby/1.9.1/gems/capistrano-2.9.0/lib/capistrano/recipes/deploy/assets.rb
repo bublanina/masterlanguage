@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 load 'deploy' unless defined?(_cset)
 
 _cset :asset_env, "RAILS_GROUPS=assets"

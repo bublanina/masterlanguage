@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 module Tilt
   TOPOBJECT = defined?(BasicObject) ? BasicObject : Object
 
