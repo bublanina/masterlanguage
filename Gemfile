@@ -33,6 +33,7 @@ gem 'validates_timeliness', '~> 3.0.2'
 gem 'ckeditor', '3.5.0'
 gem 'uglifier'
 gem 'dynamic_form'
+gem 'mysql'
 
 gem 'execjs', :git => 'git://github.com/sstephenson/execjs.git'
 gem 'libv8'
