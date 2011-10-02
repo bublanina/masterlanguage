@@ -7,7 +7,7 @@ class BadDatesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @bad_dates }
+
     end
   end
 
@@ -18,7 +18,7 @@ class BadDatesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @bad_date }
+
     end
   end
 
@@ -29,7 +29,7 @@ class BadDatesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @bad_date }
+
     end
   end
 
@@ -46,10 +46,10 @@ class BadDatesController < ApplicationController
     respond_to do |format|
       if @bad_date.save
         format.html { redirect_to @bad_date, notice: 'Bad date was successfully created.' }
-        format.json { render json: @bad_date, status: :created, location: @bad_date }
+
       else
         format.html { render action: "new" }
-        format.json { render json: @bad_date.errors, status: :unprocessable_entity }
+
       end
     end
   end
@@ -62,10 +62,10 @@ class BadDatesController < ApplicationController
     respond_to do |format|
       if @bad_date.update_attributes(params[:bad_date])
         format.html { redirect_to @bad_date, notice: 'Bad date was successfully updated.' }
-        format.json { head :ok }
+
       else
         format.html { render action: "edit" }
-        format.json { render json: @bad_date.errors, status: :unprocessable_entity }
+
       end
     end
   end
@@ -78,7 +78,7 @@ class BadDatesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to bad_dates_url }
-      format.json { head :ok }
+
     end
   end
 end
