@@ -45,7 +45,7 @@ class BadDatesController < ApplicationController
 
     respond_to do |format|
       if @bad_date.save
-        format.html { redirect_to @bad_date, notice: 'Bad date was successfully created.' }
+        format.html { redirect_to @bad_date, :notice=> 'Bad date was successfully created.' }
 
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class BadDatesController < ApplicationController
 
     respond_to do |format|
       if @bad_date.update_attributes(params[:bad_date])
-        format.html { redirect_to @bad_date, notice: 'Bad date was successfully updated.' }
+        format.html { redirect_to @bad_date, :notice=> 'Bad date was successfully updated.' }
 
       else
         format.html { render action: "edit" }
