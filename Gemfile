@@ -10,7 +10,7 @@ gem 'rake', '0.9.2'
 
 gem 'mysql2'#, "0.2.6"
 
-gem "rack"
+gem "rack", '1.3.3'
 gem 'rmagick'
 gem "will_paginate", "~> 3.0.pre2"
 
