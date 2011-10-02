@@ -48,7 +48,7 @@ class BadDatesController < ApplicationController
         format.html { redirect_to @bad_date, :notice=> 'Bad date was successfully created.' }
 
       else
-        format.html { render action: "new" }
+        format.html { render :action=> "new" }
 
       end
     end
@@ -64,7 +64,7 @@ class BadDatesController < ApplicationController
         format.html { redirect_to @bad_date, :notice=> 'Bad date was successfully updated.' }
 
       else
-        format.html { render action: "edit" }
+        format.html { render :action=> "edit" }
 
       end
     end
