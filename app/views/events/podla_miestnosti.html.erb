@@ -17,13 +17,10 @@ Vyber si týždeň pre zobrazenie:	<%= select_tag(:start, options_for_select(@st
 <h2>
 Rozvrhy miestnosí pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.days).strftime("%d.%m.%y") %>
 </h2>
-<p class="center">
-	*O* -pridaj one-to-one, *F* - pridaj firemný, *P* - pridaj public
-</p>
-<% @rozvrhy.each do |classroom, events| %>
+<% Classroom.where("name != 'firma'").each do |classroom1| %>
 <table class="day_rozvrh">
-		<th style="width:70px; max-width:70px; min-width:70px; font-size:10px;">
-			<%= Classroom.find(classroom).name %></th>
+		<th style="width:60px; max-width:60px; min-width:60px; font-size:10px;">
+			<%= classroom1.name %></th>
 		<% 13.times do |c|%>
 			<th colspan="12" style="width:48px;"><%= c+7 %></th>
 		<% end%>
@@ -35,6 +32,8 @@ Rozvrhy miestnosí pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.d
 			<% end %>
 		</tr>
 		<% tyzden = ["PO","UT","ST","ŠT","PI","SO","NE"]%>
+		<% @rozvrhy.each do |classroom, events| %>
+		<% if classroom1.id==classroom %>
 		
 		<% 7.times do |i| %>
 		
@@ -44,44 +43,67 @@ Rozvrhy miestnosí pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.d
 		<td><%= tyzden[i]+" "+(@start+i.days).strftime("%d.%m") %></td>
 		<% if events_den.empty? %>
 			<td colspan="156">
-<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", :zac=>start, :dlzka=>156, :classroom_id=>classroom %>
+			<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+									:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+									:dlzka=>156, :classroom_id=>classroom %>
 			</td>
 		<% end %>
 				
 				<% events_den.each do |event| %>
 					
-					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
-					<td colspan="<%=n%>" >
-<% if n>9 %>
-<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", :zac=>start, :dlzka=>n, :classroom_id=>classroom %>
-
-<% end%>
+					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min.minutes))/5 %>
+					<% if n>0 %>
+					<td colspan="<%=n%>">
+						<% if n>9 %>
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+											:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+											:dlzka=>n, :classroom_id=>classroom %>
+						<% end%>
 					</td>
+					<%end%>
 					<% n2=event.subject.mins_per_hour/5 %>
 					<% trieda=event.status %>
 					<td class="<%=trieda%>" colspan="<%=n2%>" >
-						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.") %>
+						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M")+"-"+(event.zaciatok+event.subject.mins_per_hour.minutes).strftime("%H:%M")+" "+event.user.lname%>
 					</td>
 
 					<% start=event.zaciatok+event.subject.mins_per_hour.minutes %>
 					<% if (156-(n+n2)==0) %><tr/><tr>
 					<% elsif (events_den.last == event) %>
 					<td colspan="<%= 156-(n+n2)%>">
-<% if (156-(n+n2))>9 %>
-<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", :zac=>start, :dlzka=>156-(n+n2), :classroom_id=>classroom %>
-
-<% end %>
+						<% if (156-(n+n2))>9 %>
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+												:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+												:dlzka=>156-(n+n2), :classroom_id=>classroom %>
+						<% end %>
 					</td>
 					<% elsif events_den[events_den.index(event) + 1].zaciatok.day != event.zaciatok.day %> 
-					<td colspan="<%= 156-(n+n2)%>">
-<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_kurz", :zac=>start, :dlzka=>156-(n+n2), :classroom_id=>classroom %>
-					</td></tr><tr>
+						<td colspan="<%= 156-(n+n2)%>">
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+												:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+												:dlzka=>156-(n+n2), :classroom_id=>classroom %>
+						</td>
+					</tr><tr>
 					<% end %>
 					
 					<% end %>
-
-
 				</tr>
-				<% end %>
+				
+		<% end %>
+		<% end %>
+	<% end %>
+				<% if classroom1.events.where(:zaciatok=>@start..@start+1.week).count==0 %>
+					<% 7.times do |i| %>
+					<tr>
+					<td><%= tyzden[i]+" "+(@start+i.days).strftime("%d.%m") %></td>
+					<td colspan="156">
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+												:zac=>@start+i.days+7.hours, 
+												:dlzka=>156, :classroom_id=>classroom1.id %>
+					</td>
+					</tr>
+					<% end %>
+				<% end%>		
+				
 	</table><br/>
 <% end %>

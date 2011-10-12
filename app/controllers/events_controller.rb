@@ -75,8 +75,14 @@ class EventsController < ApplicationController
   def planuj_public
     @zaciatok = DateTime.parse(params[:zac])
     @koniec = @zaciatok + (params[:dlzka].to_i*5).minutes
-    if @classroom
+    if params[:classroom_id]
       @classroom = Classroom.find(params[:classroom_id])
+    end
+    if params[:subject_id]
+      @subject = Subject.find(params[:subject_id])
+    end
+    if params[:user_id]
+      @user = User.find(params[:user_id])
     end
     @rozvrh = Event.where(:zaciatok => @zaciatok.to_date..@zaciatok.to_date+1.day).order(:zaciatok)
     @udalosti_u = @rozvrh.where("user_id is not null").group_by(&:user_id)
@@ -84,43 +90,70 @@ class EventsController < ApplicationController
   end
   
   def pridaj_terminy
-    
   #ak je oznacene neopakovat, prida len zvolenu 1 hodinu a finito
-    if params[:kolko]=="nie"
-      if Subject.find(params[:subject_id]).users.count==1
-      @event=Event.create(:subject_id=>params[:subject_id], :classroom_id=>params[:classroom_id],
-                       :user_id=>Subject.find(params[:subject_id]).users.first, 
+    if params[:kolko] && params[:kolko]=="nie" #1
+      if params[:user_id] #2 ak je zadany lektor, hned ho prida
+              @event=Event.new(:subject_id=>params[:subject_id], :classroom_id=>params[:classroom_id],
+                       :user_id=>params[:user_id], 
                        :zaciatok=>DateTime.new(params[:zaciatok][:year].to_i,
                                       params[:zaciatok][:month].to_i,
                                       params[:zaciatok][:day].to_i,
                                       params[:zaciatok][:hour].to_i,
-                                      params[:zaciatok][:minute].to_i ))
-      @event.save
-      redirect_to :action=>"udalosti_pridane", :events=>@event 
-      else
+                                      params[:zaciatok][:minute].to_i ),
+                       :status=>"riadna")
+      
+           if preskumaj_event(@event)==true
+            @event.save
+            redirect_to :action=>"udalosti_pridane", :events=>@event 
+            else 
+              redirect_to :back#render :action=>"planuj_public", :zac=>params[:zaciatok]
+            end
+        #2.1
+      elsif Subject.find(params[:subject_id]).users.count==1 # ak je lektor len 1, prida ho
+      @event=Event.new(:subject_id=>params[:subject_id], :classroom_id=>params[:classroom_id],
+                       :user_id=>Subject.find(params[:subject_id]).users.first.id, 
+                       :zaciatok=>DateTime.new(params[:zaciatok][:year].to_i,
+                                      params[:zaciatok][:month].to_i,
+                                      params[:zaciatok][:day].to_i,
+                                      params[:zaciatok][:hour].to_i,
+                                      params[:zaciatok][:minute].to_i ),
+                       :status=>"riadna")
+           if preskumaj_event(@event)==true
+            @event.save
+            redirect_to :action=>"udalosti_pridane", :events=>@event 
+           else 
+              redirect_to :back#render :action=>"planuj_public", :zac=>@event.zaciatok
+           end
+      else #2.2 inak nasmeruje na zvolenie lektora
         redirect_to :action=>"zvol_lektora", :subject_id=>params[:subject_id], 
                   :classroom_id=>params[:classroom_id], :zaciatok=>params[:zaciatok],
                   :kolko=>params[:kolko], :cislo=>params[:cislo], :opakovat=>params[:opakovat]
-      end
-    else
+      end  #koniec priradovania hodiny bez opakovania
+      #else k if params[:kolko]
+    else #1.2 v pripade ze je zadane opakovanie hodin ide sem
    @event=Event.new     
-    #pokial uci predmet viac lektorov, presmeruj na stranku zvolenia lektora
+    #2.1 pokial uci predmet viac lektorov, presmeruj na stranku zvolenia lektora
     if Subject.find(params[:subject_id]).users.count>1 && params[:user_id].nil?
       redirect_to :action=>"zvol_lektora", :subject_id=>params[:subject_id], 
                   :classroom_id=>params[:classroom_id], :zaciatok=>params[:zaciatok],
                   :kolko=>params[:kolko], :cislo=>params[:cislo], :opakovat=>params[:opakovat]
-    elsif params[:user_id]
-      @event.user_id = User.find(params[:user_id])
-    else
-      @event.user_id = Subject.find(params[:subject_id]).users.first  
-    @event.subject_id = Subject.find(params[:subject_id])
-    @event.classroom_id = Classroom.find(params[:classroom_id])
+    else #2.2 ak je pocet lektorov 1 alebo bol lektor zadany, prirad
+      if params[:user_id] # ak bol zadany lektor, automaticky ho prirad
+        @event.user_id = params[:user_id]
+      else
+        @event.user_id = Subject.find(params[:subject_id]).users.first.id
+      end  
+    @event.subject_id = params[:subject_id]
+    @event.classroom_id = params[:classroom_id]
     @event.zaciatok = DateTime.new(params[:zaciatok][:year].to_i,
                                       params[:zaciatok][:month].to_i,
                                       params[:zaciatok][:day].to_i,
                                       params[:zaciatok][:hour].to_i,
                                       params[:zaciatok][:minute].to_i)
-    @events=[]
+    @event.status="riadna"
+           # ak prvy event nie je v kolizii, pokracuj v pridavani                           
+         if preskumaj_event(@event)==true
+    @events=[] #vytvor pole pre eventy
     @events<<@event
     case params[:kolko]
     when "vsetky" then @kolko=(@event.subject.how_many_hours-@event.subject.events.count-1).to_i #-1 odrata prvu hodinu
@@ -135,17 +168,29 @@ class EventsController < ApplicationController
                          :subject_id=>@event.subject_id, 
                          :zaciatok=>DateTime.new(params[:zaciatok][:year].to_i,
                                       params[:zaciatok][:month].to_i,
-                                      params[:zaciatok][:day].to_i,
+                                      params[:zaciatok][:day].to_i+((i+1)*@opakovat),#pripocita dni ku dnom
                                       params[:zaciatok][:hour].to_i,
-                                      params[:zaciatok][:minute].to_i)+((i+1)*@opakovat).days )
+                                      params[:zaciatok][:minute].to_i),
+                         :status=>"riadna")
     end # end @kolko.times / ukladanie zaznamov do rozvrhu
-      if @events.each { |event| event.save }
+    @kolizie = []
+      @events.each do |event|  
+            if preskumaj_event(event)==true
+              event.save 
+            else 
+              @kolizie<<event
+              event.delete
+            end
+        end 
+        if !(@kolizie.empty?)
+          flash[:alert]="Nie všetky dátumy boli uložené - vyskytlo sa niekoľko kolízií (pozri dole)."
+        end
         flash[:notice]="Záznamy boli uložené."
-        redirect_to :action=>"udalosti_pridane", :events=>@events
-      else
-        flash[:alert]="Vyskytla sa nejaká zrada...! Fuj!"
-        render :action=>"pridaj_public"
-      end   #end if events.save
+        redirect_to :action=>"udalosti_pridane", :events=>@events, :kolizie=>@kolizie
+   # ak ma prvy event koliziu, nepokracuj
+   else 
+              redirect_to :back#render :action=>"planuj_public", :zac=>@event.zaciatok
+    end
     end
    end #koniec if params[:kolko]
   end #koniec def pridaj_terminy
@@ -158,7 +203,16 @@ class EventsController < ApplicationController
                                       params[:zaciatok][:month].to_i,
                                       params[:zaciatok][:day].to_i,
                                       params[:zaciatok][:hour].to_i,
-                                      params[:zaciatok][:minute].to_i)    
+                                      params[:zaciatok][:minute].to_i)
+    @event.status="riadna"    
+  end
+  
+  def presun_event
+    
+  end
+  
+  def presun
+    
   end
   
   
@@ -186,6 +240,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(params[:event])
+    @event.status="riadna"
 
     respond_to do |format|
       if @event.save
@@ -235,5 +290,40 @@ class EventsController < ApplicationController
   def udalosti_pridane
     @events = Event.where(:id=>params[:events])
   end
+
+def preskumaj_event(event1)
+    stav = true
+        if (6..20).include?(event1.zaciatok.hour)
+        Event.where(:zaciatok=>event1.zaciatok.to_date..event1.zaciatok.to_date+1.day).each do |event|
+          #skuma ci sa nejaky event prekryva
+            if event1.zaciatok<(event.zaciatok+event.subject.mins_per_hour.minutes)&&(event1.zaciatok+event1.subject.mins_per_hour.minutes)>event.zaciatok
+              #ak sa event prekryva, skuma ci uz lektor neuci
+              if event.user==event1.user
+                flash[:alert]="Kolízia - lektor už v tom čase učí."
+                stav=false
+              #skuma ci je volna miestnost
+              elsif event1.classroom.id!=1 && event.classroom==event1.classroom
+                flash[:alert]="Kolízia - miestnosť obsadená."
+                stav=false
+              end #end skumani  
+            end #end prekryvajucich sa eventov
+        end # end each do
+        else
+          flash[:alert]="Hodina je mimo rozsahu výučby(6:00-21:00)."
+          stav = false
+        end #end if / kontrola ci je hodina vo vyucbovom case
+        # kontrola ci ma subject
+        if event1.subject.users.count==0
+          flash[:alert]="Chyba - kurzu musí byť priradený aspoň 1 lektor."
+          stav=false
+        end
+        if !(event1.user.classrooms.include?(event1.classroom)||event1.classroom_id==1 )
+          flash[:alert]="Chyba - zvolená miestnosť nie je viditeľná pre zvoleného lektora."
+          stav=false
+        end
+        
+        return stav   
+end
+
 
 end

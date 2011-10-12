@@ -7,15 +7,18 @@ Začiatok lekcie:<%= @event.zaciatok.strftime("%d.%m.%y, %H:%M") %><br />
 Kurz:<%= @event.subject.title %><br />
 <%= hidden_field_tag :subject_id,"", :value=>@event.subject.id %>
 Miestnosť:<%= @event.classroom.name %>
-<%= hidden_field_tag :classroom_id,"", :value=>@event.classroom.id %>
-<% end %>
-<%= hidden_field_tag :zaciatok, "", :value=>@event.zaciatok %>
+<%= hidden_field_tag :classroom_id, "", :value=>@event.classroom.id %>
+<%= hidden_field_tag "zaciatok[year]", "", :value=>@event.zaciatok.year %>
+<%= hidden_field_tag "zaciatok[month]", "", :value=>@event.zaciatok.month %>
+<%= hidden_field_tag "zaciatok[day]", "", :value=>@event.zaciatok.day %>
+<%= hidden_field_tag "zaciatok[hour]", "", :value=>@event.zaciatok.hour %>
+<%= hidden_field_tag "zaciatok[minute]", "", :value=>@event.zaciatok.minute %>
 <p>
 Hodinu opakuj (bez prvej):<br />
 <% if params[:kolko]=="nie" %>neopakuj<br />
 <% elsif params[:kolko]== "vsetky" %>až do konca kurzu (kým sa neminú všetky hodiny)<br />
 <% elsif params[:kolko]=="polovica" %>do polovice kurzu (rozloží sa max.50% z nenaplánovaných kurzových hodín)<br />
-<% else %><%= params[:kolko] %>-krát<br /><br />
+<% else %><%= params[:cislo] %>-krát<br /><br />
 <%end%>
 <% if params[:kolko]!="nie" %>
 Hodinu opakovať s periódou:<br/>
@@ -25,7 +28,7 @@ Hodinu opakovať s periódou:<br/>
 <% elsif params[:opakovat]=="14" %>2 týždne<br />
 <% end %>
 <% end %>
-<% end %>
+
 </p>
 <p>
 <%= submit_tag "Vytvor" %>

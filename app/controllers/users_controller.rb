@@ -46,6 +46,7 @@ class UsersController < ApplicationController
   # POST /users.xml
   def create
     @user = User.new(params[:user])
+    @user.classroom=Classroom.find(1)
 
     respond_to do |format|
       if @user.save

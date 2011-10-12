@@ -2,7 +2,7 @@
 class User < ActiveRecord::Base
   
   has_and_belongs_to_many :classrooms
-  has_and_belongs_to_many :subjects
+  has_many :subjects, :through=>:subjects_users
   has_many :events, :dependent=>:destroy
   
   

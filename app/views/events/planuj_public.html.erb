@@ -2,8 +2,10 @@
 Nový termín 
 <% if @classroom %>
 pre miestnosť <%= @classroom.name %>
-<% elsif @lektor %>
-pre lektora <%= @lektor.fname+" "+@lektor.lname %>
+<% elsif @user %>
+pre lektora <%= @user.fname+" "+@user.lname %>
+<% elsif @subject %>
+pre kurz <%= @subject.title %>
 <% end%>
 na deň <%= @zaciatok.strftime("%d.%m.%y") %>
 </h2>
@@ -11,15 +13,20 @@ na deň <%= @zaciatok.strftime("%d.%m.%y") %>
 Začiatok lekcie:<%= select_time @zaciatok.to_time, :prefix=>:zaciatok %><br />
 
 <% if @classroom %>
-Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(Subject.joins(:users).where("users.id like ?", User.where(:id=>@classroom.users)), :id, :title)) %><br />
+Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(Subject.joins(:users).where("users.id in (?)", User.where(:id=>@classroom.users)), :id, :title)) %><br />
 <%= hidden_field_tag :classroom_id,"", :value=>@classroom.id %>
-<% elsif @lektor %>
-Lektor: <%= @lektor.fname+" "+@lektor.lname %>
-<%= hidden_field_tag :user_id%><br/>
-Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(@lektor.subjects, :id, :title)) %><br />
-Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(@lektor.classrooms, :id, :name)) %><br />
+<% elsif @user %>
+Lektor: <%= @user.fname+" "+@user.lname %>
+<%= hidden_field_tag :user_id, "", :value=>@user.id %><br/>
+Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(@user.subjects, :id, :title)) %><br />
+Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(@user.classrooms, :id, :name)) %><br />
+<% elsif @subject %>
+Kurz:<%= @subject.title %><br />
+<%= hidden_field_tag :subject_id, "", :value=>@subject.id %><br/>
+Lektor: <%= select_tag(:user_id, options_from_collection_for_select(@subject.users, :id, :lname)) %>
+Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(Classroom.joins(:users).where("users.id in (?)", User.where(:id=>@subject.users)), :id, :name)) %><br />
 <% else %>
-Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(Subject.all, :id, :title)) %><br />
+Kurz:<%= select_tag(:subject_id, options_from_collection_for_select(Subject.all(:include=>:users, :conditions=>"users.id is not null"), :id, :title)) %><br />
 Miestnosť:<%= select_tag(:classroom_id, options_from_collection_for_select(Classroom.all, :id, :name)) %><br />
 <% end %>
 <%= hidden_field_tag :zac, "", :value=>@zaciatok %>
@@ -32,8 +39,8 @@ Hodinu opakuj (bez prvej):<br />
 <%= number_field_tag :cislo, "1", :size=>1 %> -krát<br /><br />
 
 Túto hodinu chcem opakovať s periódou:<br/>
-<%= radio_button_tag :opakovat, "2" %>2 dni mimo SO,NE (s tým, že podľa prvého týždňa sa nastavia ďalšie)<br/>
-<%= radio_button_tag :opakovat, "3" %>3 dni mimo SO,NE (s tým, že podľa prvého týždňa sa nastavia ďalšie)<br/>
+<%= radio_button_tag :opakovat, "2" %>o 2 dni a takto každý týždeň<br/>
+<%= radio_button_tag :opakovat, "3" %>o 3 dni a takto každý týždeň<br/>
 <%= radio_button_tag :opakovat, "7", true %>1 týždeň<br />
 <%= radio_button_tag :opakovat, "14" %>2 týždne<br />
 </p>
@@ -46,8 +53,10 @@ Rozvrhy pre zvolený deň:<br />
 <p>
 Lektori:
 </p>
+
+<% User.where(:active=>true).each do |user1| %>
 <table class="day_rozvrh">
-		<th style="width:70px; max-width:70px; min-width:70px; font-size:10px;">
+		<th style="width:60px; max-width:60px; min-width:60px; font-size:10px;">
 			<%= @zaciatok.strftime("%d.%m.%y") %>
 		</th>
 		<% 13.times do |c|%>
@@ -60,8 +69,10 @@ Lektori:
 			<% end %>
 		</tr>
 		<% @udalosti_u.each do |user, events| %>
+		<% if user1.id==user %>
+		
 		<tr>
-		<td><%= User.find(user).lname %></td>
+		<td><%= user1.lname %></td>
 				<% start=Time.parse("7:00") %>
 				<% events.each do |event| %>
 					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
@@ -81,11 +92,22 @@ Lektori:
 
 				</tr>
 			<% end %>	
-		
+			<% end %>
+			<% if user1.events.where(:zaciatok=>@zaciatok.to_date..@zaciatok.to_date+1.day).count==0 %>
+					<tr>
+					<td><%= user1.lname %></td>
+					<td colspan="156">
+prázdne
+					</td>
+					</tr>
+				<% end%>		
 	</table>
+<% end %>
+
+
 <p>Miestnosti:</p>
 <table class="day_rozvrh">
-		<th style="width:70px; max-width:70px; min-width:70px; font-size:10px;">
+		<th style="width:60px; max-width:60px; min-width:60px; font-size:10px;">
 			<%= @zaciatok.strftime("%d.%m.%y") %>
 		</th>
 		<% 13.times do |c|%>

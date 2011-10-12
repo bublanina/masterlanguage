@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(:version => 20110918115229) do
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
   create_table "bad_dates", :force => true do |t|
-    t.date     "fujdate"
+    t.integer  "den"
+    t.integer  "mesiac"
+    t.integer  "rok"
+    t.integer  "buyer_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -85,6 +88,9 @@ ActiveRecord::Schema.define(:version => 20110918115229) do
     t.integer  "subject_id"
     t.string   "how_to_pay"
     t.integer  "persons"
+    t.decimal  "jhodinovka",    :precision => 8, :scale => 2
+    t.decimal  "jcelokurzovka", :precision => 8, :scale => 2
+    t.decimal  "zaplatil",      :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -106,6 +112,8 @@ ActiveRecord::Schema.define(:version => 20110918115229) do
   create_table "subjects_users", :id => false, :force => true do |t|
     t.integer "subject_id"
     t.integer "user_id"
+    t.decimal "uhodinovka",    :precision => 8, :scale => 2
+    t.decimal "ucelokurzovka", :precision => 8, :scale => 2
   end
 
   create_table "users", :force => true do |t|
@@ -129,7 +137,7 @@ ActiveRecord::Schema.define(:version => 20110918115229) do
     t.integer  "phone"
     t.string   "prac_pomer"
     t.text     "info"
-    t.integer  "default_hour_price"
+    t.integer  "default_hodinovka"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

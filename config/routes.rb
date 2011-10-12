@@ -11,6 +11,7 @@ MasterLanguage::Application.routes.draw do
   match '/pridaj_terminy' => 'events#pridaj_terminy'
   match '/udalosti_pridane' => 'events#udalosti_pridane'
   match '/zvol_lektora' => 'events#zvol_lektora'
+  match '/presun_event/:id' => 'events#presun_event'
   
 
   resources :bad_dates

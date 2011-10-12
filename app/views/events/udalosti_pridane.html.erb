@@ -35,5 +35,45 @@
 				</tr>
 
 	</table>
-	
 <% end%>
+
+<% if @kolizie %>
+<h3>Kolízie - tieto hodiny neboli pridané</h3>
+	<% @kolizie.each do |event| %>
+	
+	<table class="day_rozvrh">
+		<th style="width:70px; max-width:70px; min-width:70px; font-size:10px;">
+			<%= event.zaciatok.strftime("%d.%m.%y") %>
+		</th>
+		<% 13.times do |c|%>
+			<th colspan="12" style="width:48px;"><%= c+7 %></th>
+		<% end%>
+		<tr>
+			<td></td>
+			<% 156.times do %>
+				<td style="width: 2px; max-width: 2px; min-width: 1.5px;"></td>
+			<% end %>
+		</tr>
+		<tr>
+		<td><%= event.user.lname %>,
+			<%= event.classroom.name %></td>
+				<% start=Time.parse("7:00") %>
+					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
+					<td colspan="<%=n%>" ></td>
+					<% n2=event.subject.mins_per_hour/5 %>
+					<% trieda=event.status %>
+					<td class="<%=trieda%>" colspan="<%=n2%>" >
+						<%= event.subject.title+" "+event.zaciatok.strftime("%H:%M.") %>
+					</td>
+					<% if 156-(n+n2)!=0 %>
+					<td colspan="<%= 156-(n+n2)%>">
+					</td>
+					<% end %>
+				</tr>
+	</table>
+<% end%>
+
+<% end %>
+<p class="center">
+<%= link_to "Ukáž rozvrh lektorov", :action=>"podla_lektorov" %>
+</p>

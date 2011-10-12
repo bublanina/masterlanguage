@@ -19,7 +19,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :phone
       t.string :prac_pomer
       t.text :info
-      t.integer :default_hour_price
+      t.integer :default_hodinovka
 
       # t.lockable
 
@@ -33,6 +33,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
         create_table :subjects_users, :id => false do |t|
         t.integer :subject_id
         t.integer :user_id
+        t.decimal :uhodinovka, :precision => 8, :scale => 2
+        t.decimal :ucelokurzovka, :precision => 8, :scale => 2
         end
         
     end

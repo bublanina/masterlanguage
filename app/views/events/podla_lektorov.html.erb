@@ -18,11 +18,11 @@ Vyber si týždeň pre zobrazenie:	<%= select_tag(:start, options_for_select(@st
 <h2>
 Rozvrhy lektorov pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.days).strftime("%d.%m.%y") %>
 </h2>
-<% @rozvrhy.each do |user, events| %>
+
+<% User.where(:active=>true).each do |user1| %>
 <table class="day_rozvrh">
-		<th style="width:70px; max-width:70px; min-width:70px; font-size:10px;">
-			<% user = User.find(user) %>
-			<%= user.fname+" "+user.lname %></th>
+		<th style="width:60px; max-width:60px; min-width:60px; font-size:10px;">
+			<%= user1.fname+" "+user1.lname %></th>
 		<% 13.times do |c|%>
 			<th colspan="12" style="width:48px;"><%= c+7 %></th>
 		<% end%>
@@ -34,23 +34,42 @@ Rozvrhy lektorov pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.day
 			<% end %>
 		</tr>
 		<% tyzden = ["PO","UT","ST","ŠT","PI","SO","NE"]%>
-		
+				<% @rozvrhy.each do |user, events| %>
+				
+		<% if user1.id==user %>
+
 		<% 7.times do |i| %>
-		
-		<% events_den = events.find_all {|e| (@start+i.days) == e[:zaciatok].to_date } %>
+		<% start=Time.parse("7:00") %>
+		<% events_den = events.find_all {|e| (@start+i.days) == e[:zaciatok].to_date } %>		
 		<tr>
 		<td><%= tyzden[i]+" "+(@start+i.days).strftime("%d.%m") %></td>
 		<% if events_den.empty? %>
-			<td colspan="156"></td>
+			<td colspan="156">
+				<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+										:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+										:dlzka=>156, :user_id=>user %>
+			</td>
 		<% end %>
-				<% start=Time.parse("7:00") %>
+				
 				<% events_den.each do |event| %>
 					
 					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
-					<td colspan="<%=n%>" ></td>
+					<% if n>0 %>
+					<td colspan="<%=n%>" >
+			<% if n>9 %>
+				<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public",
+										:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+										:dlzka=>n, :user_id=>user %>
+			<% end%>
+					</td>
+					<% end %>
 					<% n2=event.subject.mins_per_hour/5 %>
 					<% trieda=event.status %>
 					<td class="<%=trieda%>" colspan="<%=n2%>" >
+						
+						<%= link_to :action=>"presun_event", :id=>event do %>
+							<%= image_tag "move.png", :class=>'presun' %>
+						<% end %>
 						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.")+"-"+(event.zaciatok+event.subject.mins_per_hour.minutes).strftime("%H:%M") %>
 						<%= event.classroom.name %>
 					</td>
@@ -59,16 +78,37 @@ Rozvrhy lektorov pre týždeň <%= @start.strftime("%d.%m.%y")+"-"+(@start+6.day
 					<% if (156-(n+n2)==0) %><tr/><tr>
 					<% elsif (events_den.last == event) %>
 					<td colspan="<%= 156-(n+n2)%>">
+						<% if (156-(n+n2))>9 %>
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+												:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+												:dlzka=>156-(n+n2), :user_id=>user %>
+						<% end %>
 					</td>
 					<% elsif events_den[events_den.index(event) + 1].zaciatok.month != event.zaciatok.month %> 
 					<td colspan="<%= 156-(n+n2)%>">
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+												:zac=>@start+i.days+start.hour.hours+start.min.minutes, 
+												:dlzka=>156-(n+n2), :user_id=>user %>
 					</td></tr><tr>
 					<% end %>
 					
 					<% end %>
-
-
 				</tr>
 				<% end %>
+						<% end %>
+	<% end %>
+				<% if user1.events.where(:zaciatok=>@start..@start+1.week).count==0 %>
+					<% 7.times do |i| %>
+					<tr>
+					<td><%= tyzden[i]+" "+(@start+i.days).strftime("%d.%m") %></td>
+					<td colspan="156">
+						<%= link_to " pridaj ", :controller=>"events", :action=>"planuj_public", 
+												:zac=>@start+i.days+7.hours, 
+												:dlzka=>156, :user_id=>user1.id %>
+					</td>
+					</tr>
+					<% end %>
+				<% end%>
+
 	</table><br/>
 <% end %>

@@ -74,6 +74,11 @@ p.menu {
     padding-left: 20px;
 }
 
+a.presun {
+	border-collapse: collapse;
+	width: 5px;
+}
+
 
 table {
     width: 579px;
@@ -114,7 +119,7 @@ table.calendar,table.day_rozvrh {
 	border-style: solid;
 	border-color: black;
 	background-color: white;
-	font-size: 12px;
+	font-size: 10px;
 }
 table th {
 	font-size: 14px;

@@ -11,9 +11,9 @@ set :application, "masterlanguage"
 set :repository, "git@github.com:bublanina/masterlanguage.git"
 set :scm, "git"
 
-role :web, "server7.railshosting.cz"
-role :app, "server7.railshosting.cz"
-role :db,  "server7.railshosting.cz", :primary => true
+role :web, "server8.railshosting.cz"
+role :app, "server8.railshosting.cz"
+role :db,  "server8.railshosting.cz", :primary => true
 
 
 set :deploy_to, "/home/masterlanguage/app/"
