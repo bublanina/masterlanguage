@@ -1,16 +1,6 @@
 # -*- encoding : utf-8 -*-
 require "bundler/capistrano"
 
-
-
-# Load RVM's capistrano plugin.    
-require "rvm/capistrano"
-
-set :rvm_type, :user  # Don't use system-wide RVM
-
-
-
-
 #set :whenever_command, "bundle exec whenever"
 
 
