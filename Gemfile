@@ -35,9 +35,9 @@ gem 'uglifier'
 gem 'dynamic_form'
 gem 'mysql'
 
-gem 'execjs', :git => 'git://github.com/sstephenson/execjs.git'
-gem 'libv8', :git=> 'git://github.com/fractaloop/libv8.git'
-gem "therubyracer"
+#gem 'execjs', :git => 'git://github.com/sstephenson/execjs.git'
+#gem 'libv8', :git=> 'git://github.com/fractaloop/libv8.git'
+#gem "therubyracer"
 
 
 # Use unicorn as the web server
