@@ -4,6 +4,14 @@ require "bundler/capistrano"
 #set :whenever_command, "bundle exec whenever"
 
 
+set :default_environment, {
+ 'PATH' => "/usr/local/rvm/gems/ruby-1.9.2-p290/bin:/usr/local/rvm/gems/ruby-1.9.2-p290@global/bin:/usr/local/rvm/rubies/ruby-1.9.2-p290/bin:/usr/local/rvm/bin:$PATH",
+ 'RUBY_VERSION' => 'ruby-1.9.2-p290',
+ 'GEM_HOME'     => '/usr/local/rvm/gems/ruby-1.9.2-p290',
+ 'GEM_PATH'     => '/usr/local/rvm/gems/ruby-1.9.2-p290:/usr/local/rvm/gems/ruby-1.9.2-p290@global',
+}
+
+
 #default_run_options[:pty] = true
 set :application, "masterlanguage"
 set :repository, "git@github.com:bublanina/masterlanguage.git"
