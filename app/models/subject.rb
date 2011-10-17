@@ -6,7 +6,7 @@ class Subject < ActiveRecord::Base
   accepts_nested_attributes_for :jobs, :allow_destroy => :false, 
   :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
-  has_and_belongs_to_many :buyers, :trough=>:jobs
+  has_and_belongs_to_many :buyers, :through=>:jobs
   accepts_nested_attributes_for :buyers, :allow_destroy => :false, 
   :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
   
