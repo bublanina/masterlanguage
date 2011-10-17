@@ -36,7 +36,7 @@ gem 'dynamic_form'
 gem 'mysql'
 
 gem 'execjs', :git => 'git://github.com/sstephenson/execjs.git'
-gem 'libv8'
+gem 'libv8', :git=> 'git://github.com/fractaloop/libv8.git'
 gem "therubyracer"
 
 
