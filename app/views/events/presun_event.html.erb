@@ -1,0 +1,153 @@
+<h2>Presuň hodinu</h2>
+
+<%= form_tag :action=>"presun" do |f| %>
+<p class="center">
+Presuň na dátum a čas:<%= select_datetime @zaciatok.to_datetime, :prefix=>:zaciatok %><br />
+Má byť hodina zastupovaná? <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :lname, :selected=>@event.user)) %><br />
+<%= hidden_field_tag :event_id, "", :value=>@event.id %>
+<%= submit_tag "Presuň" %>
+</p>
+<% end %>
+<p>Rozvrh lektora na daný týždeň</p>
+
+<table class="day_rozvrh">
+		<th style="width:60px; max-width:60px; min-width:60px; font-size:10px;">
+			<%= @event.user.fname+" "+@event.user.lname %>
+		</th>
+		<% 13.times do |c|%>
+			<th colspan="12" style="width:48px;"><%= c+7 %></th>
+		<% end%>
+		<tr>
+			<td></td>
+			<% 156.times do %>
+				<td style="width: 2px; max-width: 2px; min-width: 1.5px;"></td>
+			<% end %>
+		</tr>
+		<% tyzden = ["PO","UT","ST","ŠT","PI","SO","NE"]%>
+		<tr>
+		<% events = @event.user.events.where(
+				:zaciatok=>@zaciatok.to_date..@zaciatok.to_date+1.day).order(:zaciatok) %>
+		<% 7.times do |i| %>
+		<% start=Time.parse("7:00") %>
+		<% events_den = events.find_all {|e| (@zaciatok+i.days) == e[:zaciatok].to_date } %>		
+		<tr>
+		<td><%= tyzden[i]+" "+(@zaciatok+i.days).strftime("%d.%m") %></td>
+		<% if events_den.empty? %>
+			<td colspan="156">
+			</td>
+		<% end %>
+				
+				<% events_den.each do |event| %>
+					
+					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
+					<% if n>0 %>
+					<td colspan="<%=n%>" >
+					</td>
+					<% end %>
+					<% n2=event.subject.mins_per_hour/5 %>
+					<% trieda=event.status %>
+					<td class="<%=trieda%>" colspan="<%=n2%>" >
+						
+						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.")+"-"+(event.zaciatok+event.subject.mins_per_hour.minutes).strftime("%H:%M") %>
+						<%= event.classroom.name %>
+					</td>
+
+					<% start=event.zaciatok+event.subject.mins_per_hour.minutes %>
+					<% if (156-(n+n2)==0) %><tr/><tr>
+					<% elsif (events_den.last == event) %>
+					<td colspan="<%= 156-(n+n2)%>">
+
+					</td>
+					<% elsif events_den[events_den.index(event) + 1].zaciatok.month != event.zaciatok.month %> 
+					<td colspan="<%= 156-(n+n2)%>">
+
+					</td></tr><tr>
+					<% end %>
+					<% end %>
+					<% end %>
+				</tr>
+
+				<% if @event.user.events.where(:zaciatok=>@zaciatok..@zaciatok+1.week).count==0 %>
+					<% 7.times do |i| %>
+					<tr>
+					<td><%= tyzden[i]+" "+(@zaciatok+i.days).strftime("%d.%m") %></td>
+					<td colspan="156">
+					</td>
+					</tr>
+					<% end %>
+					<% end %>
+	</table>
+
+<p>Rozvrhy miestností: </p>
+
+<% @event.user.classrooms.each do |classroom| %>
+<table class="day_rozvrh">
+		<th style="width:60px; max-width:60px; min-width:60px; font-size:10px;">
+			<%= classroom.name %>
+		</th>
+		<% 13.times do |c|%>
+			<th colspan="12" style="width:48px;"><%= c+7 %></th>
+		<% end%>
+		<tr>
+			<td></td>
+			<% 156.times do %>
+				<td style="width: 2px; max-width: 2px; min-width: 1.5px;"></td>
+			<% end %>
+		</tr>
+		<% tyzden = ["PO","UT","ST","ŠT","PI","SO","NE"]%>
+		<tr>
+		<% events = classroom.events.where(
+				:zaciatok=>@zaciatok.to_date..@zaciatok.to_date+1.day).order(:zaciatok) %>
+		<% 7.times do |i| %>
+		<% start=Time.parse("7:00") %>
+		<% events_den = events.find_all {|e| (@zaciatok+i.days) == e[:zaciatok].to_date } %>		
+		<tr>
+		<td><%= tyzden[i]+" "+(@zaciatok+i.days).strftime("%d.%m") %></td>
+		<% if events_den.empty? %>
+			<td colspan="156">
+			</td>
+		<% end %>
+				
+				<% events_den.each do |event| %>
+					
+					<% n = ((event.zaciatok.hour-start.hour)*60+(event.zaciatok.min-start.min))/5 %>
+					<% if n>0 %>
+					<td colspan="<%=n%>" >
+					</td>
+					<% end %>
+					<% n2=event.subject.mins_per_hour/5 %>
+					<% trieda=event.status %>
+					<td class="<%=trieda%>" colspan="<%=n2%>" >
+						
+						<%= event.subject.title+" -"+event.subject.typ.first.upcase+"- "+event.zaciatok.strftime("%H:%M.")+"-"+(event.zaciatok+event.subject.mins_per_hour.minutes).strftime("%H:%M") %>
+						<%= event.classroom.name %>
+					</td>
+
+					<% start=event.zaciatok+event.subject.mins_per_hour.minutes %>
+					<% if (156-(n+n2)==0) %><tr/><tr>
+					<% elsif (events_den.last == event) %>
+					<td colspan="<%= 156-(n+n2)%>">
+
+					</td>
+					<% elsif events_den[events_den.index(event) + 1].zaciatok.month != event.zaciatok.month %> 
+					<td colspan="<%= 156-(n+n2)%>">
+
+					</td></tr><tr>
+					<% end %>
+					<% end %>
+					<% end %>
+				</tr>
+
+				<% if @event.user.events.where(:zaciatok=>@zaciatok..@zaciatok+1.week).count==0 %>
+					<% 7.times do |i| %>
+					<tr>
+					<td><%= tyzden[i]+" "+(@zaciatok+i.days).strftime("%d.%m") %></td>
+					<td colspan="156">
+					</td>
+					</tr>
+					<% end %>
+					<% end %>
+	</table>
+	<br/>
+<% end %>
+

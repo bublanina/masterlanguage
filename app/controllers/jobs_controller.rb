@@ -51,7 +51,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.html { redirect_to subject_path(@job.subject), notice: 'Klient bol pridaný do kurzu.' }
         format.json { render json: @job, status: :created, location: @job }
       else
         format.html { render action: "new" }

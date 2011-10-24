@@ -12,6 +12,8 @@ MasterLanguage::Application.routes.draw do
   match '/udalosti_pridane' => 'events#udalosti_pridane'
   match '/zvol_lektora' => 'events#zvol_lektora'
   match '/presun_event/:id' => 'events#presun_event'
+  match '/presun/:id' => 'events#presun'
+  match '/nastav_zastupovanie/:id'=> 'events#nastav_zastupovanie'
   
 
   resources :bad_dates
@@ -105,5 +107,5 @@ MasterLanguage::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+   #match ':controller(/:action(/:id(.:format)))'
 end

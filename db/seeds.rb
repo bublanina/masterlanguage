@@ -7,11 +7,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin = Admin.create!(:email => 'ivazuz@gmail.com', :password => 'adminnimda')
+admin = Admin.create!(:email => 'lenka@master-language.com', :password => 'dustY')
 
 user = User.create!([{ :fname=>"Lenka", :lname=>"Rábeková",
-                    :confirmed_at => Date.today, :email => 'ivazuz@gmail.com',
-                    :password => 'adminnimda'#, :nick => 'ADMIN'
+                    :confirmed_at => Date.today, :email => 'lenka@master-language.com',
+                    :password => 'dustY'#, :nick => 'ADMIN'
                     }])
 
 classroom = Classroom.create!({:name=>"firma", :capacity=>10000, :note=>"súkromná miestnosť klienta"})

@@ -157,7 +157,7 @@ class EventsController < ApplicationController
     @events<<@event
     case params[:kolko]
     when "vsetky" then @kolko=(@event.subject.how_many_hours-@event.subject.events.count-1).to_i #-1 odrata prvu hodinu
-    when "polovica" then @kolko=(@event.subject.how_many_hours-@event.subject.events-1).to_i/2
+    when "polovica" then @kolko=(@event.subject.how_many_hours-@event.subject.events.count-1).to_i/2
     when "cislo" then @kolko=params[:cislo].to_i
     end
     @kolko=@kolko.to_i
@@ -168,9 +168,10 @@ class EventsController < ApplicationController
                          :subject_id=>@event.subject_id, 
                          :zaciatok=>DateTime.new(params[:zaciatok][:year].to_i,
                                       params[:zaciatok][:month].to_i,
-                                      params[:zaciatok][:day].to_i+((i+1)*@opakovat),#pripocita dni ku dnom
+                                      params[:zaciatok][:day].to_i,#pripocita dni ku dnom
                                       params[:zaciatok][:hour].to_i,
-                                      params[:zaciatok][:minute].to_i),
+                                      params[:zaciatok][:minute].to_i
+                                                 )+((i+1)*@opakovat).days,
                          :status=>"riadna")
     end # end @kolko.times / ukladanie zaznamov do rozvrhu
     @kolizie = []
@@ -208,11 +209,27 @@ class EventsController < ApplicationController
   end
   
   def presun_event
-    
+    @event = Event.find(params[:id])
+    @zaciatok =  @event.zaciatok.to_date-@event.zaciatok.wday.days+1.day
+   
   end
   
   def presun
-    
+    @event = Event.find(params[:event_id])
+    @event.zaciatok = DateTime.new(params[:zaciatok][:year].to_i,
+                                      params[:zaciatok][:month].to_i,
+                                      params[:zaciatok][:day].to_i,
+                                      params[:zaciatok][:hour].to_i,
+                                      params[:zaciatok][:minute].to_i)
+    @event.user_id = params[:user_id]
+    @event.status = "presunutá"
+    if preskumaj_event(@event)==true
+      @event.save
+      flash[:notice]="Hodina bola presunutá."
+      redirect_to :action=>"udalosti_pridane", :events=>@event     
+    else
+      redirect_to :back
+    end
   end
   
   
@@ -291,10 +308,10 @@ class EventsController < ApplicationController
     @events = Event.where(:id=>params[:events])
   end
 
-def preskumaj_event(event1)
+def preskumaj_event(event1) #ak je vystup true, tak sa hodina neprekryva
     stav = true
         if (6..20).include?(event1.zaciatok.hour)
-        Event.where(:zaciatok=>event1.zaciatok.to_date..event1.zaciatok.to_date+1.day).each do |event|
+        Event.where(:zaciatok=>event1.zaciatok.to_date..event1.zaciatok.to_date+1.day).where("events.id != ?", event1.id).each do |event|
           #skuma ci sa nejaky event prekryva
             if event1.zaciatok<(event.zaciatok+event.subject.mins_per_hour.minutes)&&(event1.zaciatok+event1.subject.mins_per_hour.minutes)>event.zaciatok
               #ak sa event prekryva, skuma ci uz lektor neuci

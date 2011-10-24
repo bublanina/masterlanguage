@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
   
+  has_many :subjects_users
   has_and_belongs_to_many :classrooms
   has_many :subjects, :through=>:subjects_users
   has_many :events, :dependent=>:destroy

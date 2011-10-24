@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Subject < ActiveRecord::Base
   
+  has_many :subjects_users
   has_many :users, :through=>:subjects_users
   has_many :jobs
   accepts_nested_attributes_for :jobs, :allow_destroy => :false, 
