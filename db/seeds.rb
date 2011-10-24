@@ -11,7 +11,7 @@ admin = Admin.create!(:email => 'lenka@master-language.com', :password => 'dustY
 
 user = User.create!([{ :fname=>"Lenka", :lname=>"Rábeková",
                     :confirmed_at => Date.today, :email => 'lenka@master-language.com',
-                    :password => 'dustY'#, :nick => 'ADMIN'
+                    :password => 'dustY4'#, :nick => 'ADMIN'
                     }])
 
 classroom = Classroom.create!({:name=>"firma", :capacity=>10000, :note=>"súkromná miestnosť klienta"})
