@@ -8,7 +8,8 @@ gem 'rails', '3.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'#, "0.2.6"
+gem 'mysql2', '< 0.3.7'
+gem 'mysql'
 
 gem "rack", '1.3.3'
 gem 'rmagick'
