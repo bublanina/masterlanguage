@@ -31,7 +31,7 @@ set :user, "masterlanguage"
 set :use_sudo, false
 
 task :after_update_code, :roles => [:app, :db] do
-  run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  run "ln -nfs #{shared_path}/config/database2.yml #{release_path}/config/database2.yml"
 end
 
 
