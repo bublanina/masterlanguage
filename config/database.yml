@@ -23,7 +23,6 @@ development:
   username: masterlanguage
   password: hLuaDG19
 #  host: localhost
-  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
@@ -33,7 +32,6 @@ production:
   username: masterlanguage
   password: hLuaDG19
 #  host: localhost
-  socket: /var/run/mysqld/mysqld.sock
   
 test:
   adapter: mysql2
@@ -42,5 +40,3 @@ test:
   pool: 5
   username: masterlanguage
   password: hLuaDG19
-#  host: localhost
-  socket: /var/run/mysqld/mysqld.sock
