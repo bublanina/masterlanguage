@@ -21,7 +21,7 @@ development:
   database: masterlanguage
   pool: 5
   username: masterlanguage
-  password: hLuaDG19
+  password: q3E2wsbghE
 #  host: localhost
 
 production:
@@ -30,7 +30,7 @@ production:
   database: masterlanguage
   pool: 5
   username: masterlanguage
-  password: hLuaDG19
+  password: q3E2wsbghE
 #  host: localhost
   
 test:
@@ -39,4 +39,4 @@ test:
   database: masterlanguage
   pool: 5
   username: masterlanguage
-  password: hLuaDG19
+  password: q3E2wsbghE
